@@ -1,6 +1,8 @@
 ---
-title: "Ananke: a Hugo Theme"
+title: "Cluster PI"
 featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "The last theme you'll ever need. Maybe."
+description: "Building Clusters with Raspberry PI's."
 ---
-Welcome to my blog with some of my work in progress. I've been working on this book idea. You can read some of the chapters below.
+
+Welcome to the Website on which we coordinate resources to build
+clusters with Raspberry PI's.
