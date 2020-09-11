@@ -1,6 +1,6 @@
 ---
 date: 2017-04-09T10:58:08-04:00
-description: "Build a Mini CLuster"
+description: "Build a Mini Cluster"
 featured_image: "/images/pi.jpg"
 tags: ["Mini Cluster"]
 title: "Build a Mini Cluster"
@@ -13,6 +13,13 @@ Include some image. Make sure the background is white.
 ## Team
 
 Put team names here
+
+* Adam
+* Logan
+* 
+* Sunny
+* Richie (pi burn)
+
 
 ## Equipmemt
 
@@ -38,7 +45,7 @@ put list of equipment here
 
 ## Week 2
 
-- [ ] find k3s and see if that can be set up. Reemebr they may do it
+- [ ] find k3s and see if that can be set up. Remember they may do it
   differently than we need. We assume a cluster network is setup. We
   need to build form existing cluster with network. Can k3s do this?
   Evaluate report.
