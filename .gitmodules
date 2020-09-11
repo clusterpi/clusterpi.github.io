@@ -1,0 +1,9 @@
+[submodule "docs/clusterpi.github.io/themes/ananke"]
+	path = docs/clusterpi.github.io/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "docs/themes/ananke"]
+	path = docs/themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "docs/gohugo-theme-ananke"]
+	path = docs/gohugo-theme-ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
