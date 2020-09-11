@@ -26,6 +26,13 @@
 &lt;p&gt;Include some image. Make sure the background is white.&lt;/p&gt;
 &lt;h2 id=&#34;team&#34;&gt;Team&lt;/h2&gt;
 &lt;p&gt;Put team names here&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adam&lt;/li&gt;
+&lt;li&gt;Logan&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Sunny&lt;/li&gt;
+&lt;li&gt;Richie (pi burn)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;equipmemt&#34;&gt;Equipmemt&lt;/h2&gt;
 &lt;p&gt;put list of equipment here&lt;/p&gt;
 &lt;table&gt;
@@ -59,7 +66,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;week-2&#34;&gt;Week 2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; find k3s and see if that can be set up. Reemebr they may do it
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; find k3s and see if that can be set up. Remember they may do it
 differently than we need. We assume a cluster network is setup. We
 need to build form existing cluster with network. Can k3s do this?
 Evaluate report.&lt;/li&gt;
