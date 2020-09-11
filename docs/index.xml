@@ -1,51 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cluster PI on </title>
+    <title>Cluster PI – Cluster PI</title>
     <link>/</link>
-    <description>Recent content in Cluster PI on </description>
+    <description>Recent content on Cluster PI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Sep 2020 06:54:11 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Welcome</title>
-      <link>/blog/welcome/</link>
-      <pubDate>Fri, 11 Sep 2020 06:54:11 -0400</pubDate>
+    <lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
       
-      <guid>/blog/welcome/</guid>
-      <description></description>
-    </item>
+      
+    
     
     <item>
-      <title>Build a Mini Cluster</title>
-      <link>/post/mini-cluster/</link>
-      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      <title>Blog: Sample Post</title>
+      <link>/blog/2018/10/06/sample-post/</link>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/mini-cluster/</guid>
-      <description>Please describe here the steps on how you build the mini cluster.
-Include some image. Make sure the background is white.
-Team Put team names here
-Equipmemt put list of equipment here
-   Name Quantity Purpose     Power Switch 1 Allows the cluster do be switched on and of easily    Progress Week 1  Distributed mini cluster equipment Set up cluster with cloudmesh-pi-burn Get more SD Cards Add more tasks &amp;hellip; ;-) Add more weeks &amp;hellip; ;-) Add dates to Weeks &amp;hellip; ;-) Add weekly meeting Add slack to web page: https://app.</description>
-    </item>
-    
-    <item>
-      <title>Example Post</title>
-      <link>/post/sample/</link>
-      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
-      
-      <guid>/post/sample/</guid>
-      <description>This is an example post.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/contact/</guid>
-      <description>NOT YET WORKING
-This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out Formspree for a simple, free form service.
-Your Name Email Address An email address is required.  Message   </description>
+      <guid>/blog/2018/10/06/sample-post/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/2018/10/06/sample-post/featured-pi_hu4fa8ac8dae08586f9463019a3aa80673_390499_640x0_resize_q75_catmullrom.jpg" width="640" height="394"/>]]>
+        
+        &lt;p&gt;&lt;strong&gt;This is a typical blog post that includes images.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p&gt;
+&lt;h2 id=&#34;including-images&#34;&gt;Including images&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s an image (&lt;code&gt;featured.jpg&lt;/code&gt;) that includes a byline and a caption.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/sample-post/featured-pi_hu4fa8ac8dae08586f9463019a3aa80673_390499_600x300_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Fetch and scale an image in the upcoming Hugo 0.43.
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: pixabay / CC-BY-CA&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;The front matter of this post specifies properties to be assigned to all image resources:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;resources:
+- src: &amp;quot;**.{png,jpg}&amp;quot;
+  title: &amp;quot;Image #:counter&amp;quot;
+  params:
+    byline: &amp;quot;Photo: pixabay / CC-BY-CA&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To include the image in a page, specify its details like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/sample-post/featured-pi_hu4fa8ac8dae08586f9463019a3aa80673_390499_600x300_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Fetch and scale an image in the upcoming Hugo 0.43.
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: pixabay / CC-BY-CA&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The image will be rendered at the size and byline specified in the front matter.&lt;/p&gt;
+
+      </description>
     </item>
     
   </channel>
