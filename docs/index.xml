@@ -5,7 +5,16 @@
     <link>/</link>
     <description>Recent content in Cluster PI on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Apr 2017 10:58:08 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Sep 2020 06:54:11 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>/blog/welcome/</link>
+      <pubDate>Fri, 11 Sep 2020 06:54:11 -0400</pubDate>
+      
+      <guid>/blog/welcome/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Build a Mini Cluster</title>
       <link>/post/mini-cluster/</link>

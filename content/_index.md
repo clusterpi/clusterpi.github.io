@@ -1,6 +1,6 @@
 ---
 title: "Cluster PI"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
+featured_image: '/images/pi.jpg'
 description: "Building Clusters with Raspberry PI's."
 ---
 
