@@ -7,12 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 09 Apr 2017 10:58:08 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Example Post</title>
-      <link>/post/chapter-1/</link>
+      <title>Build a Mini Cluster</title>
+      <link>/post/mini-cluster/</link>
       <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
       
-      <guid>/post/chapter-1/</guid>
-      <description>This is an example post</description>
+      <guid>/post/mini-cluster/</guid>
+      <description>Please describe here the steps on how you build the mini cluster.
+Include some image. Make sure the background is white.
+Team Put team names here
+Equipmemt put list of equipment here
+   Name Quantity Purpose     Power Switch 1 Allows the cluster do be switched on and of easily    Progress Week 1  Distributed mini cluster equipment Set up cluster with cloudmesh-pi-burn Get more SD Cards Add more tasks &amp;hellip; ;-) Add more weeks &amp;hellip; ;-) Add dates to Weeks &amp;hellip; ;-) Add weekly meeting Add slack to web page: https://app.</description>
+    </item>
+    
+    <item>
+      <title>Example Post</title>
+      <link>/post/sample/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>/post/sample/</guid>
+      <description>This is an example post.</description>
     </item>
     
     <item>
