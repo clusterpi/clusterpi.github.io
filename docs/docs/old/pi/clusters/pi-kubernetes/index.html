@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.75.0-DEV" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Kubernetes | Cluster PI</title><meta property="og:title" content="Kubernetes" />
+<meta property="og:description" content=":o2:
+In this section we will discuss how to set up a Kubernetes cluster on a number of Raspberry Pis.
+Todo  all the simple setup with sd cards, ssh, keys, and so on should be moved to the NOW cluster section. This way we can require simply a NOW and start without duplication on the real Kubernetes install. we have two sections of Kubernetes contributed by two students. What we need is to merge them and save the usable things." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/old/pi/clusters/pi-kubernetes/" />
+<meta property="og:site_name" content="Cluster PI" />
+<meta itemprop="name" content="Kubernetes">
+<meta itemprop="description" content=":o2:
+In this section we will discuss how to set up a Kubernetes cluster on a number of Raspberry Pis.
+Todo  all the simple setup with sd cards, ssh, keys, and so on should be moved to the NOW cluster section. This way we can require simply a NOW and start without duplication on the real Kubernetes install. we have two sections of Kubernetes contributed by two students. What we need is to merge them and save the usable things.">
+
+<meta itemprop="wordCount" content="3714">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubernetes"/>
+<meta name="twitter:description" content=":o2:
+In this section we will discuss how to set up a Kubernetes cluster on a number of Raspberry Pis.
+Todo  all the simple setup with sd cards, ssh, keys, and so on should be moved to the NOW cluster section. This way we can require simply a NOW and start without duplication on the real Kubernetes install. we have two sections of Kubernetes contributed by two students. What we need is to merge them and save the usable things."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.cf1e97eec3f71328eb83c5234c5252029e87d27e0c2bdc419937767af8e9581b.css" as="style">
+<link href="/scss/main.min.cf1e97eec3f71328eb83c5234c5252029e87d27e0c2bdc419937767af8e9581b.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zM197.0804 232.033c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zM197.0804 177.6188c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zM197.5309 286.4723c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zM197.0804 340.5784c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Cluster PI</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/community/" ><span>Community</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/old/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Old Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsold">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/old/iot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">IoT</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsoldiot">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotdexter" href="/docs/old/iot/dexter/">Dexter</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldioteasyplug" href="/docs/old/iot/easyplug/">Easy Plug</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotesp8266" href="/docs/old/iot/esp8266/">ESP8266</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotgrovepi" href="/docs/old/iot/grovepi/">GrovePi Modules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiothardware" href="/docs/old/iot/hardware/">Hardware for IoT Projects</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotintroduction" href="/docs/old/iot/introduction/">Introduction</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotprojects" href="/docs/old/iot/projects/">Projects</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotpi" href="/docs/old/iot/pi/">Raspberry PI 3</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotsensors" href="/docs/old/iot/sensors/">Sensors</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiottools" href="/docs/old/iot/tools/">Tools</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotturtle" href="/docs/old/iot/turtle/">Turtle Graphics</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpipreface" href="/docs/old/pi/preface/">About</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-configure-cluster" href="/docs/old/pi/clusters/pi-configure-cluster/">Automated Headless Configuration of a Pi Cluster :o2:</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpisetup" href="/docs/old/pi/setup/">Cluster Setup</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-docker" href="/docs/old/pi/clusters/pi-docker/">Docker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiexercise" href="/docs/old/pi/exercise/">Exercise</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpifortran" href="/docs/old/pi/fortran/">Fortan</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpikubernetes526headhead_node_readme" href="/docs/old/pi/kubernetes/526/head/head_node_readme/">Head Node Setup</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/old/case/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">IU 100 Node Cluster Case</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsoldcase">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoldpiclusterspi-kubernetes" href="/docs/old/pi/clusters/pi-kubernetes/">Kubernetes</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpikubernetes417binreadme" href="/docs/old/pi/kubernetes/417/bin/readme/">Kubernetes Cluster in Raspberry Pi - automation</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpimpi" href="/docs/old/pi/mpi/">Message Massing Interface Cluster</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpimotherboard-led" href="/docs/old/pi/motherboard-led/">Motherboard LED</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-now" href="/docs/old/pi/clusters/pi-now/">Network of Pis (NOW)</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpicase" href="/docs/old/pi/case/">Pi Cluster Form Factor</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpilinks" href="/docs/old/pi/links/">Pi Clusters on the Internet</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpisoftware2" href="/docs/old/pi/software2/">Pi Software Collection</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-setup" href="/docs/old/pi/clusters/pi-setup/">Preparing the SD card</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspxe" href="/docs/old/pi/clusters/pxe/">PXE Booting</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiboard" href="/docs/old/pi/board/">Raspberry PI</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-hadoop" href="/docs/old/pi/clusters/pi-hadoop/">Raspberry PI Hadoop Cluster</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-cassandra-apache2" href="/docs/old/pi/clusters/pi-cassandra-apache2/">Raspberry Pi IoT Thermostat with Cassandra and Apache Webserver</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpisetup-ultimate" href="/docs/old/pi/setup-ultimate/">Raspberry PI Setup (Small Number of PIs)</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-spark-orig" href="/docs/old/pi/clusters/pi-spark-orig/">Raspberry PI Spark Cluster</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiclusterspi-spark" href="/docs/old/pi/clusters/pi-spark/">Raspberry PI Spark Cluster</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpirun-at-boot" href="/docs/old/pi/run-at-boot/">Run Commands at Boot time</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpisetup-multiple" href="/docs/old/pi/setup-multiple/">Setting up Large PI clusters :o2:</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpisetup-dev" href="/docs/old/pi/setup-dev/">Setup of a Development Environment</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpislurm" href="/docs/old/pi/slurm/">SLURM</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiconfig-display" href="/docs/old/pi/config-display/">Visual Feedback Management</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpivnc" href="/docs/old/pi/vnc/">VNC &#34;&#34;</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsmini-cluster" href="/docs/mini-cluster/">Build a Mini Cluster</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+<a href="https://github.com/clusterpi/clusterpi.github.io/edit/master/content/en/docs/old/pi/clusters/pi-kubernetes.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/clusterpi/clusterpi.github.io/issues/new?title=Kubernetes" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/clusterpi/clusterpi.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#todo">Todo</a></li>
+    <li><a href="#resources-needed">Resources Needed</a></li>
+    <li><a href="#overview-of-kubernetes-cluster-setup">Overview of Kubernetes Cluster Setup</a></li>
+    <li><a href="#kubernetes-cluster-setup-with-scripts">Kubernetes Cluster Setup with Scripts</a>
+      <ul>
+        <li><a href="#pi-cluster-tools-setup">Pi Tools Prerequisites</a></li>
+        <li><a href="#kubernetes-shared-setup">Kubernetes Shared Setup</a></li>
+        <li><a href="#kubernetes-master-setup">Kubernetes Master Setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#pi-kubernetes-join-workers">Join Workers to Master</a></li>
+    <li><a href="#manual-kubernetes-cluster-setup">Manual Kubernetes Cluster Setup</a>
+      <ul>
+        <li><a href="#pi-install-docker">Install docker</a></li>
+        <li><a href="#install-kubernetes">Install Kubernetes</a></li>
+        <li><a href="#pi-kubernetes-system-config">System configuration</a></li>
+        <li><a href="#setup-kubernetes-cluster">Setup Kubernetes Cluster</a></li>
+      </ul>
+    </li>
+    <li><a href="#kubernetes-first-steps">Kubernetes First Steps</a>
+      <ul>
+        <li><a href="#kubernetes-pods">Kubernetes Pods</a></li>
+        <li><a href="#removing-a-node-from-a-cluster">Removing a node from a cluster</a></li>
+      </ul>
+    </li>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/old/">Old Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/old/pi/clusters/pi-kubernetes/">Kubernetes</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Kubernetes</h1>
+    
+	       
+	<p>:o2:</p>
+<p>In this section we will discuss how to set up a Kubernetes cluster on a
+number of Raspberry Pis.</p>
+<h2 id="todo">Todo</h2>
+<ul>
+<li><input disabled="" type="checkbox"> all the simple setup with sd cards, ssh, keys, and so on should be moved to the NOW cluster section. This way we can require simply a NOW and start without duplication on the real Kubernetes install.</li>
+<li><input checked="" disabled="" type="checkbox"> we have two sections of Kubernetes contributed by two students. What we need is to merge them and save the usable things. We need to identify if the setup is significantly different before we can do this.</li>
+<li><input disabled="" type="checkbox"> so before you can work on the Kubernetes section you need to make sure the NOW section is up to date.</li>
+</ul>
+<h2 id="resources-needed">Resources Needed</h2>
+<p>In <a href="#pi-now-main">Network of Pis</a> section we explained how to set up a network
+of Pis. Here we assume that we start from such a network. We recommend that the
+cluster will have at least one master and three worker nodes. The test should
+not use too many resources otherwise the system may be unnecessarily slow. In
+particular we should have one dedicated master. We use three nodes to support
+testing the distribution of containers. (It may work with two, but we have not
+tested it). Please give us feedback on this and let us know what works for you.
+We will integrate your feedback.</p>
+<h2 id="overview-of-kubernetes-cluster-setup">Overview of Kubernetes Cluster Setup</h2>
+<p>A Kubernetes cluster is made of one master and several worker nodes. Each node
+must have the standard Kubernetes setup completed and the master must also have
+additional setup. Once the master and worker nodes are setup then the worker
+nodes can join the network created by the master node. For the Raspberry Pi we
+support two modes of setting up the master and workers. The first method is to
+use the scripts that we provide to do the required installations. The second
+method is to perform each step by hand. We will begin by explaining how to use
+the scripts to setup your cluster quickly.</p>
+<h2 id="kubernetes-cluster-setup-with-scripts">Kubernetes Cluster Setup with Scripts</h2>
+<p>These steps have been verified with the latest build of Raspbian
+Stretch which is
+<a href="https://downloads.raspberrypi.org/raspbian_lite_latest">2018-11-13-raspbian-stretch-lite</a>.
+If you have installed Raspbian Stretch with Desktop or Raspbian Stretch with
+Desktop and Recommended Software then some of these steps will not be required,
+but repeating them will not be a problem.</p>
+<p>The required scripts are stored in the
+<a href="https://github.com/cloudmesh-community/pi">Cloudmesh Community Pi</a> repository
+and must be copied to each Raspberry Pi in order to run. This guide assumes that
+each Pi has internet access which is required to download the necessary tools.
+The first steps to setup the Pi tools is listed on the
+<a href="https://github.com/cloudmesh-community/pi/blob/master/README.md">README.md</a>
+for the Pi tools repository. We will repeat those steps here for convenience.</p>
+<h3 id="pi-cluster-tools-setup">Pi Tools Prerequisites</h3>
+<p>To use the Cloudmesh Pi tools you need <code>git</code> to download the tools from the
+github repository. You must also update the Pi&rsquo;s list of software, install
+<code>git</code>, and then download or clone the <code>git</code> repository. Run these steps at the
+Pi command prompt:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get update<span style="color:#000;font-weight:bold">;</span> sudo apt-get install -y git
+$ git clone https://github.com/cloudmesh-community/pi.git
+</code></pre></div><p>When that successfully completes you will have a copy of the Pi tools on your Pi
+and you can now run them.</p>
+<h3 id="kubernetes-shared-setup">Kubernetes Shared Setup</h3>
+<p>Every Kubernetes node, whether master or worker, needs to complete the following
+setup steps. The Pi scripts are stored in the <code>bin</code> directory. Every
+Kubernetes Pi master and worker must run the <code>kubernetes-setup.sh</code> script which
+will download and install Docker and Kubernetes and make the necessary system
+changes to support both. When this script completes the Pi must be rebooted to
+properly configure its memory system for Kubernetes. Execute the following
+commands:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pi/bin/kubernetes-setup.sh
+$ sudo reboot
+</code></pre></div><p>If you are connected to the Pi over <code>ssh</code> your session may hang at this point.
+You can either wait for <code>ssh</code> to timeout or kill the session by typing a tilde
+then a period. The tilde on a new line is a special command to <code>ssh</code> and the
+period means to disconnect the session.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~.
+</code></pre></div><p>At this point the worker is ready to connect to the Kubernetes master node.
+The command to connect to the master node is <code>kubeadm join</code> but we need to
+finish setting up the master node in order to get the token necessary to
+authenticate with it.</p>
+<h3 id="kubernetes-master-setup">Kubernetes Master Setup</h3>
+<p>To setup the Kubernetes master node you should first complete the
+<a href="#kubernetes-shared-setup">Kubernetes Shared Setup</a>. After the Pi reboots you
+can run the master setup script:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pi/bin/kubernetes-master-setup.sh
+</code></pre></div><p>The master setup script will run <code>kubeadm init</code> which can take a long time and
+will occasionally timeout on the Raspberry Pi without completing. This does not
+indicate a failure of the Pi setup. If the command finishes with the error</p>
+<pre><code>Unfortunately, an error has occurred:
+        timed out waiting for the condition
+</code></pre><p>then it is possible to restart the setup and it will usually complete
+successfully the second time. To do this (only if the master setup failed) run
+<code>kubeadm reset</code> and be sure to answer <code>y</code> to the prompts. Then run the master
+setup script again:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm reset
+$ sudo pi/bin/kubernetes-master-setup.sh
+</code></pre></div><p>When the master setup successfully completes you should see:</p>
+<pre><code>Your Kubernetes master has initialized successfully!
+</code></pre><p>and there will be further instructions on how to setup the master. These steps
+have already been performed by the setup scripts so you do not need to do them.
+The output will also list the required <code>kubeadm join</code> command that can be issued
+on each worker node that wishes to join this Kubernetes master node. In
+addition, the scripts have stored the join command, the master IP address, the
+join token, and the CA Hash in a YAML file <code>kubeadm-settings.yml</code> in the current
+directory. If you need to add nodes in the future, you may refer to this file
+for the required parameters.</p>
+<h2 id="pi-kubernetes-join-workers">Join Workers to Master</h2>
+<p>Now login to each of the workers and issue the <code>kubeadm join</code> command from the
+master node. If you have not successfully completed the master node setup,
+please see <a href="#kubernetes-master-setup">Kubernetes Master Setup</a> for the required
+steps.</p>
+<p>As of this writing there is a version incompatibility between the latest
+Kubernetes and the latest Docker. Kubernetes has not yet verified Docker version
+18.09 which is installed by the default Docker install script. If you use our
+provided setup script then the version of Docker will be automatically
+downgraded to 18.06.1 which is verified by Kubernetes. You can follow the steps
+to downgrade your Docker version given in <a href="#pi-install-docker">Install Docker</a> or
+you can skip the version check by specifying
+<code>--ignore-preflight-errors=SystemVerification</code> on the command line. An example
+<code>kubeadm join</code> command would be:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm join 10.0.0.101:6443 <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    --token vstt3y.faa67q2dp383xhgv <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    --discovery-token-ca-cert-hash <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    sha256:7fa06185f14b89234235aa9f03ef60835ade825e2553cd97a52b5894566edeb5
+</code></pre></div><p>Once the worker nodes have joined the cluster, you can login to the master node
+and see their status with the following command:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubectl get nodes
+NAME     STATUS   ROLES    AGE     VERSION
+blue00   Ready    master   4h56m   v1.12.2
+blue01   Ready    &lt;none&gt;   4h44m   v1.12.2
+blue02   Ready    &lt;none&gt;   4h46m   v1.12.2
+blue03   Ready    &lt;none&gt;   4h42m   v1.12.2
+blue04   Ready    &lt;none&gt;   4h1m    v1.12.2
+</code></pre></div><p>When the workers are joining the cluster they will initially be in a <code>NotReady</code>
+state for a while as they complete their setup. This is the normal expected
+behavior and each node should reach the <code>Ready</code> state within a few minutes. To
+continue experimenting with your Kubernetes cluster, please see the
+<a href="#kubernetes-first-steps">Kubernetes First Steps</a> section.</p>
+<h2 id="manual-kubernetes-cluster-setup">Manual Kubernetes Cluster Setup</h2>
+<p>If you do not want to use our setup scripts or would like to change some steps
+in the installation you can use the following steps to manually setup a
+Kubernetes cluster on several Pis. First, each node in the cluster must have
+Docker and Kubernetes installed along with some system configurations. Then the
+master should be launched and each worker node connected to the master. Please
+follow these instructions carefully and you should have a working Kubernetes
+cluster.</p>
+<h3 id="pi-install-docker">Install docker</h3>
+<p>Kubernetes depends on a containerization platform to run applications. The
+standard platform used with Kubernetes is Docker, although other container
+platforms are also support. We will use Docker on the Pi. Install Docker with
+the convenience script at <code>get.docker.com</code>. You may also download the script
+manually and see what operations it performs. The basic steps in the script are
+to detect your operation system and computer architecture, setup the proper
+Docker package repositories and keys for your system, and finally install the
+Docker packages and dependencies. The current version of Docker 18.09 has not
+been verified by Kubernetes, so after installation we will downgrade this
+package to 18.06 in the following steps. Once the installation finishes we
+recommend running the following <code>usermod</code> command to run Docker as a non-root
+user. This is an optional but recommended step.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -sSL get.docker.com <span style="color:#000;font-weight:bold">|</span> sudo sh
+$ sudo usermod -aG docker pi
+</code></pre></div><p>The current version of Docker 18.09 installed by the convenience script has not
+been verified by Kubernetes v1.12.2 yet so it will give an error and Kubernetes
+will fail to start. You can fix this by giving the
+<code>--ignore-preflight-errors=SystemVerification</code> flag to <code>kubeadm init</code> and
+<code>kubeadm join</code>. However, a better solution is to downgrade the Docker version
+installed. The Docker install script will also setup the proper <code>apt-get</code>
+repositories that host previous versions of Docker. To downgrade, first stop
+the <code>docker.service</code> that is running, then downgrade the package and restart the
+service. The Docker service should restart automatically after the downgrade, so
+restarting the service with <code>systemctl</code> is just done in case of a problem.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo systemctl stop docker.service
+$ sudo apt-get install -qy --allow-downgrades <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  docker-ce<span style="color:#ce5c00;font-weight:bold">=</span>18.06.1~ce~3-0~raspbian
+$ sudo systemctl start docker.service
+</code></pre></div><h3 id="install-kubernetes">Install Kubernetes</h3>
+<p>After installing Docker we must also install Kubernetes. The Kubernetes package
+sources and GPG keys need to be added to the <code>apt-get</code> package manager first,
+then we must update the <code>apt-get</code> package list with the new sources before we
+can finally install the Kubernetes services and administration package
+<code>kubeadm</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span style="color:#000;font-weight:bold">|</span><span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo apt-key add -
+$ <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;deb http://apt.kubernetes.io/ kubernetes-xenial main&#34;</span> <span style="color:#000;font-weight:bold">|</span><span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo tee /etc/apt/sources.list.d/kubernetes.list
+$ sudo apt-get update -q<span style="color:#000;font-weight:bold">;</span> sudo apt-get install -qy kubeadm
+</code></pre></div><p>Once Kubernetes and Docker are correctly installed there are some system
+configuration changes necessary for Kubernetes.</p>
+<h3 id="pi-kubernetes-system-config">System configuration</h3>
+<p>Kubernetes is not compatible with SWAP memory and as of version 1.8 it will
+<a href="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.8.md#before-upgrading">fail if swap is enabled on a node</a>,
+therefore we need to disable swap memory on Raspbian. It is possible that
+disabling swap on the Pi could cause other issues, especially due to the low
+memory on the Raspberry Pi, but it is accepted practice for running any
+Kubernetes cluster to disable swap. There is a flag <code>--fail-swap-on=false</code> that
+can be passed to <code>kubeadm</code> to skip the check for swap but we have not tested
+with this setting.  To disable swap execute the following commands on the Pi:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dphys-swapfile swapoff <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo dphys-swapfile uninstall <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo update-rc.d dphys-swapfile remove
+</code></pre></div><p>You should now not see any entries in this command:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo swapon --summary
+</code></pre></div><p>Next some kernel cgroup settings need to be changed for Kubernetes. This is a
+boot-time option that can only be changed by altering the options passed to the
+Linux kernel during boot. These options are stored in the file
+<code>/boot/cmdline.txt</code> on the Raspberry Pi. This file only contains a single line
+that specifies the kernel options. The following three options must be added to
+the end of the line <code>cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory</code>.
+You may edit the file in a text editor if you are confident that you can make
+the change correctly or simply run the following lines at the command prompt.
+They will first backup the current file, then then append the new options and
+finally write the entire string back to the original file:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo cp /boot/cmdline.txt /boot/cmdline.bak.txt
+$ <span style="color:#000">new_options</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>head -n1 /boot/cmdline.txt<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06"> \
+</span><span style="color:#4e9a06">cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory&#34;</span>
+$ <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$new_options</span><span style="color:#4e9a06">&#34;</span> <span style="color:#000;font-weight:bold">|</span> sudo tee /boot/cmdline.txt
+</code></pre></div><p>Kubernetes also expects certain kernel modules to be loaded. It will enable
+these kernel modules during setup but we can also specify them to always be
+loaded on boot which removes the warning messages. To enable the required kernel
+modules, execute the following lines which will append these modules to the list
+of enabled kernel modules stored in <code>/etc/modules</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat <span style="color:#4e9a06">&lt;&lt; EOF | sudo tee -a /etc/modules
+</span><span style="color:#4e9a06">ip_vs
+</span><span style="color:#4e9a06">ip_vs_sh
+</span><span style="color:#4e9a06">ip_vs_rr
+</span><span style="color:#4e9a06">ip_vs_wrr
+</span><span style="color:#4e9a06">nf_conntrack_ipv4
+</span><span style="color:#4e9a06">EOF</span>
+</code></pre></div><p>Since these changes only take place at boot time, you <em>must reboot</em> before
+continuing with the rest of the section. If you do not reboot then Kubernetes
+will refuse to run and issue an error.</p>
+<h3 id="setup-kubernetes-cluster">Setup Kubernetes Cluster</h3>
+<p>After the Pi reboots and you reconnect to it there are a few steps to perform on
+the master Kubernetes node to prepare it for the worker nodes to connect to.
+First we recommend pulling (downloading) the Kubernetes images so that this step
+is separate from initializing the cluster. You can issue the following command
+and note that it will take several minutes depending on your network connection:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm config images pull
+</code></pre></div><p>Once that is complete we can now initialize the Kubernetes master. You need to
+know the IP address of the master node and you should choose a CIDR for the pod
+network. Note that in this case we are setting the join token to have a
+time-to-live of 0 which means it will never expire. This is reasonable for
+initial setup and testing but in any permanent system the token should be
+allowed to expire in a few hours or days to prevent unauthorized nodes from
+joining the cluster should the token accidentally be leaked. The following
+command will setup the master:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#000">POD_CIDR</span><span style="color:#ce5c00;font-weight:bold">=</span>10.244.0.0/16
+$ <span style="color:#000">APISERVER_IP</span><span style="color:#ce5c00;font-weight:bold">=</span>10.0.0.101
+$ sudo kubeadm init --token-ttl<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  --pod-network-cidr<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#000">$POD_CIDR</span><span style="color:#4e9a06">&#34;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  --apiserver-advertise-address<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#000">$APISERVER_IP</span><span style="color:#4e9a06">&#34;</span>
+</code></pre></div><p>When the master setup completes successfully then you should see output similar
+to the following:</p>
+<pre><code>Your Kubernetes master has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run &quot;kubectl apply -f [podnetwork].yaml&quot; with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+You can now join any number of machines by running the following on each node
+as root:
+
+  kubeadm join 10.0.0.101:6443 --token vstt3y.faa67q2dp383xhgv --discovery-token-ca-cert-hash sha256:7fa06185f14b89234235aa9f03ef60835ade825e2553cd97a52b5894566edeb5
+</code></pre><p>You should follow these instructions, running these commands:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -p <span style="color:#4e9a06">&#34;</span><span style="color:#000">$HOME</span><span style="color:#4e9a06">/.kube&#34;</span>
+$ sudo cp -i /etc/kubernetes/admin.conf <span style="color:#4e9a06">&#34;</span><span style="color:#000">$HOME</span><span style="color:#4e9a06">/.kube/config&#34;</span>
+$ sudo chown <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>id -u<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>:<span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>id -g<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$HOME</span><span style="color:#4e9a06">/.kube/config&#34;</span>
+</code></pre></div><p>The <code>kubeadm join</code> command should be copied and stored for later use. If you
+lose the details you can view the existing tokens with <code>kubeadm token list</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm token list
+</code></pre></div><p>And you can find the sha256 hash of the CA Cert with:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey <span style="color:#000;font-weight:bold">|</span><span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  openssl rsa -pubin -outform DER 2&gt;/dev/null <span style="color:#000;font-weight:bold">|</span> sha256sum <span style="color:#000;font-weight:bold">|</span><span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  cut -d<span style="color:#4e9a06">&#39; &#39;</span> -f1
+</code></pre></div><p>The original token is for development use and so we set it to have an unlimited
+time-to-live. This is not recommended for a production system, however, a
+shorter TTL of a few hours or days should be specified and a new token should be
+generated when the previous one has expired. A new token can be created with the
+following command.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm token create --print-join-command
+</code></pre></div><p>This will not retrieve the original token but will generate a new one. These
+tokens should be carefully managed as they allow a node to join the Kubernetes
+cluster which is a potentially unsafe operation for untrusted nodes.</p>
+<p>The final step is setting up the networking. These instructions use
+<a href="https://www.weave.works/oss/net/">Weave Net</a> to enable the Kubernetes network
+architecture. Another recommended solution to use with the Raspberry Pi is
+<a href="https://github.com/coreos/flannel">Flannel</a>. Here is the command to setup Weave
+Net on the Kubernetes cluster.</p>
+<pre><code>  kubectl apply -f \
+ &quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')&quot;
+</code></pre><p>After waiting a minute or so, you should see the following output from this
+command:</p>
+<pre><code> $ sudo kubectl get pods --namespace=kube-system
+NAME                             READY   STATUS    RESTARTS   AGE
+coredns-576cbf47c7-hn55k         1/1     Running   0          4m51s
+coredns-576cbf47c7-nvmm4         1/1     Running   0          4m51s
+etcd-blue00                      1/1     Running   0          3m55s
+kube-apiserver-blue00            1/1     Running   0          4m7s
+kube-controller-manager-blue00   1/1     Running   0          4m5s
+kube-proxy-9xwdn                 1/1     Running   0          4m51s
+kube-scheduler-blue00            1/1     Running   0          4m
+weave-net-xj4tc                  2/2     Running   0          73s
+</code></pre><p>Now that the master is running and networking is enabled, you can run the
+<code>kubeadm join</code> command on each Pi in the cluster and issue the identical command
+for them to join the master. Please see the section <a href="#pi-kubernetes-join-workers">Join Workers to
+Master</a> for more details.</p>
+<h2 id="kubernetes-first-steps">Kubernetes First Steps</h2>
+<p>Now that you have the Kubernetes cluster running you can deploy pods on the
+cluster. For production use of Kubernetes it is recommended to use a Controller
+which will manage the details of deploying pods to nodes and ensuring
+replication and self-healing. Please see the
+<a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#pods-and-controllers">Kubernetes Pod Overview</a>
+section of the Kubernetes documentation for information on creating
+<a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Deployments</a>,
+<a href="https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/">StatefulSets</a>
+or
+<a href="https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/">DaemonSets</a>
+on your cluster. For our simple use case we will create a few pods by hand.</p>
+<h3 id="kubernetes-pods">Kubernetes Pods</h3>
+<p>The <a href="https://github.com/cloudmesh-community/pi">Cloudmesh Community Pi</a>
+repository has several pod definition files that you can use directly or
+customize to your particular use case for experimenting with the Kubernetes
+cluster. If you used our install scripts you should already have these on your
+Kubernetes master. If you did the setup by hand you can get the repository by
+installing <code>git</code> and then cloning it onto the Pi using the instructions in the
+<a href="#pi-cluster-tools-setup">Pi Tools Prerequisites</a> section.</p>
+<p>As an initial test you can create the markdown renderer deployment on your
+cluster with the command:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#204a87">cd</span> pi/kubernetes
+$ sudo kubectl create -f markdownrender.yml
+service/markdownrender created
+deployment.apps/markdownrender created
+</code></pre></div><p>If you look at the markdownrender.yml file you will see that it defines a
+Service and a Deployment and it maps port 8080 from the Service to the external
+port 31118. The Deployment specifies that it should have one replica of the
+application which runs a Docker container from Docker Hub titled
+<a href="https://hub.docker.com/r/functions/markdownrender/">functions/markdownrender:latest-armhf</a>.
+This container supplies a simple service to translate a markdown document into
+an HTML document. You can test it with the following commands to see it working:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -4 http://localhost:31118 -d <span style="color:#4e9a06">&#34;# test&#34;</span>
+$ curl -4 http://localhost:31118 --data-binary @../README.md
+</code></pre></div><p>The 31118 port will also be accessible to any computer that can reach the
+Kubernetes master (unless firewall rules dictate otherwise) so you can also test
+this from your own computer if it is on the same network as the Kubernetes
+master. For example you could run:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -4 http://blue00:31118 -d <span style="color:#4e9a06">&#34;# test&#34;</span>
+$ curl -s <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  https://raw.githubusercontent.com/cloudmesh-community/pi/master/README.md <span style="color:#000;font-weight:bold">|</span><span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  curl -4 http://blue00:31118 --data-binary @-
+</code></pre></div><p>You can see the status of your pods by using <code>kubectl get pods</code> on the master.
+Adding the <code>-o wide</code> parameter will also output the node and node ip of the node
+that the pod is deployed to.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubectl get pods -o wide
+NAME                              READY   STATUS    RESTARTS   AGE   IP
+NODE     NOMINATED NODE
+markdownrender-7d8d6f74d6-67bsg   1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          20m   10.44.0.1
+blue01   &lt;none&gt;
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo kubectl get pods -o <span style="color:#000">jsonpath</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;{.items[*].spec.nodeName}&#39;</span>
+</code></pre></div><h3 id="removing-a-node-from-a-cluster">Removing a node from a cluster</h3>
+<p>To remove a Kubernetes node from a cluster, you must first drain the node which
+will evict every pod in the node and cordon it off so that no new pods will be
+scheduled in it. For cluster setup each node will be running the Weave daemon so
+it is necessary to specify <code>--ignore-daemonsets</code> to drain the node. The drain
+command should complete without errors.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubectl drain --ignore-daemonsets &lt;node&gt;
+</code></pre></div><p>If there are pods scheduled to the node then you should wait until those pods
+complete and are shutdown and removed from the node. You can observe the node
+state using <code>kubectl get nodes</code> and <code>kubectl get pods</code>. You could see a sequence
+of events such as this when draining a node that has a deployed pod.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubectl drain blue01 --ignore-daemonsets
+node/blue01 cordoned
+WARNING: Ignoring DaemonSet-managed pods: kube-proxy-2zplz, weave-net-r7b85
+pod/markdownrender-7d8d6f74d6-67bsg evicted
+$ sudo kubectl get pods -o wide
+NAME                              READY   STATUS              RESTARTS   AGE   IP       NODE     NOMINATED NODE
+markdownrender-7d8d6f74d6-lqk58   0/1     ContainerCreating   <span style="color:#0000cf;font-weight:bold">0</span>          14s   &lt;none&gt;   blue03   &lt;none&gt;
+$ sudo kubectl get pods -o wide
+NAME                              READY   STATUS    RESTARTS   AGE   IP          NODE     NOMINATED NODE
+markdownrender-7d8d6f74d6-lqk58   1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          24s   10.39.0.1   blue03   &lt;none&gt;
+</code></pre></div><p>When the node has no pods scheduled to it you can remove it from the cluster
+permanently by issuing the <code>delete</code> command on the master. The node should be in
+the <code>Ready,SchedulingDisabled</code> status. For example, in this output the node
+<code>blue04</code> has been drained and is ready to be deleted from the cluster.</p>
+<pre><code>$ sudo kubectl get nodes
+NAME     STATUS                     ROLES    AGE     VERSION
+blue00   Ready                      master   40h     v1.12.2
+blue01   Ready                      &lt;none&gt;   40h     v1.12.2
+blue02   Ready                      &lt;none&gt;   40h     v1.12.2
+blue03   NotReady                   &lt;none&gt;   40h     v1.12.2
+blue04   Ready,SchedulingDisabled   &lt;none&gt;   4m10s   v1.12.2
+</code></pre><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubectl delete node &lt;node&gt;
+</code></pre></div><p>Once this is complete you can login to the node itself and reset it so that it
+can join another cluster or be used for other purposes. The <code>kubeadm reset</code>
+command will accomplish this. At this point Kubernetes should be shut down on
+the Pi and you should not see any entries in the <code>systemctl</code> table for
+<code>kubernetes</code> or <code>kubelet</code> and you should not see any running Docker images that
+are related to Kubernetes. This can be confirmed with the following commands run
+<em>on the node</em> not on the master:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo kubeadm reset
+$ sudo systemctl list-units <span style="color:#000;font-weight:bold">|</span> grep -E <span style="color:#4e9a06">&#39;kubernetes|kubelet&#39;</span>
+$ docker ps
+</code></pre></div><p>Remember that Kubernetes required swap to be disabled and it may need to be
+re-enabled if you are planning to use the Raspberry Pi for other uses. There is
+some debate about whether swap on a Pi is actually a good idea in general,
+however, since the SD Card is rather slow and doesn&rsquo;t handle repeated reads and
+writes well. If you have a USB hard drive this could be a good solution to
+increasing swap. The memory and cpuset cgroups were also enabled for Kubernetes
+by modifying the <code>/boot/cmdline.txt</code> kernel options file. Leaving these enabled
+will not cause problems for other uses but they can be easily turned off by
+removing the lines that were added in the
+<a href="#pi-kubernetes-system-config">System configuration</a> section.
+Here are the required commands to re-enable swap.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dphys-swapfile install <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo dphys-swapfile swapon <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>  sudo update-rc.d dphys-swapfile defaults
+</code></pre></div><p>Swap will be enabled immediately and the changes will persist after reboot.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/tree/master/chapters/pi/kubernetes/526/bin/adm_kub_config.yaml">kubernetes/526/bin/adm_kub_config.yaml</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/tree/master/chapters/pi/kubernetes/526/bin/config_kub.sh">kubernetes/526/bin/config_kub.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/tree/master/chapters/pi/kubernetes/526/bin/copy_dk_kub_install_script_to_nodes.sh">kubernetes/526/bin/copy_dk_kub_install_script_to_nodes.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/tree/master/chapters/pi/kubernetes/526/bin/docker_kubernites_install.sh">kubernetes/526/bin/docker_kubernites_install.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/install_docker.sh">docker_setup.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/README.md">README.md</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/dhcp_setup.sh">dhcp_setup.sh</a></p>
+</li>
+<li>
+<p><a href="417/bin/join">join</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/kube_head_setup.sh">kube_head_setup.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/kube_worker_setup.sh">kube_worker_setup.sh</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/kubeadm_conf.yaml">kubeadm_conf.yaml</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudmesh-community/book/blob/master/chapters/pi/kubernetes/417/bin/opt_setup.sh">opt_setup.sh</a></p>
+</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://gist.github.com/alexellis/fdbc90de7691a1b9edb545c17da2d975">https://gist.github.com/alexellis/fdbc90de7691a1b9edb545c17da2d975</a></li>
+<li><a href="https://cloud.google.com/solutions/real-time/kubernetes-redis-bigquery">https://cloud.google.com/solutions/real-time/kubernetes-redis-bigquery</a></li>
+<li><a href="https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1">https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1</a></li>
+<li><a href="https://www.hanselman.com/blog/HowToBuildAKubernetesClusterWithARMRaspberryPiThenRunNETCoreOnOpenFaas.aspx">https://www.hanselman.com/blog/HowToBuildAKubernetesClusterWithARMRaspberryPiThenRunNETCoreOnOpenFaas.aspx</a></li>
+<li><a href="https://marcussmallman.io/2018/02/18/diy-rasberry-pi-kubernetes-cluster/">https://marcussmallman.io/2018/02/18/diy-rasberry-pi-kubernetes-cluster/</a></li>
+<li><a href="https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster/">https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster/</a></li>
+<li><a href="https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49">https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49</a></li>
+</ul>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified January 1, 0001
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Contact Gregor" aria-label="Contact Gregor">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://laszewski.github.io/#contact">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://app.slack.com/client/TFQC2P62D/CTP848QDV/details/top">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/google/docsy">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://app.slack.com/client/TFQC2P62D/CTP848QDV/details/top">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 The Cluster PI Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="/about/">About Culster PI</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

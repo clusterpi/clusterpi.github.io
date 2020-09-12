@@ -1,0 +1,2336 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – IoT</title>
+    <link>/docs/old/iot/</link>
+    <description>Recent content in IoT on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/old/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Dexter</title>
+      <link>/docs/old/iot/dexter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/dexter/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;creating-an-sd-card&#34;&gt;Creating an SD Card&lt;/h2&gt;
+&lt;h3 id=&#34;macos&#34;&gt;macOS&lt;/h3&gt;
+&lt;p&gt;First, install Etcher from &lt;a href=&#34;https://etcher.io/&#34;&gt;etcher.io&lt;/a&gt; which allows
+you to flash images onto the SD card. When flashing make sure you only
+attach one USB SD card reader/writer or use the build in SD card slot
+provided in some Mac&amp;rsquo;s.&lt;/p&gt;
+&lt;p&gt;The version of etcher we used is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/resin-io/etcher/releases/download/v1.1.1/Etcher-1.1.1-darwin-x64.dmg&#34;&gt;Etcher-1.1.1-darwin-x64.dmg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Make sure to check if there is a newer version&lt;/p&gt;
+&lt;h3 id=&#34;dexteros&#34;&gt;DexterOS&lt;/h3&gt;
+&lt;p&gt;DexterOS:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics&#34;&gt;https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dexterindustries.com/download/dexteros&#34;&gt;https://www.dexterindustries.com/download/dexteros&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pJZURHLeTs0&#34;&gt;&lt;img src=&#34;../images/video.png&#34; alt=&#34;Video&#34;&gt; DexterOS 9:15 Set up SDCard (original Video)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The video is published on the Dexter Web site.&lt;/p&gt;
+&lt;h3 id=&#34;dexter-raspbian&#34;&gt;Dexter Raspbian&lt;/h3&gt;
+&lt;p&gt;Dexter provides a special image that contains the drivers and sample
+programs for the GrovePi shield. We had some issues installing it on a
+plain Raspbian OS, thus we recommend that you use dexters version if you
+use the GrovePi shield. It is available from&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/dexterindustriesraspbianflavor/&#34;&gt;Google
+Drive&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/dexterindustriesraspbianflavor/&#34;&gt;Sourceforge&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed information on how to generate an SD card while using your OS
+is provided at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card&#34;&gt;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;github&#34;&gt;Github&lt;/h3&gt;
+&lt;p&gt;Dexter maintains a github repository that includes their code for the
+shield and many other projects at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd&#34;&gt;https://github.com/DexterInd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cloning-grove-pi&#34;&gt;Cloning Grove PI&lt;/h3&gt;
+&lt;p&gt;To clone the GrovePI library on other computers you can use the command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/DexterInd/GrovePi.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dexter-sample-programs&#34;&gt;Dexter Sample programs&lt;/h3&gt;
+&lt;p&gt;Dexter maintains all GrovePi related programs at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi&#34;&gt;https://github.com/DexterInd/GrovePi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The python related programs are in a subdirectory at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi/tree/master/Software/Python&#34;&gt;https://github.com/DexterInd/GrovePi/tree/master/Software/Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here you find many programs and for a complete list visit that link.
+Dependent on the sensors and actuators you have, inspect some programs.
+Some of them may inspire you to purchase some sensors.&lt;/p&gt;
+&lt;p&gt;We have developed a partial library of GrovePi module classes at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/tree/master/cloudmesh/pi&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi/tree/master/cloudmesh/pi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Easy Plug</title>
+      <link>/docs/old/iot/easyplug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/easyplug/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Copied from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keyestudio Easy-plug control board is a microcontroller board based on
+the ATmega328P-PU. It has 14 digital input/outputs (of which 6 can be
+used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB
+connection, a power jack, an ICSP header and a reset button. It
+contains everything needed to support the microcontroller; simply
+connect it to a computer with a USB cable or power it with a AC-to-DC
+adapter or battery to get started.You can tinker with your UNO without
+worrying too much about doing something wrong, worst case scenario you
+can replace the chip for a few dollars and start over again.  For
+convenience of wire connection, we simplify pins GND and VCC into each
+plug, so you only need one wire to connect a module, no need to
+separately connect the VCC and GND. The pins on the original UNO are
+all redesigned into plug interface. On the board, you can find ports
+D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/easyplug.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;specifications&#34;&gt;Specifications&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Microcontroller core&lt;/th&gt;
+&lt;th&gt;ATmega328P-PU&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Working voltage&lt;/td&gt;
+&lt;td&gt;+5V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage&lt;/td&gt;
+&lt;td&gt;$+7V - +12V$ (suggested)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage  (externum)&lt;/td&gt;
+&lt;td&gt;$+6V \leq Vin \leq +20V$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Digital signal I/O interface&lt;/td&gt;
+&lt;td&gt;14 (of which 6 provide PWM output)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analog signal input interface&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DCI/O interface current&lt;/td&gt;
+&lt;td&gt;20 mA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FlashMemory&lt;/td&gt;
+&lt;td&gt;32KB (ATmega328) of which 0.5 KB used by bootloader&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SRAM static storage capacity&lt;/td&gt;
+&lt;td&gt;2KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;1 KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;16 MHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;p&gt;Tools -&amp;gt; Arduino/Genuine Arduino&lt;/p&gt;
+&lt;p&gt;port oon OSX will lock something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/dev/cu.usbmodem1461&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;test-code&#34;&gt;Test code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;int command;
+int port;
+
+int pin_from = 5;
+int pin_to = 13;
+
+void Light(int pin){
+  digitalWrite(pin,HIGH);
+  delay(500);
+  digitalWrite(pin,LOW);
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+ command=Serial.read();
+  if(command==&#39;a&#39;) {
+    int i;
+    for (i = pin_from; i &amp;lt;= pin_to; i++){
+      Light(i);
+      Serial.print(&amp;quot;Led &amp;quot;);
+      Serial.println(i);
+      delay(100);
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;kit-list&#34;&gt;Kit List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&#34;&gt;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/easyplugkit.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Part&lt;/th&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug controller Board&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Acrylic Board + Copper bush set&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug cable&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB cable&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Piranha LED Module&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Line Tracking Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Infrared obstacle avoidance sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Photo Interrupter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug PIR Motion Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS18B20 Temperature Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Receiver Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Transmitter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Single Relay Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug ADXL345 Three Axis Acceleration Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DHT11 Temperature and Humidity Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS3231 Clock Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Gas Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Alcohol Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug MQ135 Air Quality Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug BMP180 Barometric Pressure Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Bluetooth Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug 1602 I2C Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug I2C 8x8 LED Matrix&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;command-language&#34;&gt;Command Language&lt;/h2&gt;
+&lt;p&gt;on PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches PORT on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches port off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;on all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goes serially through ports and switches them on and off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;String command;
+
+
+int pin_from = 5;
+int pin_to = 13;
+
+String getValue(String data, char separator, int index)
+{
+  // copied from internet
+    int found = 0;
+    int strIndex[] = { 0, -1 };
+    int maxIndex = data.length() - 1;
+
+    for (int i = 0; i &amp;lt;= maxIndex &amp;amp;&amp;amp; found &amp;lt;= index; i++) {
+        if (data.charAt(i) == separator || i == maxIndex) {
+            found++;
+            strIndex[0] = strIndex[1] + 1;
+            strIndex[1] = (i == maxIndex) ? i+1 : i;
+        }
+    }
+    return found &amp;gt; index ? data.substring(strIndex[0], strIndex[1]) : &amp;quot;&amp;quot;;
+}
+
+void Light(int pin, int action){
+  if (action ==  1) {
+    digitalWrite(pin,HIGH);
+  } else {
+    digitalWrite(pin,LOW);
+  }
+}
+
+void wait_for_input() {
+  while (Serial.available()==0) { }
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+
+  Serial.print(&amp;quot;command:&amp;quot;);
+  wait_for_input();
+  command=Serial.readString();
+  Serial.println (command);
+
+   if (command==&amp;quot;dance&amp;quot;) {
+      for (int i = pin_from; i &amp;lt;= pin_to; i++) {
+        Light(i,1);
+        delay(100);
+        Light(i,0);
+        Serial.print(&amp;quot;Led &amp;quot;);
+        Serial.println(i);
+        delay(100);
+      }
+    } else {
+
+      int action;
+      String action_name = getValue(command, &#39; &#39;, 0);
+      String port_name = getValue(command, &#39; &#39;, 1);
+
+      action = action_name == &amp;quot;on&amp;quot;;
+
+      if (port_name == &amp;quot;all&amp;quot;) {
+        for (int i = pin_from; i &amp;lt;= pin_to; i++){
+          Light(i,action);
+          Serial.print(&amp;quot;Led &amp;quot;);
+          Serial.println(i);
+        }
+      } else {
+        int port = port_name.toInt();
+
+        Serial.println(action);
+        Serial.println(port);
+        Light(port, action);
+     }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: ESP8266</title>
+      <link>/docs/old/iot/esp8266/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/esp8266/</guid>
+      <description>
+        
+        
+        &lt;p&gt;When working with a external hardware such as the NodeMCU you will find
+a lot of information on the internet about it. It is a bit difficult at
+times to assess what you need to program it. You are exposed to many
+choices. A NodeMCU typically comes with Lua. However you have many other
+choices. Such choices include multiple programming languages such as
+Lua, MicroPython, Arduino/C, Go and others.&lt;/p&gt;
+&lt;p&gt;As all of them are slightly different you need to identify which works
+best for you. In addition you need to install images, programs and
+libraries that support your specific language choice.&lt;/p&gt;
+&lt;p&gt;For our first experiments we will be using MicroPython. This choice is
+motivated by the fact that Python is a well established and easy to
+learn programming language. Recently many educational institutions are
+offering Python as an introductory programming language making this
+choice even mor compelling&lt;/p&gt;
+&lt;p&gt;To simplify the setup and use of the esp8266 for MicroPython we
+developed an easy to use commandline tool that allows users to set up
+their computer and interact more easily with the board. We believe that
+the interface is so simple that it can also be used in STEM activities
+and not just in the university or by advanced hobbyists.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;In this section we discuss the various ways on how to set up the esp8266
+&lt;code&gt;cloudmesh.robot&lt;/code&gt; development environment. You have several options to
+install it.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Option A: OSX with scripts hosted on github (recommended)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Option B: OSX from source&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Option C: Explore your own&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;While we provide here a detailed option for OSX, you are free to explore
+other operating systems. We know that it can for example be installed on
+Ubuntu 16.04. We have not tested any of this on a Windows machine.&lt;/p&gt;
+&lt;p&gt;We like to get feedback and Installation instructions.&lt;/p&gt;
+&lt;h2 id=&#34;option-a-osx-install-from-a-script&#34;&gt;Option A: OSX install from a Script&lt;/h2&gt;
+&lt;p&gt;For OSX we have created two scripts that you will need&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://cloudmesh.github.io/get/robot/osx/system/&#34;&gt;system.sh&lt;/a&gt;, that
+installs pip, ansible, homebrew, xcode, virtualenv, readline, wget,
+lua, picocom, mosquito, aquamacs, pycharm, numpy, matplotlib,
+libusb, USB drivers for selkected esp8266 (ch34x chip)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://cloudmesh.github.io/get/robot/osx/user&#34;&gt;user.sh&lt;/a&gt;, that
+installs matplotlib, virtualenv, and the cloudmesh source in
+~/github&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We recommend that you review these scripts carefully before you use them
+and check if they fit your needs. If they do not, please just download t
+hem and adapt them to your needs. The &lt;strong&gt;system&lt;/strong&gt; script must be ran on
+an &lt;strong&gt;Administrator&lt;/strong&gt; account as it requires sudo privileges. The
+&lt;strong&gt;user&lt;/strong&gt; script must be ran on a &lt;strong&gt;User&lt;/strong&gt; account. We do not recommend
+to run the IoT software in an administrative account due to security
+best practices. To execute the &lt;strong&gt;system&lt;/strong&gt; script, type in the
+&lt;em&gt;Administrator account&lt;/em&gt; terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -fsSL http://cloudmesh.github.io/get/robot/osx/system &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As earlier versions of pip may have some issues, this script will also
+update pip and setuptools to a newer version&lt;/p&gt;
+&lt;p&gt;To execute the &lt;strong&gt;user&lt;/strong&gt; script, type in the User account terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -fsSL http://cloudmesh.github.io/get/robot/osx/user &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Together these scripts allow you to install in a simple way development
+tools for our IoT activities.&lt;/p&gt;
+&lt;p&gt;The following steps are to be executed in the user environment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: &lt;em&gt;the scripts do not update pip and setuptools, which may be
+required due to a bug in setuptools prior to version 34 for setuptools.
+You may have to repeat the update on any pyenv environment that you use.
+How to do thi sis documented in a later section.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To simplify use, we recommend that you make the following additions to
+your &lt;code&gt;~/.bash_profile&lt;/code&gt; file so that python 3 is automatically activated,
+but does not interfere with the system installed python. Use the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emacs ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or your favourite editor to edit the file and add the following lines at
+the end.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#######################################################################&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# PYENV&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;######################################################################&lt;/span&gt;
+open_emacs&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# open -na Aquamacs $*&lt;/span&gt;
+    open -a Aquamacs &lt;span style=&#34;color:#000&#34;&gt;$*&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#204a87&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;e&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;open_emacs
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;########################################################&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# PYENV&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;########################################################&lt;/span&gt;
+&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;PYENV_VIRTUALENV_DISABLE_PROMPT&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;
+&lt;span style=&#34;color:#204a87&#34;&gt;eval&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;pyenv init -&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87&#34;&gt;eval&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;pyenv virtualenv-init -&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;
+__pyenv_version_ps1&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87&#34;&gt;local&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ret&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$?&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;output&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;pyenv version-name&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[[&lt;/span&gt; ! -z &lt;span style=&#34;color:#000&#34;&gt;$output&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;then&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; -n &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$output&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;)&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fi&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$ret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;PS1&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;\$(__pyenv_version_ps1) &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PS1&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ENV3&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;pyenv activate ENV3&amp;#34;&lt;/span&gt;
+ENV3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once you start a new terminal you can edit files via aquamacs by typing&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ e FILENAME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where FILENAME is the name of the file you like to edit. However the
+file must exists, which you can simply do with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;touch FILENAME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add the following lines at the end of the file&lt;/p&gt;
+&lt;p&gt;To learn more about how to you automate the setup of an OSX machine, you
+may be inspired by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ricbra/dotfiles/blob/master/bin/setup_osx&#34;&gt;https://github.com/ricbra/dotfiles/blob/master/bin/setup_osx&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.vandenbrand.org/2016/01/04/how-to-automate-your-mac-os-x-setup-with-ansible&#34;&gt;https://blog.vandenbrand.org/2016/01/04/how-to-automate-your-mac-os-x-setup-with-ansible&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setting-up-git&#34;&gt;Setting Up Git&lt;/h3&gt;
+&lt;p&gt;Sooner or later you will be using git. We recommend that you set your
+identity on all computers that you will be using. To do this adapt the
+following example according to your github.com identity that you have.
+IF you do not, its time to greater one at github.com and follow the
+directions.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git config --global user.name &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Gregor von Laszewski&amp;#34;&lt;/span&gt;
+$ git config --global user.email laszewski@gmail.com
+$ git config --global core.editor emacs
+$ git config --global push.default matching
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;option-b-setup-from-pip&#34;&gt;Option B: setup from pip&lt;/h2&gt;
+&lt;p&gt;We have removed the pip setup instructions as they do not include
+installing the drivers.&lt;/p&gt;
+&lt;h2 id=&#34;option-b-install-cloudmesh-robot-from-source&#34;&gt;Option B: Install Cloudmesh Robot from source&lt;/h2&gt;
+&lt;p&gt;Developers that already have a development environment (e.g. xcode is
+installed) can install cloudmesh robot also from the terminal while
+downloading the source. You will need to first obtain the source and
+compile it with the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir github
+$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; github
+$ git clone https://github.com/cloudmesh/cloudmesh.common.git
+$ git clone https://github.com/cloudmesh/cloudmesh.cmd5.git
+$ git clone https://github.com/cloudmesh/cloudmesh.robot.git
+$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; cloudmesh.robot
+$ make &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To test out if the command has been installed, type&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot welcome
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If everything works you should see an ASCII image of R2D2 and C3PO.
+Next, we still have to install some additional programs before you can
+use other commands.&lt;/p&gt;
+&lt;p&gt;Once you have installed cloudmesh robots you well be able to install a
+number of tools automatically with the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot osx install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will install services and tools including xcode, homebrew, macdown,
+pycharm, and aquamacs. If you have some these tools already installed
+it will skip the Installation process for a particular tool. Please note
+that some of the tools require root access and thus you must be able to
+have access to sudo to run them from our tool. In addition you will need
+to install the OSX driver for the USB interface to the esp8266. This is
+achieved with (only to be done if you follow the install from source
+option)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot osx driver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now please change your account to be again a standard account.&lt;/p&gt;
+&lt;p&gt;Now you &lt;strong&gt;MUST REBOOT&lt;/strong&gt; the machine. Without rebooting you will not be
+able to use the USB drivers.&lt;/p&gt;
+&lt;h2 id=&#34;option-c-a-possible-setup-for-linux&#34;&gt;Option C: A possible setup for Linux&lt;/h2&gt;
+&lt;p&gt;On a linux computer we recommend that you install emacs, cmake and
+configure your git. Replace the user name and e-mail with the once that
+you used to register your account in git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir github
+$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; github
+$ git clone https://github.com/cloudmesh/cloudmesh.robot.git
+$ ssh-keygen
+$ sudo apt-get install -y emacs
+$ sudo apt-get install -y cmake
+$ sudo apt-get install -y libqt4-dev
+$ git config --global user.name &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Gregor von Laszewski&amp;#34;&lt;/span&gt;
+$ git config --global user.email laszewski@gmail.com
+$ git config --global core.editor emacs
+$ git config --global push.default matching
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This setup is highly incomplete and does not include the setup of the
+USB drivers. Please help us completing the documentation.&lt;/p&gt;
+&lt;h3 id=&#34;option-c-a-possible-setup-for-windows&#34;&gt;Option C: A possible setup for Windows&lt;/h3&gt;
+&lt;p&gt;We do not have tried to set this up on Windows or a virtualbox running
+Linux under windows. If you have tried it, please let us know. If you
+have difficulties just use a raspberry PI and skip the IoT projects&lt;/p&gt;
+&lt;h3 id=&#34;option-c-installation-of-the-cloudmeshrobot-interface-via-pip&#34;&gt;Option C: Installation of the cloudmesh.robot Interface via Pip&lt;/h3&gt;
+&lt;p&gt;.. warning:: this option does not include installing the USB drivers.
+You have to install them first. See examples on how to do that in our
+install scripts. Generally what we do in our user.sh script is the same
+way, but also includes the setup of python 3.6.1.&lt;/p&gt;
+&lt;p&gt;To more easily interface with the robot we have developed a convenient
+program that is installed as part of a command tool called cloudmesh.&lt;/p&gt;
+&lt;h3 id=&#34;install-cloudmesh-robot-with-pip-not-working&#34;&gt;Install Cloudmesh Robot with Pip (not working)&lt;/h3&gt;
+&lt;p&gt;Note that pip may not include the newest version of cloudmesh.robot and
+we recommend you use the source install instead.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pip install cloudmesh.robot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will install a program &lt;code&gt;cms&lt;/code&gt; on your computer that allows you to
+easily communicate with the robot.&lt;/p&gt;
+&lt;h2 id=&#34;using-cloudmesh-robot&#34;&gt;Using cloudmesh robot&lt;/h2&gt;
+&lt;p&gt;Once you have successfully installed the drivers and the commands you
+can look at the manual page of the robot command with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot &lt;span style=&#34;color:#204a87&#34;&gt;help&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You will see a manual page like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Usage:
+   robot welcome
+   robot osx install
+   robot osx driver
+   robot image fetch
+   robot probe [--format=FORMAT]
+   robot flash erase [--dryrun]
+   robot flash python [--dryrun]
+   robot test
+   robot run PROGRAM
+   robot credentials set SSID USERNAME PASSWORD
+   robot credentials put
+   robot credentials list
+   robot login
+   robot set PORT NOT IMPLEMENTED
+   robot ls [PATH]
+   robot put [-o] SOURCE [DESTINATION]
+   robot get PATH
+   robot rm PATH
+   robot rmdir PATH
+   robot dance FILE IPS
+   robot inventory list [--cat] [--path=PATH] [ID]
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;testing-the-board&#34;&gt;Testing the board&lt;/h3&gt;
+&lt;p&gt;Before you can use you ESP8266, you must have the appropriate drivers
+installed on your computer. Click on &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh.robot/blob/7859b395fd15e4d6ced679b05893c9a91957c956/documentation/source/espdrivers.md&#34;&gt;this
+link&lt;/a&gt;
+and follow the instructions on how to install these drivers.&lt;/p&gt;
+&lt;p&gt;Next is to connect a esp8266 with a USB cable to the computer. The
+ESP8266 should look similar to this.&lt;/p&gt;
+&lt;p&gt;After you connected it, press the reset button. Before doing anything on
+the board, we must test it. Once you have plugged it in, execute the
+following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot probe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command takes about ten seconds to execute. The ESP8266&amp;rsquo;s led
+should flash irregularly as it is probed. When the probe is finished, an
+image similar to the following should appear in your terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    +-----------+---------------------------+
+    | Attribute | Value                     |
+    +-----------+---------------------------+
+    | chipid    | b&#39; 0x00d0f9ec&#39;            |
+    | mac       | b&#39; 00:10:FA:6E:38:4A&#39;     |
+    | tty       | /dev/tty.wchusbserial1410 |
+    +-----------+---------------------------+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please note that you should only have one board attached to your
+computer.&lt;/p&gt;
+&lt;h4 id=&#34;flashing-the-image-onto-the-robot-board&#34;&gt;Flashing the image onto the robot board&lt;/h4&gt;
+&lt;p&gt;Next we need to flash the image on the robot board. Naturally we need to
+fetch the image first from the internet. We do this with the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot image fetch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will fetch an image that contains MicroPython into your local
+directory.&lt;/p&gt;
+&lt;p&gt;Next we need to &lt;em&gt;flash&lt;/em&gt; the image on the board.&lt;/p&gt;
+&lt;p&gt;Before you begin, make sure that the ESP8266 is connected to your
+computer. The board may come with a pre-installed image such as Lua or
+some custom image from the vendor. In order to write programs in python,
+we need to the chips to run micropython. To get micropython on our
+ESP8266&amp;rsquo;s, a number of steps are required.&lt;/p&gt;
+&lt;h4 id=&#34;erase-the-chip&#34;&gt;Erase the chip&lt;/h4&gt;
+&lt;p&gt;First we need to erase the chip.&lt;/p&gt;
+&lt;p&gt;Run the following command in your terminal terminal, and then &lt;strong&gt;stop.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot flash erase
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your terminal should respond with the following query:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/dev/tty.SLAB_USBtoUART
+Please press the right buttons
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;continue&lt;/span&gt;? &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;Y/n&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Before taking any further steps, press both buttons on the ESP8266 at
+the same time. Once you have done this, type &lt;code&gt;Y&lt;/code&gt; and press &lt;code&gt;enter&lt;/code&gt;. The
+process should take under ten seconds to complete.&lt;/p&gt;
+&lt;h4 id=&#34;putting-python-on-the-chip&#34;&gt;Putting Python on the chip&lt;/h4&gt;
+&lt;p&gt;Before proceeding, you must once again press both of the buttons on the
+ESP8266. Once this is done, you are ready to flash the chip with python
+with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot flash python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;testing-if-it-works&#34;&gt;Testing if it works&lt;/h4&gt;
+&lt;p&gt;To test running a python program execute&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot &lt;span style=&#34;color:#204a87&#34;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Be careful as it overwrites the file &lt;code&gt;test.py&lt;/code&gt;. If the ESP8266 is set up
+properly, it should return this in your terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Count to 3
+1
+2
+3
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;execute-an-arbitrary-program&#34;&gt;Execute an arbitrary program&lt;/h4&gt;
+&lt;p&gt;Lets assume you have placed a program in the file &lt;code&gt;prg.py&lt;/code&gt; with the
+command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot put prg.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You must reboot the ESP8266 before using a new program. This can be done
+manually by pressing the reset button on the chip, or in terminal with
+the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot reset
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the chip is reset, you can run &lt;code&gt;prg.py&lt;/code&gt; with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot run prg.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;interactive-python-shell-on-the-board&#34;&gt;Interactive Python shell on the board&lt;/h4&gt;
+&lt;p&gt;To get into the interactive python shell on the board you need to reset
+the ESP8266 and run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;cleaning-an-reinstalling-a-development-version&#34;&gt;Cleaning an reinstalling a development version&lt;/h4&gt;
+&lt;p&gt;IN case you are a developer and you need to modify the source code, we
+found that it is sometimes necessary to clean your development directory
+and libraries. The easiest way to do this is to go to the repository
+that you like to reinstall. Let us assume it is &lt;em&gt;cloudmesh.robot&lt;/em&gt;. Than
+the following commands will clean the repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; cloudmesh.robot
+$ pip uninstall cloudmesh.robot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Do the pip uninstall as many times till you see an error that no more
+cloudmesh.robot versions can be found. Than execute&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ make clean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After this you can reinstall it with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python setup.py install&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt; pip install -e .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;the -e flag is optional, but allows you to change the code without the
+need of recompiling. A very useful feature in python.&lt;/p&gt;
+&lt;h4 id=&#34;nodemcu-esp12-dev-kit-pin-definition&#34;&gt;NodeMCU ESP12 Dev Kit Pin Definition&lt;/h4&gt;
+&lt;p&gt;For V1.0&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/nodemcu.png&#34; alt=&#34;nodemcu&#34;&gt;{width=&amp;quot;50%&amp;quot;}&lt;/p&gt;
+&lt;p&gt;The GPIO numbers of teh NodeMCU, do not correspond with the actual
+numbers used in micropython&amp;rsquo;s pin library. The numbers are as follows:&lt;/p&gt;
+&lt;p&gt;Pin/GPIO   NodeMCU&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;15         D8&lt;/p&gt;
+&lt;h4 id=&#34;led&#34;&gt;LED&lt;/h4&gt;
+&lt;h5 id=&#34;program&#34;&gt;Program&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;15&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;OUT&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;high&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;low&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;15&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;OUT&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#3465a4&#34;&gt;True&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;high&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sleep&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;low&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sleep&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#a40000&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;schema&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;images&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;esp8266_bb&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;png&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;){&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#a40000&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;schema&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;images&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;led&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;esp8266_schem&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;png&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;){&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##### Real Time Clock&lt;/span&gt;
+
+&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;library&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;urtc&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;py&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#4e9a06&#34;&gt;``&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;bash&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;https&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;raw&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;githubusercontent&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;adafruit&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Adafruit&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;uRTC&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;master&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;urtc&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Place it on the esp8266&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot put urtc.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Connect the board the following pins&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SDA to pin 5 = D1
+SCL to pin 4 = D2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Login to the board&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Execute the following code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;i2c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;I2C&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sda&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;scl&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;machine&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Pin&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;i2c&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;scan&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;87&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;104&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;urtc&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DS3231&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;t&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DS3231&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i2c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;t&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;datetime&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;               &lt;span style=&#34;color:#000&#34;&gt;DateTimeTuple&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;year&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;month&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;day&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;                                                &lt;span style=&#34;color:#000&#34;&gt;weekday&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;hour&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;minute&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;15&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;                                                &lt;span style=&#34;color:#000&#34;&gt;second&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;53&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;millisecond&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#3465a4&#34;&gt;None&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Assignment: Create an object oriented class and fill out the details
+while using code from &lt;code&gt;urtc.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Clock&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;object&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sda&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;scl&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;pass&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;pass&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;__str__&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;pass&lt;/span&gt;
+
+&lt;span style=&#34;color:#000&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Clock&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ https://github.com/adafruit/Adafruit-uRTC/blob/master/urtc.py
+$ git clone https://github.com/adafruit/Adafruit-uRTC.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;alternative-boards&#34;&gt;Alternative boards&lt;/h3&gt;
+&lt;h4 id=&#34;huzzah-feather-esp8266&#34;&gt;HUZZAH Feather esp8266&lt;/h4&gt;
+&lt;p&gt;Many different 8266 based alternative boards exist. One of these boards
+is the HUZZAH Feather. IT behaves the same as the other boards, but ay
+be using different drivers and USB ports. The &lt;em&gt;cms robot&lt;/em&gt; command line
+tool is clever enough to identify automatically if it is attached and
+uses the appropriate settings. More documentation about this board can
+be found at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/using-nodemcu-lua&#34;&gt;doc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This site has also many other examples and you can search for them with
+keywords such as feather, esp8266, micropython.&lt;/p&gt;
+&lt;p&gt;An example on how to use the LED on the &lt;em&gt;feather&lt;/em&gt; is documented at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.adafruit.com/micropython-basics-blink-a-led/blink-led&#34;&gt;Feather HUZZAH
+ESP8266&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To place micropython on the feather you can plug in the to the usb port.
+The good thing about this board is that you do not need to press any
+buttons as it detects the upload nicely. If not make sure to reset it or
+for flashing press both buttons. You can do the following:&lt;/p&gt;
+&lt;p&gt;Probe the board with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot probe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Erasing the feather is simple as it has a build in mechanism to detect if
+it is going to be erased. Hence no reset button needs to be pressed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot flash erase
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Get the python image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot fetch python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Flashing is conducted with 460800 baud, it will take about 15 seconds.
+After flashing you should try to login:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cms robot login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Set the boudrate to 115200:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    CTRL-A CTRL-B&amp;gt;
+
+    *** baud:
+    ```
+
+type in:
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;115200 &amp;lt;ENTER&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Make sure that echo is switched to OFF:
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;CTRL-A CTRL-C
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;toggles it. Now you should see:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Try typing in:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    print(&amp;quot;Hello&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;appendix&#34;&gt;Appendix&lt;/h3&gt;
+&lt;h3 id=&#34;installing-esp8266-usb-drivers&#34;&gt;Installing ESP8266 USB drivers&lt;/h3&gt;
+&lt;p&gt;We provide here a section to explain which drivers we have tested on
+various esp8266. Please note that if you have different versions you may
+need different drivers. On OSX we found that we get good results with
+the following commands&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ brew tap mengbo/ch340g-ch34g-ch34x-mac-os-x-driver https://github.com/mengbo/ch340g-ch34g-ch34x-mac-os-x-driver
+$ brew cask install wch-ch34x-usb-serial-driver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start a new terminal after the driver has finished installing.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget http://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip
+$ unzip Mac_OSX_VCP_Driver.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Click on the driver install file contained inside the zip file and the
+driver should start installing. Once the driver has finished installing,
+make sure to start a new terminal.&lt;/p&gt;
+&lt;p&gt;Please remember that you need to close all terminals, as well as reboot
+the computer to use the drivers. They will typically not work if you
+have not rebooted.&lt;/p&gt;
+&lt;p&gt;For other boards that also use the CH340G chip the following page may
+help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kig.re/2014/12/31/how-to-use-arduino-nano-mini-pro-with-CH340G-on-mac-osx-yosemite.html&#34;&gt;http://kig.re/2014/12/31/how-to-use-arduino-nano-mini-pro-with-CH340G-on-mac-osx-yosemite.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: GrovePi Modules</title>
+      <link>/docs/old/iot/grovepi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/grovepi/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.instructables.com/id/Basic-Electronics&#34;&gt;Electronics&lt;/a&gt;: An
+introduction to the basic principals of electronics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law&#34;&gt;Voltage&lt;/a&gt;:
+An introduction to the physics of electricity.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://info-ee.eps.surrey.ac.uk/Teaching/Unix/index.html&#34;&gt;Unix&lt;/a&gt;:
+An introduction to the Unix os.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi/tree/master/Software/Python&#34;&gt;grove
+examples&lt;/a&gt;:
+A list of Dexter Industries example code for GrovePi modules.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/tree/master/cloudmesh/pi&#34;&gt;GrovePi module
+classes&lt;/a&gt;:
+A repository for the GrovePi module classes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;led&#34;&gt;LED&lt;/h2&gt;
+&lt;p&gt;An LED is the simplest possible module for a raspberry pi, as it is
+responsive only to the provided power. For an LED to emit light, it must
+be exposed to a voltage greater than a certain threshold value. Above
+this voltage, the conductivity of the diode increases exponentially and
+its brightness increases likewise. If the current through the LED
+becomes too high, the LED will burn out. The following link leads to a
+tutorial from Dexter Industries for the LED module.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dexterindustries.com/GrovePi/projects-for-the-raspberry-pi/raspberry-pi-led-tutorial/&#34;&gt;Dexter LED
+tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Connect the LED to a digital port (see @fig:grove-led). The following code describes an LED
+class. Since it is connected to a digital output, the voltage has only
+two states, on and off. The default port for the LED class is D3. The
+code for the &lt;code&gt;LED&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/led.py&#34;&gt;LED
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/led.jpg&#34; alt=&#34;LED&#34;&gt;{#fig:grove-led}&lt;/p&gt;
+&lt;h2 id=&#34;buzzer&#34;&gt;Buzzer&lt;/h2&gt;
+&lt;p&gt;The buzzer is shown in @fig:grove-buzzer.  Connect the buzzer to a
+digital port. The default port for the Buzzer class is D3. You will
+notice that the Buzzer class and the LED class are
+interchangeable. This is because they work on the same digital
+principal. Their two values are on and off. The code for the &lt;code&gt;Buzzer&lt;/code&gt;
+class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/buzzer.py&#34;&gt;Buzzer
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/buzzer.jpg&#34; alt=&#34;Buzzer&#34;&gt;{#fig:grove-buzzer}&lt;/p&gt;
+&lt;h2 id=&#34;relay&#34;&gt;Relay&lt;/h2&gt;
+&lt;p&gt;The relay is shown in @fig:grove-relay.  The relay acts as a switch
+in a circuit. When the value on the relay is 1, it allows current to
+flow through it. When the value is 0, the relay breaks the circuit and
+the current stops. Connect the relay to a digital port. The default
+digital port is D4. The &lt;code&gt;Relay&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/relay.py&#34;&gt;Relay
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/relay.jpg&#34; alt=&#34;Relay&#34;&gt;{#fig:grove-relay}&lt;/p&gt;
+&lt;h2 id=&#34;light-sensor&#34;&gt;Light Sensor&lt;/h2&gt;
+&lt;p&gt;The light sensor is shown in @fig:grove-light-sensor.  The light
+sensor measures light intensity and returns a value between 0
+and 1023. Connect the light sensor to an analog port. The default port
+is A0. The analog port allows the light sensor to return a range of
+values. The &lt;code&gt;LightSensor&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/light.py&#34;&gt;LightSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/light.jpg&#34; alt=&#34;Light Sensor&#34;&gt;{#fig:grove-light-sensor}&lt;/p&gt;
+&lt;h2 id=&#34;rotary-angle-sensor&#34;&gt;Rotary Angle Sensor&lt;/h2&gt;
+&lt;p&gt;The rotary angle sensor is shown in @fig:grove-rotary-angle-sensor.
+The rotary angle sensor measures the angle to which it is turned.
+Connect the sensor to an analog port. Port A0 is the default. The
+&lt;code&gt;RotarySensor&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/rotary.py&#34;&gt;RotarySensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/rotary.jpg&#34; alt=&#34;Rotary Angle Sensor&#34;&gt;{#fig:grove-rotary-angle-sensor}&lt;/p&gt;
+&lt;h2 id=&#34;barometer&#34;&gt;Barometer&lt;/h2&gt;
+&lt;p&gt;The barometer is shown in @fig:grove-barometer.  Connect the
+barometer to an I2C port. In addition to pressure, the GrovePi
+barometer measures temperature in Fahrenheit and Celsius. The
+&lt;code&gt;Barometer&lt;/code&gt; class can be found here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/barometer.py&#34;&gt;Barometer
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/barometer.jpg&#34; alt=&#34;Barometer&#34;&gt;{#fig:grove-barometer}&lt;/p&gt;
+&lt;h2 id=&#34;distance-sensor&#34;&gt;Distance Sensor&lt;/h2&gt;
+&lt;p&gt;The distance sensor is shown in @fig:grove-distance-sensor.  Connect
+the distance sensor to a digital port. The grovepi module has a
+built-in function to read the distance from the distance sensor, but
+it is improperly calibrated, so this DistanceSensor class has a
+calibration based on experimental data. The &lt;code&gt;DistanceSensor&lt;/code&gt; class can
+be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/distance.py&#34;&gt;DistanceSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/distance.jpg&#34; alt=&#34;Distance Sensor&#34;&gt;{#fig:grove-distance-sensor}&lt;/p&gt;
+&lt;h2 id=&#34;temperature-sensor&#34;&gt;Temperature Sensor&lt;/h2&gt;
+&lt;p&gt;The temperature sensor is shown in @fig:grove-temperature-sensor.
+The temperature sensor measures both temperature and humidity. Connect
+the temperature sensor to a digital port. D7 is the default port. The
+&lt;code&gt;TemperatureSensor&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/temperature.py&#34;&gt;TemperatureSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/temperature.jpg&#34; alt=&#34;Temperature Sensor&#34;&gt;{#fig:grove-temperature-sensor}&lt;/p&gt;
+&lt;h2 id=&#34;heartbeat-sensor&#34;&gt;Heartbeat Sensor&lt;/h2&gt;
+&lt;p&gt;the heartbeat sensor is shown in @fig:grove-heartbeat.  Connect the
+heartbeat sensor to an I2C port. The heartbeat sensor returns the
+heart rate of the wearer. The &lt;code&gt;HeartbeatSensor&lt;/code&gt; class can be found
+here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/heartbeat.py&#34;&gt;HeartbeatSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/heartbeat.jpg&#34; alt=&#34;Heartbeat Sensor&#34;&gt;{#fig:grove-heartbeat}&lt;/p&gt;
+&lt;h2 id=&#34;joystick&#34;&gt;Joystick&lt;/h2&gt;
+&lt;p&gt;The joystick is shown in @fig:grove-joystick.  Connect the joystick
+to an analog port. A0 is the default port. The joystick has an x, y,
+and click status based on the current state of the module. The
+&lt;code&gt;Joystick&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/joystick.py&#34;&gt;Joystick
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/joystick.jpg&#34; alt=&#34;Joystick&#34;&gt;{#fig:grove-joystick}&lt;/p&gt;
+&lt;h2 id=&#34;lcd-screen&#34;&gt;LCD Screen&lt;/h2&gt;
+&lt;p&gt;The LCD screen is shown in @fig:grove-lcd.  The LCD screen can be
+used to display text and colors. In order to use it, plug it into one
+of the I2C ports. The &lt;code&gt;LCD&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/lcd.py&#34;&gt;LCD
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/lcd.jpg&#34; alt=&#34;LCD Screen&#34;&gt;{#fig:grove-lcd}&lt;/p&gt;
+&lt;h2 id=&#34;moisture-sensor&#34;&gt;Moisture Sensor&lt;/h2&gt;
+&lt;p&gt;The moisture sensor is shown in @fig:grove-moisture-sensor.  Connect
+the moisture sensor to an analog port. The default port is A0.  The
+&lt;code&gt;MoistureSensor&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/moisture.py&#34;&gt;MoistureSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/moisture.jpg&#34; alt=&#34;Moisture Sensor&#34;&gt;{#fig:grove-moisture-sensor}&lt;/p&gt;
+&lt;p&gt;An example of the implementation of the moisture sensor from Dexter
+Industries can be found
+&lt;a href=&#34;https://github.com/DexterInd/GrovePi/blob/master/Projects/plant_monitor/plant_project.py&#34;&gt;here&lt;/a&gt;.
+The program is meant to measure the environmental conditions that affect
+plant growth.&lt;/p&gt;
+&lt;h2 id=&#34;water-sensor&#34;&gt;Water Sensor&lt;/h2&gt;
+&lt;p&gt;The water sensor is shown in @fig:grove-water-sensor.  The water
+sensor measures the amount of water in the environment of the
+sensor. Connect the sensor to a digital point. D2 is the default port.
+The &lt;code&gt;WaterSensor&lt;/code&gt; class can be found here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/blob/master/cloudmesh/pi/water.py&#34;&gt;WaterSensor
+Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;images/water.jpg&#34; alt=&#34;Water Sensor&#34;&gt;{#fig:grove-water-sensor}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Hardware for IoT Projects</title>
+      <link>/docs/old/iot/hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/hardware/</guid>
+      <description>
+        
+        
+        &lt;p&gt;When teaching programming you may find yourself in a situation that
+things can be done on your computer, but you may not want to install
+programs that help you to learn programming on your computer. However,
+we have a solution (or several) for you. We will have some fun with
+hardware for IoT that at the same time can be used to teach you some
+very elementary skills in programming. However, if you would rather use
+your computer you certainly can do this too.&lt;/p&gt;
+&lt;p&gt;We see the following arguments for using IoT hardware:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You will have fun with inexpensive hardware&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will get hands on experience with IOT devices&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will learn how to program in python&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can keep your current computer unchanged&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will get experience with two platforms esp8266 and Raspberry PI
+3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can customise your choices by conducting some fun projects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You have the opportunity to find alternative hardware choices such
+as the WiPy or the ESP32. You may find cheaper or better
+alternatives if you buy kits when they are available. And learn in
+getting an overview about such devices and kits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; Ordering from overseas suppliers may take significant time, so
+make sure to plan ahead. Prices given here are done to provide an
+estimate, they may vary.&lt;/p&gt;
+&lt;h2 id=&#34;raspberry-pi-3&#34;&gt;Raspberry Pi 3&lt;/h2&gt;
+&lt;p&gt;The raspberry PI 3 is a very good development platform. With its base
+price of $35 it is quite a bargain. You will need some additional
+components to make sure you can use it. Please be reminded to never
+connect or power the raspberry with your computers USB port. It draws
+some significant amperage and we do not want you to destroy your
+computer. We recommend that you buy a certified power adapter. The price
+is so cheap that you could even create your own mini cluster as a
+project. We do not recommend any older versions of Raspberry as they are
+less powerful and do not contain built-in Bluetooth or WiFi.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Configuration:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$37.50 &lt;a href=&#34;https://www.amazon.com/Raspberry-Model-A1-2GHz-64-bit-quad-core/dp/B01CD5VC92/ref=sr_1_1?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1499251061&amp;amp;sr=1-1&amp;amp;keywords=raspberry+pi+3&#34;&gt;Pi
+3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$7.69
+&lt;a href=&#34;https://www.amazon.com/Eleduino-Raspberry-Model-Acrylic-Enclosure/dp/B01CQRROLW/ref=sr_1_7?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251106&amp;amp;sr=1-7&amp;amp;keywords=raspberry+pi+3+case&#34;&gt;Case&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$7.99 &lt;a href=&#34;https://www.amazon.com/Enokay-Supply-Raspberry-Charger-Adapter/dp/B01MZX466R/ref=sr_1_3?ie=UTF8&amp;amp;qid=1498443576&amp;amp;sr=8-3&amp;amp;keywords=raspberry+pi+power+adapter+micro+usb+switch&#34;&gt;Power
+Adapter&lt;/a&gt;
+This is an aftermarket power adapter. Lots uof us use this one.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$6.99 &lt;a href=&#34;https://www.amazon.com/AmazonBasics-High-Speed-HDMI-Cable-Standard/dp/B014I8SSD0/ref=sr_1_3?ie=UTF8&amp;amp;qid=1499253502&amp;amp;sr=8-3&amp;amp;keywords=hdmi+cable&#34;&gt;HDMI
+cable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monitor/TV with hdmi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SD Card, 8GB minimum, 32GB maximum&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Advantages:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Full Linux like OS based on debian&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Good environment for learning Linux and Python&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reasonable interfaces to IoT sensors&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;excellent camera support&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;excellent choice of expansion packages including Grove Sensors that
+make it easy to attach sensors and actuators. An example package is
+the &lt;a href=&#34;https://www.amazon.com/GrovePi-Starter-Kit-Dexter-Industries/dp/B00TXTZ5SQ/ref=pd_lpo_vtph_147_bs_tr_img_1?_encoding=UTF8&amp;amp;psc=1&amp;amp;refRID=45QX6XSNZAG1NT8NES79&#34;&gt;Grove Starter
+Kit&lt;/a&gt;
+for about $90&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Disadvantages:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We tried the Windows IoT package and were not impressed by it. This
+is not an issue of the Raspberry, but the Windows IoT platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esp8266-robot-car-kit&#34;&gt;ESP8266 Robot Car Kit&lt;/h2&gt;
+&lt;p&gt;The ESP8266 has many variants. Some of which are difficult to interface
+with. However, this does not apply for the ESP8266 NodeMCU. This board
+is originally flashed with &lt;em&gt;Lua&lt;/em&gt;, however it can easily be reflashed
+with MicroPython. In addition it is often offered as part of a platform
+to develop a robot car. There are arguably better kits available, but
+the price of $24 for the entire kit is hard to beat. Unfortunately the
+version of python, as well as the limited memory make the esp8266 not a
+full fledged platform for python programming and you will quickly see
+its limitations. Interfacing with it, however, as an IoT device will
+gain you a lot of insights.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Configuration:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$14.99 &lt;a href=&#34;https://www.amazon.com/KOOKYE-ESP8266-NodeMcu-ESP-12E-Expansion/dp/B01C6MR62E/ref=sr_1_1?ie=UTF8&amp;amp;qid=1499251895&amp;amp;sr=8-1&amp;amp;keywords=esp8266+robot+car&#34;&gt;esp8266 &amp;amp;
+shield&lt;/a&gt;
+or &lt;a href=&#34;https://www.amazon.com/Makerfocus-ESP8266-ESP-12E-Development-Expansion/dp/B01MU4XQUN/ref=sr_1_2?ie=UTF8&amp;amp;qid=1499252002&amp;amp;sr=8-2&amp;amp;keywords=esp8266+motor+shield&#34;&gt;esp8266 &amp;amp;
+shield&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$12.59
+&lt;a href=&#34;https://www.amazon.com/Emgreat-Chassis-Encoder-wheels-Battery/dp/B00GLO5SMY/ref=pd_rhf_se_s_cp_10?_encoding=UTF8&amp;amp;pd_rd_i=B00GLO5SMY&amp;amp;pd_rd_r=77XYGK6BE54FGDTGQ0AC&amp;amp;pd_rd_w=FNQFl&amp;amp;pd_rd_wg=wKMdb&amp;amp;psc=1&amp;amp;refRID=77XYGK6BE54FGDTGQ0AC&#34;&gt;Chasis&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4 * AA Rechargable Batteries &amp;amp; charger&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optionally you may want to get additional sensors such as wheel Encoders&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/Wheel-Encoder-Kit-Robot-Car/dp/B00NPWGEIM/ref=sr_1_4?s=toys-and-games&amp;amp;ie=UTF8&amp;amp;qid=1499254488&amp;amp;sr=1-4&amp;amp;keywords=speed+sensor+robot+car+wheel&#34;&gt;Wheel
+Encoder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Advantages:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Very low price for what it can do&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We have macOS software available that makes it easy to setup (Other
+tutorials for other platforms are available on the internet, you can
+contribute by creating documentation we distribute in class for
+points)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sensor-kit&#34;&gt;Sensor Kit&lt;/h2&gt;
+&lt;p&gt;It is fun to attach sensors to your IoT board. There are many kits
+available and we encourage you to do comparisons. One such kit is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$29.99 &lt;a href=&#34;https://www.amazon.com/Elegoo-Upgraded-Modules-Tutorial-Arduino/dp/B01MG49ZQ5/ref=sr_1_7?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251441&amp;amp;sr=1-7&amp;amp;keywords=elegoo&#34;&gt;Elegoo 37
+Sensors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However it does not include a breadboard like other kits. Hence we
+recommend that you get a breadboard as it makes experimenting easier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$5.68 &lt;a href=&#34;https://www.amazon.com/Elegoo-Premium-Female-tie-points-breadboard/dp/B06XB8TZVC/ref=sr_1_23?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251600&amp;amp;sr=1-23&amp;amp;keywords=elegoo&#34;&gt;small bread board and
+wires&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fish-kit&#34;&gt;Fish Kit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$29.99
+&lt;a href=&#34;https://www.amazon.com/Swimmer-Inflatable-Flying-Replacement-Balloon/dp/B00658LN3E/ref=pd_bxgy_21_img_2?_encoding=UTF8&amp;amp;pd_rd_i=B00658LN3E&amp;amp;pd_rd_r=F71N2YCYE6Z0BCCEPQJC&amp;amp;pd_rd_w=AwYab&amp;amp;pd_rd_wg=rHTnv&amp;amp;psc=1&amp;amp;refRID=F71N2YCYE6Z0BCCEPQJC&#34;&gt;shark&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cheaper balloons leak&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;before assembly and putting gas in, make sure components work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gas will last typically for one week&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$39.99 gas can be purchased in party store&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2 g9 servo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;soldering (for cable, so cheap one will do)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pins&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;esp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;double sided scotch tape&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hot glue gun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;paper clips&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;alternative-components&#34;&gt;Alternative components&lt;/h2&gt;
+&lt;h3 id=&#34;esp8266-alternatives&#34;&gt;Esp8266 Alternatives&lt;/h3&gt;
+&lt;p&gt;Two models are good. Adafruit has some added features, but may need
+soldering&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$8.79
+&lt;a href=&#34;https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES/ref=sr_1_3?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251149&amp;amp;sr=1-3&amp;amp;keywords=esp8266&#34;&gt;NodeMCU&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$16.95 &lt;a href=&#34;https://www.adafruit.com/product/2821&#34;&gt;Adafruit Feather&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;car-parts-alternatives&#34;&gt;Car Parts Alternatives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$14.59 &lt;a href=&#34;https://www.amazon.com/Ardokit-Chassis-Encoder-Battery-Arduino/dp/B00K5OWHXO/ref=sr_1_3?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251712&amp;amp;sr=1-3&amp;amp;keywords=robot+car&#34;&gt;Car
+Chasis&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$22.88 &lt;a href=&#34;https://www.amazon.com/VKmaker-Avoidance-tracking-Chassis-Ultrasonic/dp/B01CXVA6IO/ref=sr_1_6?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251770&amp;amp;sr=1-6&amp;amp;keywords=robot+car&#34;&gt;Car Chasis and
+Arduino&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;simple-sensors&#34;&gt;Simple sensors&lt;/h3&gt;
+&lt;p&gt;Simple sensors can be attached to the boards with cables (that you need
+to purchase separately). Examples include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Elegoo-Sensor-Module-Arduino-MEGA/dp/B009OVGKTQ/ref=sr_1_5?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1500678010&amp;amp;sr=1-5&amp;amp;keywords=grove+sensor&#34;&gt;Elegoo 37 sensor
+kit&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Breadboard-Wires-Aoyoho-Multicolored-Jumper/dp/B01GK2Q4ZQ/ref=sr_1_1?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1500678142&amp;amp;sr=1-1&amp;amp;keywords=bread+board+cab%3Be&#34;&gt;Breadboard
+Cable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;grove-sensors&#34;&gt;Grove Sensors&lt;/h3&gt;
+&lt;p&gt;Grove sensors have ready-made cables that make them easy to attach to
+the Raspberry PI. However, they are more expensive. You still need a
+Raspberry PI. No soldering iron and no breadboards are required.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html&#34;&gt;Grove Starter
+Set&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.seeedstudio.com/category/Grove-c-1003.html&#34;&gt;Seed Studio Grove
+Sensors&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU-p-2513.html&#34;&gt;Grove Shield for
+NodeMCU&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.switchdoc.com/2016/02/tutorial-intro-to-grove-connectors-for-arduinoraspberry-pi-projects/&#34;&gt;Grove
+Cable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;alternative-hardware-and-sensors&#34;&gt;Alternative Hardware and Sensors&lt;/h2&gt;
+&lt;p&gt;In this section we will list a number of alternative hardware products
+that we are exploring. If you have used them, please help us improving
+these sections.&lt;/p&gt;
+&lt;h3 id=&#34;small-footprint-battery-power&#34;&gt;Small Footprint Battery Power&lt;/h3&gt;
+&lt;p&gt;The following board provides to the Raspberry Pi a lithium battery power
+pack expansion board. It is powered by two 18650 Li-ion batteries
+providing steady. A 4-LED indicator indicates the level of charge. The
+board costs $16.99.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sunfounder.com/plus-power-module.html&#34;&gt;https://www.sunfounder.com/plus-power-module.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Introduction</title>
+      <link>/docs/old/iot/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/introduction/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Internet of Things is one of the driving forces in the modernisation
+of today&amp;rsquo;s world. It is based on connecting &lt;em&gt;things&lt;/em&gt; to the internet
+to create a more aware world that can be interfaced with. This not
+only includes us humans, but any &lt;em&gt;thing&lt;/em&gt; that can interact with other
+things.  It is clear that such a vision of interconnected devices will
+result in billions of devices to communicate with each other. Some of
+them may only communicate small number of items, while others will
+communicate a large amount. Analysis of this data is dependent on the
+capability of the &lt;em&gt;thing&lt;/em&gt;. If it is to small the analysis can be
+conducted on a remote server or cloud while information to act are fed
+back from the device.  In other cases the device may be completely
+autonomous and does not require any interaction. Yet in other cases
+the collaborative information gathered from such devices is used to
+derive decisions and actions.&lt;/p&gt;
+&lt;p&gt;Within this section we are trying to provide you with a small glimpse
+into how IoT devices function and can be utilized on small projects.
+Ideally if the class has all such a device we could even attempt to
+build a cloud based service that collects and redistributes the data.&lt;/p&gt;
+&lt;p&gt;To keep things simple we are not providing a general introduction in
+IoT. For that we offer other classes. However, we will introduce you to
+two different devices. These are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;esp8266&lt;/li&gt;
+&lt;li&gt;Raspberry Pi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The reasons we chose them is that&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;They are cheap.&lt;/li&gt;
+&lt;li&gt;We can program both in python allowing us to use a single
+programming language for all projects and assignments, and&lt;/li&gt;
+&lt;li&gt;They are sufficiently powerful and we can conduct real projects with
+them beyond toy projects.&lt;/li&gt;
+&lt;li&gt;The devices, especially the Raspberry PI can be used to also learn
+Linux in case you do not have access to a linux computer. Please
+note however the raspberry will have memory and space limitations
+that you need to deal with.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Projects that you can do to test the devices are&lt;/p&gt;
+&lt;p&gt;esp8266 (easy-moderate, small memory):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a LED blinker&lt;/li&gt;
+&lt;li&gt;a dendrite :o2:&lt;/li&gt;
+&lt;li&gt;a robot fish :o2:&lt;/li&gt;
+&lt;li&gt;a fish swarm :o2:&lt;/li&gt;
+&lt;li&gt;a robot swarm :o2:&lt;/li&gt;
+&lt;li&gt;an activity of your desire&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Raspberry Pi (easy-moderate, 32GB space limitation):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;a LED blinker&lt;/li&gt;
+&lt;li&gt;a robot car&lt;/li&gt;
+&lt;li&gt;a robot car with camera&lt;/li&gt;
+&lt;li&gt;a temperature service&lt;/li&gt;
+&lt;li&gt;different clusters&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;lt;-!&amp;ndash;
+Crazyflie 2.0 (difficult):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;programming a drone&lt;/li&gt;
+&lt;li&gt;programming a drone swarm
+-&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Indiana University&lt;/em&gt;: Please note that for those at IU we do have a
+Lab in which you can use some of the devices pointed out here. You can
+arrange for accessing the infrastructure.&lt;/p&gt;
+&lt;p&gt;In case you want to work on a swarm, we do have positioning sensors
+that simplify that task.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Due to the small cost involed in these devices you can buy them
+also simply yourself.&lt;/p&gt;
+&lt;p&gt;We provide throughout the book lists of hardware that you will need
+for the various projects.&lt;/p&gt;
+&lt;p&gt;In general we think that these platforms provide a wonderful
+introduction into IoT. Such platforms were
+just a decade ago not powerful enough or too expensive. However today
+the provide a serious platform for developers. Sensors are available
+easily as most Android comparable sensors can be used.&lt;/p&gt;
+&lt;p&gt;Before we jump right into programming the devices, we like to point
+out that we did not chose to use Arduinos much, as their price advantage is
+no longer valid. They also are mostly using C and as we focus in our
+material on python we decided to not spend much time on it.&lt;/p&gt;
+&lt;p&gt;We also find that esp8266 and Raspberry can interface
+with most sensors. Having the ability to easily use WiFi however is
+our primary reason for using them. Furthermore being able to attach a
+camera to the Raspberry is just superb. Image analysis is one of
+the drivers for big data.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Projects</title>
+      <link>/docs/old/iot/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/projects/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Please see the introduction to the IoT section to get started.&lt;/p&gt;
+&lt;p&gt;Term project suggestion combining IoT and Big Data:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Recognizing street sign in a car robot with a camera&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Recognizing street lines in a car robot with camera&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Driving a Robot car swarm without collisions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simulating a City with robot cars&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Control a robot fish with cameras&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build a distributed sensor system (with your classmates)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Drones:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Control a drone swarm with positioning system&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Suggest your own&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Raspberry PI 3</title>
+      <link>/docs/old/iot/pi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/pi/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;erasing-the-sd-card&#34;&gt;Erasing the SD Card&lt;/h3&gt;
+&lt;p&gt;Before you can install an OS on your sd card, you must erase it and put
+it in the proper format.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Insert your sd card into your micro-sd adapter and open Disk Utility
+with a spotlight search.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the Disk Utility, right click the name of the sd card and select
+erase.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Name the sd card and format it as MS-DOS (FAT). Then click erase.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/diskutil.png&#34; alt=&#34;image&#34;&gt;{width=&amp;quot;50%&amp;quot;}&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If it does not erase the first time, try again. It sometimes takes
+multiple tries to work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;installation-of-noobs&#34;&gt;Installation of NOOBS&lt;/h3&gt;
+&lt;p&gt;NOOBS is an OS that includes Raspbian. The official description of
+Raspbian can be found
+&lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;here&lt;/a&gt;. It comes
+pre-packaged with many useful programming tools, and is easy to use.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download Noobs &lt;a href=&#34;https://www.raspberrypi.org/downloads/noobs/&#34;&gt;here&lt;/a&gt;.
+This will take around 30 minutes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to your Finder and in Downloads, search for NOOBS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the NOOBS folder and drag its contents into the sd card in the
+devices section. There should be 20 files and folders in the NOOBS
+folder. The download should take about 3 minutes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once installed, eject the sd card and put it in your raspberry pi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Power up your raspberry and you will see a menu like this&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;images/noobs.jpg&#34; alt=&#34;Noobs&#34;&gt;{width=&amp;quot;50%&amp;quot;}&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select Raspbian and click &lt;code&gt;Install (i)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;installation-of-dexter&#34;&gt;Installation of Dexter&lt;/h3&gt;
+&lt;p&gt;The version of Dexter that you want to flash onto your sd card is called
+Raspbian for Robots. This is a Raspbian based os that is compatible with
+the GrovePi board. It also comes with pre-installed Dexter Industries
+software.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First, download the most recent Dexter_Industries_jessie.zip file
+from
+&lt;a href=&#34;https://sourceforge.net/projects/dexterindustriesraspbianflavor/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the file has downloaded, uncompress it and insert your sd card
+into the micro-sd adapter.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open etcher and flash the uncompressed jessie image onto the sd
+card.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;images/etcher.png&#34; alt=&#34;Etcher&#34;&gt;{width=&amp;quot;50%&amp;quot;}&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eject your sd card and insert it into your raspberry pi.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;configure&#34;&gt;Configure&lt;/h2&gt;
+&lt;h3 id=&#34;prepare-os&#34;&gt;Prepare OS&lt;/h3&gt;
+&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+&lt;p&gt;The following are essential updates:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install emacs
+dpkg -l &amp;gt; ~/Desktop/packages.list
+pip freeze &amp;gt; ~/Desktop/pip-freeze-initial.list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The following are necessary for the scientific libraries, but they
+require lots of space. Our sd cards do not have enough space for them.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install build-essential python-dev python-distlib python-setuptools python-pip python-wheel libzmq-dev libgdal-dev
+sudo apt-get install xsel xclip libxml2-dev libxslt-dev python-lxml python-h5py python-numexpr python-dateutil python-six python-tz python-bs4 python-html5lib python-openpyxl python-tables python-xlrd python-xlwt cython python-sqlalchemy python-xlsxwriter python-jinja2 python-boto python-gflags python-googleapi python-httplib2 python-zmq libspatialindex-dev
+sudo pip install bottleneck rtree
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;add to .bashrc&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd
+git clone git://github.com/yyuu/pyenv.git .pyenv
+echo &#39;export PYENV_ROOT=&amp;quot;$HOME/.pyenv&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bashrc
+echo &#39;export PATH=&amp;quot;$PYENV_ROOT/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bashrc
+echo &#39;eval &amp;quot;$(pyenv init -)&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bashrc
+source ~/.bashrc
+
+export PATH=&amp;quot;/home/pi/.pyenv/bin:$PATH&amp;quot;
+eval &amp;quot;$(pyenv init -)&amp;quot;
+eval &amp;quot;$(pyenv virtualenv-init -)&amp;quot;
+
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;source&lt;/p&gt;
+&lt;h3 id=&#34;update-to-python-361&#34;&gt;Update to Python 3.6.1&lt;/h3&gt;
+&lt;h2 id=&#34;change-python-version&#34;&gt;Change python version&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux]
+(&lt;a href=&#34;https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux&#34;&gt;https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Upgrade setuptools for pip install with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ pip3 install --upgrade setuptools
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Test your python version with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ python --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check your python version alternatives&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ update-alternatives --list python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If python2.7 is not in your alternatives, add it with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If python3.4 is not in your alternatives, add it with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.4 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now make python3.4 to your default with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    update-alternatives --config python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Select python3.4&lt;/p&gt;
+&lt;h2 id=&#34;install-361&#34;&gt;install 3.6.1&lt;/h2&gt;
+&lt;p&gt;To install python 3.6.1, follow steps 1 and 2. This is unnecessary for
+our purposes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f&#34;&gt;better get
+3.6.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-cloudmesh-pi&#34;&gt;install cloudmesh-pi&lt;/h2&gt;
+&lt;p&gt;pip install cloudmesh-pi&lt;/p&gt;
+&lt;p&gt;pip install cloudmesh-pi with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ git clone https://github.com/cloudmesh/cloudmesh-pi.git
+    $ cd cloudmesh-pi
+    $ sudo pip3 install .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;see how we do this in macOS/linux can this be done on raspberry? if not
+document update from source with altinstall&lt;/p&gt;
+&lt;h3 id=&#34;install-scientific-libraries&#34;&gt;Install scientific Libraries&lt;/h3&gt;
+&lt;p&gt;check if they are already installed we do not have enough space to
+install all of these.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install python-numpy python-matplotlib python-scipy python-sklearn python-pandas
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;numpy&lt;br&gt;
+matplotlib&lt;br&gt;
+scipy&lt;br&gt;
+scikitlearn&lt;/p&gt;
+&lt;h3 id=&#34;cloudmesh-pi&#34;&gt;cloudmesh-pi&lt;/h3&gt;
+&lt;p&gt;cloudmesh-pi is a repository for our GrovePi module classes. These
+classes require Dexter software, so you need to either have Raspbian for
+Robots or download the software separately.&lt;/p&gt;
+&lt;p&gt;If you have Raspbian for Robots, run the following in your terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd
+mkdir github
+cd github
+git clone https://github.com/cloudmesh/cloudmesh-pi.git
+cd cloudmesh-pi
+sudo pip install .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;install-vnc&#34;&gt;Install VNC&lt;/h3&gt;
+&lt;p&gt;describe how to install and configure VNC&lt;/p&gt;
+&lt;h2 id=&#34;sensors&#34;&gt;Sensors&lt;/h2&gt;
+&lt;h3 id=&#34;grove-sensors-o2&#34;&gt;Grove Sensors :o2:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;images/no.png&#34; alt=&#34;No&#34;&gt;&lt;/p&gt;
+&lt;p&gt;we already have draft&lt;/p&gt;
+&lt;h3 id=&#34;non-grove-sensors-o2&#34;&gt;Non Grove Sensors :o2:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;images/no.png&#34; alt=&#34;No&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Elegoo as example&lt;/p&gt;
+&lt;h2 id=&#34;notes-to-integrates&#34;&gt;Notes To integrates&lt;/h2&gt;
+&lt;h3 id=&#34;connecting&#34;&gt;Connecting&lt;/h3&gt;
+&lt;p&gt;Hostnames:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;raspberrypi.local&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;raspberrypi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;change&lt;/p&gt;
+&lt;p&gt;recovery.cmdline&lt;/p&gt;
+&lt;p&gt;forgot what these were:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;runinstaller quiet ramdisk_size=32768 root=/dev/ram0 init=/init vt.cur_default=1 elevator=deadline
+silentinstall runinstaller quiet ramdisk_size=32768 root=/dev/ram0 init=/init vt.cur_default=1 elevator=deadline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connect the cable&lt;/p&gt;
+&lt;p&gt;You will see the activity LEDs flash while the OS installs. Depending on
+your SD-Card this can take up to 40-60 minutes.&lt;/p&gt;
+&lt;h2 id=&#34;vlc-on-macos&#34;&gt;VLC on macOS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.videolan.org/vlc/index.en_GB.html&#34;&gt;http://www.videolan.org/vlc/index.en_GB.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://get.videolan.org/vlc/2.2.6/macosx/vlc-2.2.6.dmg&#34;&gt;http://get.videolan.org/vlc/2.2.6/macosx/vlc-2.2.6.dmg&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.mybigideas.co.uk/RPi/RPiCamera/&#34;&gt;http://www.mybigideas.co.uk/RPi/RPiCamera/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;camera-on-pi&#34;&gt;Camera on Pi&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install vlc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/learning/getting-started-with-picamera/worksheet/&#34;&gt;https://www.raspberrypi.org/learning/getting-started-with-picamera/worksheet/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.hackster.io/bestd25/pi-car-016e66&#34;&gt;https://www.hackster.io/bestd25/pi-car-016e66&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;streaming-video&#34;&gt;Streaming video&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android&#34;&gt;https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux-commandline&#34;&gt;Linux Commandline&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.computerworld.com/article/2598082/linux/linux-linux-command-line-cheat-sheet.html&#34;&gt;http://www.computerworld.com/article/2598082/linux/linux-linux-command-line-cheat-sheet.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enable-spi&#34;&gt;Enable SPI&lt;/h2&gt;
+&lt;p&gt;go to the configuration interfaces and enable&lt;/p&gt;
+&lt;h2 id=&#34;rtimulib2&#34;&gt;RTIMUlib2&lt;/h2&gt;
+&lt;p&gt;git clone &lt;a href=&#34;https://github.com/RTIMULib/RTIMULib2.git&#34;&gt;https://github.com/RTIMULib/RTIMULib2.git&lt;/a&gt; cd RTIMULib&lt;/p&gt;
+&lt;p&gt;Add the following two lines to /etc/modules&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;i2c-bcm2708
+i2c-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;reboot&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls /dev/i2c-*
+sudo apt-get install i2c-tools
+
+sudo i2cdetect -y 1
+         0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;create a file /etc/udev/rules.d/90-i2c.rules and add the line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;KERNEL==&amp;quot;i2c-[0-7]&amp;quot;,MODE=&amp;quot;0666&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;note: does not work&lt;/p&gt;
+&lt;p&gt;instead we do&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chmod 666 /dev/i2c-1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the I2C bus speed to 400KHz by adding to /boot/config.txt:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dtparam=i2c1_baudrate=400000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;reboot. In terminal change directories to&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /home/pi/github/RTIMULib2/RTIMULib/IMUDrivers
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and open&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;emacs RTIMUDefs.h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In RTIMUDefs.h change&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#define MPU9250_ID 0x71
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#define MPU9250_ID 0x73
+
+
+
+cd /home/pi/github/RTIMULib2/RTIMULib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In terminal&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir build
+cd build
+cmake ..
+make -j4
+sudo make install
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;compile-rtimulib-apps&#34;&gt;Compile RTIMULib Apps&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;cd /home/pi/github/RTIMULib2/Linux/RTIMULibCal
+make clean; make -j4
+sudo make install
+cd /home/pi/github/RTIMULib2/Linux/RTIMULibDrive
+make clean; make -j4
+sudo make install
+cd /home/pi/github/RTIMULib2/Linux/RTIMULibDrive10
+make clean; make -j4
+sudo make install
+cd /home/pi/github/RTIMULib2/Linux/RTIMULibDrive11
+make clean; make -j4
+sudo make install
+
+
+cd /home/pi/github/RTIMULib2/Linux/RTIMULibDemo
+qmake clean
+make clean
+qmake
+make -j4
+sudo make install
+cd /home/pi/github/RTIMULib2/Linux/RTIMULibDemoGL
+qmake clean
+make clean
+qmake
+make -j4
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;camera&#34;&gt;Camera&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/learning/getting-started-with-picamera/worksheet/&#34;&gt;Camera
+Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+
+sudo apt-get install libxvidcore-dev libx264-dev
+
+sudo pip install virtualenv virtualenvwrapper
+sudo rm -rf ~/.cache/pip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;copy into ~/.profile:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; echo -e &amp;quot;\n# virtualenv and virtualenvwrapper&amp;quot; &amp;gt;&amp;gt; ~/.profile
+ echo &amp;quot;export WORKON_HOME=$HOME/.virtualenvs&amp;quot; &amp;gt;&amp;gt; ~/.profile
+ echo &amp;quot;source /usr/local/bin/virtualenvwrapper.sh&amp;quot; &amp;gt;&amp;gt; ~/.profile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;source ~/.profile&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkvirtualenv cv -p python3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;workon cv&lt;/p&gt;
+&lt;p&gt;command line has (cv) in front&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install numpy
+
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;lessons-and-projects&#34;&gt;Lessons and Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/learning/getting-started-with-guis/worksheet/&#34;&gt;Gui&lt;/a&gt;\&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/learning/getting-started-with-guis/&#34;&gt;Solder&lt;/a&gt;\&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/blog/an-image-processing-robot-for-robocup-junior/&#34;&gt;PI Camera Line
+Follower&lt;/a&gt;\&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://circuitdigest.com/microcontroller-projects/web-controlled-raspberry-pi-surveillance-robot&#34;&gt;Pi car
+flask&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-to-be-integrated&#34;&gt;OTHER TO BE INTEGRATED&lt;/h2&gt;
+&lt;h3 id=&#34;pi-emulator-on-windows&#34;&gt;PI emulator on Windows&lt;/h3&gt;
+&lt;p&gt;We have not yet tried it, but we like to hear back from you on
+experiences with&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourceforge.net/projects/rpiqemuwindows/&#34;&gt;https://sourceforge.net/projects/rpiqemuwindows/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scratch&#34;&gt;Scratch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi/tree/master/Software/Scratch&#34;&gt;scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-server&#34;&gt;Web Server&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/learning/python-web-server-with-flask/worksheet/&#34;&gt;Web Server
+Flask&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Sensors</title>
+      <link>/docs/old/iot/sensors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/sensors/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section contains the wiring diagrams and associated classes for sensors that can be used with the Raspberry Pi.  In addition to the individual sensors an example project is also included.  Before getting started with sensors for the Raspberry Pi you will need to ensure that the Pi is set up with python3 and has the latest version of Raspbian installed.  Instructions for setting up the Raspberry Pi can be found &lt;a href=&#34;https://github.com/cloudmesh-community/book/blob/master/chapters/iot/pi.md&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ds18b20-temperature-sensor&#34;&gt;DS18B20 Temperature Sensor&lt;/h2&gt;
+&lt;p&gt;The DS18B20 is a thermoresistive temperature sensor and can be found in many of the sensor kits referenced in this book.  To set up the DS18B20 connect the jumper wires as shown in @fig:ds18b20_setup.  If you have an individual sensor instead of a sensor module you will need to use a 4.7k ohm resistor as shown in the diagram.  The resistor allows the one wire interface to work properly and should be used to avoid damage to the sensor [@DS18B20_resistor].  If you have a DS18B20 module it may already include a resistor and you will not need to add another.  Be sure to check before setting up your sensor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/DS18B20_setup.png&#34; alt=&#34;DS18B20 Setup&#34;&gt;{#fig:ds18b20_setup}&lt;/p&gt;
+&lt;p&gt;Once you have set up the wiring of the DS18B20 you will need to set up the one wire interface.  This can be done with the following steps [@DS18B20_code_setup].&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In a terminal enter:  &lt;code&gt;sudo nano /boot/config.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Scroll to the bottom of this text file and enter &lt;code&gt;dtoverlay=w1–gpio&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the setup is complete you can use the DS18B20 code provided to output the temperature to the terminal.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/ds18b20.py&#34;&gt;DS18B20 Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;temperature-and-humidity-sensor-module&#34;&gt;Temperature and Humidity Sensor Module&lt;/h2&gt;
+&lt;p&gt;The temperature and humidity sensor used in this example is the DHT11 sensor which can be purchased as a part of the &lt;a href=&#34;https://www.amazon.com/gp/product/B01J9GD3DG/ref=oh_aui_detailpage_o03_s01?ie=UTF8&amp;amp;psc=1&#34;&gt;Kookye Smart Home Sensor kit&lt;/a&gt; or the &lt;a href=&#34;https://www.amazon.com/ELEGOO-Project-Starter-Tutorial-Arduino/dp/B01D8KOZF4/ref=sr_1_6?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1542065611&amp;amp;sr=1-6&amp;amp;keywords=dht11+temperature+and+humidity+module&#34;&gt;Elegoo Uno Kit.&lt;/a&gt;.  The humidity component of the DHT11 works by measuring the conductivity between two electrodes. Between these electrodes there is a substrate that holds moisture and as the moisture changes the conductivity changes [@How_DHT11_Works]. The temperature sensor of the DHT11 works in the same way as the DS18B20.&lt;/p&gt;
+&lt;p&gt;To set up the DHT11 sensor connect jumper wires to the Raspberry Pi as shown in @fig:dht11_setup.  Ensure that the ground wire of the DHT11 is connected to the ground rail of the breadboard or a ground pin on the Raspberry Pi.  The VCC wire of the DHT11 should be connected to 3.3v from the Raspberry Pi.  To receive data the middle pin should be connected to one of the GPIO pins on the Raspberry Pi.  In this example and associated code we connect the data wire to GPIO 4 on the Raspberry Pi as shown in @fig:dht11_setup.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/DHT11_setup.png&#34; alt=&#34;DHT11 Setup&#34;&gt;{#fig:dht11_setup}&lt;/p&gt;
+&lt;p&gt;Once you have checked that the DHT11 is set up correctly you will need to set up the Adafruit_DHT module for python.  The sample python class utilizes the Adafruit_DHT module which can be set up by executing the following code in a terminal on your Raspberry Pi [@Adafruit_setup].&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; Adafruit_Python_DHT
+sudo apt-get update
+sudo apt-get install build-essential python-dev
+sudo python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once you have set up the Adafruit_DHT module you can use the python class to display the temperature and humidity reading to the terminal.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/temp_humid.py&#34;&gt;Temperature &amp;amp; Humidity Sensor Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;photosensitive-light-sensor-module&#34;&gt;Photosensitive Light Sensor Module&lt;/h2&gt;
+&lt;p&gt;The light sensor used in this example can be purchased &lt;a href=&#34;https://www.amazon.com/Gowoops-Digital-Intensity-Detection-Photosensitive/dp/B01N1FKS4L/ref=sr_1_3?ie=UTF8&amp;amp;qid=1543528066&amp;amp;sr=8-3&amp;amp;keywords=arduino+light+sensor+module&#34;&gt;individually&lt;/a&gt; or as part of a sensor kit.  To set up the light sensor module connect the wires to the Raspberry Pi as shown in @fig:light_setup.  The sensor shown in this example has three pins.  However, some sensor modules may have four pins.  In most cases the extra pin is not necessary.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/light_setup.png&#34; alt=&#34;Light Sensor Setup&#34;&gt;{#fig:light_setup}&lt;/p&gt;
+&lt;p&gt;Once you have set up the light sensor you can use the light_sensor class to retrieve data from the light sensor.  The light sensor will return &amp;ldquo;1&amp;rdquo; if light is not detected and a &amp;ldquo;0&amp;rdquo; if the sensor detects light.  Some sensor modules also include a potentiometer which can be adjusted to change the sensitivity of the light sensor.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/light_sensor.py&#34;&gt;Light Sensor Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;capacitive-touch-sensor-module&#34;&gt;Capacitive Touch Sensor Module&lt;/h2&gt;
+&lt;p&gt;In this example we are using a &lt;a href=&#34;https://www.adafruit.com/product/1374&#34;&gt;momentary capacitive touch sensor&lt;/a&gt;.  The sensor kits mentioned in this book will also contain this sensor.  To set up the touch sensor connect the wires to the Raspberry Pi as shown in @fig:touch_setup.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/touch_setup.png&#34; alt=&#34;Touch Sensor Setup&#34;&gt;{#fig:touch_setup}&lt;/p&gt;
+&lt;p&gt;Once you have set up the sensor you can use the touch_sensor class to execute another function when the sensor is touched.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/touch_sensor.py&#34;&gt;Touch Sensor Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;relay-module&#34;&gt;Relay Module&lt;/h2&gt;
+&lt;p&gt;The relay module can be used as a switch to complete a circuit.  The module can be purchased as an individual component or may be included on a board with 2, 4 or more relay switches.  In this example we will be using a two channel relay module. To set up the relay module connect the wires to the Raspberry Pi as shown in @fig:relay_setup.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/relay_setup.png&#34; alt=&#34;Relay Module Setup&#34;&gt;{#fig:relay_setup}&lt;/p&gt;
+&lt;p&gt;Once the module is set up you can use the relay_switch class to turn the relays on and off.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/relay_switch.py&#34;&gt;Relay Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;16-x-2-lcd-screen&#34;&gt;16 x 2 LCD Screen&lt;/h2&gt;
+&lt;p&gt;The 16x2 LCD screen can be used as a display for the Raspberry Pi.  To set up the LCD screen connect the wires as shown in @fig:LCD_setup.  You will also need two potentiometers in order to adjust the contrast and the brightness.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/lcd_setup.png&#34; alt=&#34;LCD Setup&#34;&gt;{#fig:lcd_setup}&lt;/p&gt;
+&lt;p&gt;Once everything is correctly wired up the LCD class can be used to print text to the LCD display.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/LCD.py&#34;&gt;LCD Class&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;compass-noimagesnopng&#34;&gt;Compass &lt;img src=&#34;images/no.png&#34; alt=&#34;No&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;TODO: which compass sensor&lt;/p&gt;
+&lt;p&gt;The default pins are defined in variants/nodemcu/pins_arduino.h as GPIO&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    SDA=4
+    SCL=5
+    D1=5
+    D2=4.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also choose the pins yourself using the I2C constructor
+Wire.begin(int sda, int scl);&lt;/p&gt;
+&lt;h2 id=&#34;project-smart-thermostat&#34;&gt;Project: Smart Thermostat&lt;/h2&gt;
+&lt;p&gt;In this example we will combine some of the sensors discussed in this section to create a smart thermostat.  The first step of this project is to make sure that you have a Raspberry Pi which has Raspbian installed and is configured appropriately.  Instructions for how to complete the basic set up of your Raspberry Pi can be found in the &lt;a href=&#34;https://github.com/ahilgenkamp/book/blob/master/chapters/pi/setup-ultimate.md&#34;&gt;Setting up a Single Raspberry PI&lt;/a&gt; section of this book.&lt;/p&gt;
+&lt;p&gt;Prerequisites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 3 with Raspbian installed&lt;/li&gt;
+&lt;li&gt;DHT11 Temperature and Humidity Sensor&lt;/li&gt;
+&lt;li&gt;Photosensitive Light Sensor&lt;/li&gt;
+&lt;li&gt;Capacitive Touch Sensor&lt;/li&gt;
+&lt;li&gt;2 Channel Relay Module&lt;/li&gt;
+&lt;li&gt;16x2 LCD display&lt;/li&gt;
+&lt;li&gt;Three bread boards&lt;/li&gt;
+&lt;li&gt;Two potentiometers&lt;/li&gt;
+&lt;li&gt;4 female to female jumper wires&lt;/li&gt;
+&lt;li&gt;24 male to male jumper wires&lt;/li&gt;
+&lt;li&gt;12 male to female jumper wires&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If using the LED&amp;rsquo;s you will want the additional components listed next:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Three 4.7k ohm resistors&lt;/li&gt;
+&lt;li&gt;Three LED&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;3 additional male to male jumper wires&lt;/li&gt;
+&lt;li&gt;4 additional male to female jumper wires&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have the necessary components you will need to connect the wires as shown in @fig:smart_therm.  The LED lights in this example represent the connections to the actual thermostat. It is suggested that you test the set up using the LED&amp;rsquo;s to ensure that everything is wired correctly and that you are getting the expected results.  We will cover how to connect the smart thermostat to your HVAC system later in this example. For this project three separate breadboards are used to hold different components.  The first one will hold the LCD and potentiometers used to adjust contrast and brightness.  The second will hold all of the sensors and the third will be used to either hold the LED&amp;rsquo;s or distribute power from the HVAC system.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/smart_therm_diagram.png&#34; alt=&#34;Smart_Thermostat Setup&#34;&gt;{#fig:smart_therm}&lt;/p&gt;
+&lt;p&gt;Once all of the components are connected as shown in @fig:smart_therm we need to test each of the sensors.  To do this we will first need to set up the raspberry pi.  This can be done by running the thermostat_setup.sh shell script.  To run this open a terminal and type &lt;code&gt;nano thermostat_setup.sh&lt;/code&gt; then copy the code from &lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/thermostat_setup.sh&#34;&gt;thermostat_setup.sh&lt;/a&gt;.  Once you have copied the code, close the editor and run &lt;code&gt;chmod u+x thermostat_setup.sh&lt;/code&gt;.  Then run &lt;code&gt;./thermostat_setup.sh&lt;/code&gt; to run the code to add the code and dependencies needed for this project.&lt;/p&gt;
+&lt;p&gt;Once the thermostat_setup.sh script has finished running there will be a new directory containing the code for this project.  Navigate to this directory with &lt;code&gt;cd ~/git-repos/fa18-523-84/paper/code&lt;/code&gt;.  We will now test each of the components by running the following commands.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python3 LCD.py&lt;/code&gt; This should show the output &amp;ldquo;Hello World!&amp;rdquo; on the LCD screen.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3 temp_humid.py&lt;/code&gt; Should show the current temp and humidity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3 ds18b20.py&lt;/code&gt; Should show temp. (using this sensor as well because temp is more accurate)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3 light_sensor.py&lt;/code&gt; Should show either 1 or 0 depending on if light is detected.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3 relay_switch.py&lt;/code&gt; Connected to the LED&amp;rsquo;s this should turn the LED&amp;rsquo;s on and off.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python3 touch_sensor.py&lt;/code&gt; When the sensor is touched &amp;ldquo;Hey!&amp;rdquo; should be printed to the terminal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have tested the components and have ensured that they work you can run &lt;code&gt;python3 smart_therm_not_connected.py&lt;/code&gt; to start the smart thermostat.  The code should print the current system status to the terminal.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/smart_therm_not_connected.py&#34;&gt;Smart Thermostat Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have tested each of the components and have tested the smart thermostat code using the LED&amp;rsquo;s we can connect to the HVAC system. Each HVAC system is different so be sure to do some research on how your specific system works.  Generally there will be a power wire that you can connect to the relay switch and then connect the other wires to the appropriate terminals [@Smart_therm_example].  Based on the readings from the other sensors the code will determine which relay to turn on, which will complete the circuit sending a signal to the HVAC system.  The system used in this example is shown in @fig:wiring_start.  For this system the red wire is 24v power, green connects to the fan, white connects to the heat, yellow connects to the AC compressor and blue is ground [@Smart_therm_example].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/wiring_start.JPG&#34; alt=&#34;HVAC Wiring&#34;&gt;{#fig:wiring_start}&lt;/p&gt;
+&lt;p&gt;To connect the Raspberry Pi smart thermostat to the system we need a way to supply power to each of the signal wires.  To do this we can use a breadboard to supply power to each of the three relay switches as shown in @fig:wiring_final.  When the relay switch is activated the signal will be supplied to the appropriate wire.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/wiring_final.JPG&#34; alt=&#34;HVAC Wiring Final&#34;&gt;{#fig:wiring_final}&lt;/p&gt;
+&lt;p&gt;Once the system is wired correctly we can test the code again now that it is wired to the HVAC system.  Running &lt;code&gt;python3 smart_therm_not_connected.py&lt;/code&gt; will start the program but to run the program in the background use &lt;code&gt;nohup python3 smart_therm_not_connected.py &amp;amp;&lt;/code&gt;.  When running the program in the background the output will be saved to the nohup.out file.  Now you can adjust settings in the program to make your HVAC system more efficient.  The final result is shown in @fig:smart_therm_final.  Also in this book you can find &lt;a href=&#34;&#34;&gt;an example&lt;/a&gt; which connects the smart thermostat to a database to store data and also allows anyone on the local network to change settings.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/smart_therm_final.JPG&#34; alt=&#34;Smart Thermostat Final&#34;&gt;{#fig:smart_therm_final}&lt;/p&gt;
+&lt;h2 id=&#34;sources-for-this-section&#34;&gt;Sources for this section:&lt;/h2&gt;
+&lt;p&gt;need to integrate into &lt;a href=&#34;https://github.com/cloudmesh-community/book/blob/master/chapters/SECTION/SECTION-REFERENCES.md&#34;&gt;https://github.com/cloudmesh-community/book/blob/master/chapters/SECTION/SECTION-REFERENCES.md&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DS18B20_resistor: &lt;a href=&#34;https://arduino.stackexchange.com/questions/30822/the-use-of-4-7kohm-resistor-with-ds18b20-temperature-sensor&#34;&gt;https://arduino.stackexchange.com/questions/30822/the-use-of-4-7kohm-resistor-with-ds18b20-temperature-sensor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DS18B20_code_setup: &lt;a href=&#34;http://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/&#34;&gt;http://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adafruit_setup: &lt;a href=&#34;https://stackoverflow.com/questions/28913592/python-gpio-code-for-dht-11-temperature-sensor-fails-in-pi-2&#34;&gt;https://stackoverflow.com/questions/28913592/python-gpio-code-for-dht-11-temperature-sensor-fails-in-pi-2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How_DHT11_Works: &lt;a href=&#34;https://howtomechatronics.com/tutorials/arduino/dht11-dht22-sensors-temperature-and-humidity-tutorial-using-arduino/&#34;&gt;https://howtomechatronics.com/tutorials/arduino/dht11-dht22-sensors-temperature-and-humidity-tutorial-using-arduino/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Smart_therm_example: &lt;a href=&#34;https://dzone.com/articles/how-to-build-your-own-arduino-thermostat&#34;&gt;https://dzone.com/articles/how-to-build-your-own-arduino-thermostat&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Tools</title>
+      <link>/docs/old/iot/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/tools/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Terminal&lt;/strong&gt;: On macOS, when you navigate to the search magnification
+glass, you can type in &lt;em&gt;terminal&lt;/em&gt; to start it. A terminal allows you
+to execute a number of commands to interact with the computer from a
+commandline interface, e.g. the terminal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxconfig.org/bash-scripting-tutorial&#34;&gt;Bash&lt;/a&gt; it the
+command language used in terminal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osx&#34;&gt;Pyenv&lt;/a&gt;
+allows to manage multiple versions of python easily. &lt;a href=&#34;https://github.com/pyenv/pyenv#how-it-works&#34;&gt;Pyenv
+link&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osx&#34;&gt;XCode&lt;/a&gt;
+is an integrated development environment for macOS containing a
+suite of software development tools developed by Apple for
+developing software for macOS, iOS, watchOS and tvOS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://brew.sh&#34;&gt;Homebrew&lt;/a&gt; is a &lt;em&gt;package manager&lt;/em&gt; for OS X which
+lets the user &lt;em&gt;install software&lt;/em&gt; from &lt;em&gt;UNIX&lt;/em&gt; and &lt;em&gt;open source
+software&lt;/em&gt; that is not included in macOS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;:
+is an Integrated Development Environment for Python.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Matplotlib&lt;/em&gt;: Matplotlib is a library that allows us to create nice
+graphs in python. As we typically install python with virtualenv, we
+need to configure matplotlib properly to use it. The easiest way to
+do this is to execute the following commands. After you run them you
+can use matplotlib.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ pip install numpy
+$ pip install matplotlib
+$ echo &amp;quot;backend : TkAgg&amp;quot; &amp;gt; ~/.matplotlib/matplotlibrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt; a macdown editor for macOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.ghost.org/markdown/&#34;&gt;Markdown&lt;/a&gt; (from Markdown)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://oracc.museum.upenn.edu/doc/help/usingemacs/aquamacs/&#34;&gt;AquaEmacs&lt;/a&gt;
+(from Aquamacs)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://marvelmind.com/&#34;&gt;Marvelmind&lt;/a&gt; (from Marvelmind if you have
+marvelmind positioning sensors which are optional)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; (from Arduino if
+you like to use their interface to access the esp8266 boards)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192&#34;&gt;40 OSX Terminal
+Tricks&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown&#34;&gt;Markdown&lt;/h2&gt;
+&lt;p&gt;MarkDown is a format convention that produces nicely formatted text with
+simple ASCII text. Markdown has very good support for editors that
+render the final output in a view window next to the editor pane. Two
+such editors are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt;: MacDown provides a nice
+integrated editor that works well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;:
+We have successfully used Vladimir Schhneiders &lt;a href=&#34;https://plugins.jetbrains.com/plugin/7896-markdown-navigator&#34;&gt;Markdown Navigator
+plugin&lt;/a&gt;.
+Once installed you click on a .md file pycharm will automatically
+ask to install the plugins from Markdown for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A detailed set of syntax rules can be found at: &lt;strong&gt;BUG: LINK TO MARKDOWN
+SYNTAX MISSING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following are some basic examples&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;To &lt;em&gt;emphasise&lt;/em&gt; a text you use &lt;code&gt;*emphasize*&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;strong&gt;bold&lt;/strong&gt; use &lt;code&gt;**bold**&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;em&gt;&lt;strong&gt;bold-and-emphasize&lt;/strong&gt;&lt;/em&gt; use &lt;code&gt;***bold-and-emphasize***&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To create a hyperlink use &lt;code&gt;[Google](https://google.com)&lt;/code&gt; which will
+result in &lt;a href=&#34;https://google.com&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To include an image use &lt;code&gt;![Bracketed Text](link)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A list can be created by item starting with *, a - , or a + or a number&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. one
+2. two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* one
+* two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to indent items underneath already bulleted items, precede
+the indent items with four spaces and they will be nested under the item
+previous to them.&lt;/p&gt;
+&lt;p&gt;To qoute textc precede it with a &amp;ldquo;&amp;gt;&amp;rdquo;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Quote
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Other syntax options can be found in the Format drop-down at the top of
+the screen between View and Plug-ins of macdown.&lt;/p&gt;
+&lt;h2 id=&#34;aquamacs&#34;&gt;Aquamacs&lt;/h2&gt;
+&lt;p&gt;There are many different versions of emacs available on OSX. Aquamacs is
+often used as it integrates nicely with the OSX GUI interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aquamacs.org/download.shtml&#34;&gt;AquaEmacs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Aquamacs&lt;/em&gt; is a program for Mac devices which allows the user to edit
+text, HTML, LaTeX, C++, Java, Python, R, Perl, Ruby, PHP, and more.
+Aquamacs integrates well with OSX and provides many functions through a
+menu. You will mostly be using the File, Edit, menus or toolbar icons.&lt;/p&gt;
+&lt;p&gt;Emacs provides convenient keyboard shortcuts, most of which are
+combinations with the Control or Meta key (The Meta key is the ESC key).
+If you accidentally end up doing something wrong simply press &lt;code&gt;CTRL-g&lt;/code&gt;
+to get out without issue. Other Keyboard Shortcuts include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CTRL-x u&lt;/code&gt; or File&amp;gt;Undo will cancel any command that you did not
+want done. (CHECK)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ESC-g&lt;/code&gt; will cancel any command you are in the middle of.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can break paragraph lines with &lt;code&gt;Ctrl-x w&lt;/code&gt;, where &lt;code&gt;w&lt;/code&gt; will wrap
+text around word boundaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To delete text to the end of the current word, press &lt;code&gt;ESC-d&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;to delete the whole line from the position of the cursor to the end,
+press &lt;code&gt;CTRL-k&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bash&#34;&gt;Bash&lt;/h2&gt;
+&lt;p&gt;Bash is pre-installed in OSX. A &lt;em&gt;bash&lt;/em&gt; script contains &lt;em&gt;commands&lt;/em&gt; in
+plain text. In order to create a bash script please decide for a
+convenient name. Let us assume we name our script &lt;em&gt;myscript&lt;/em&gt;. Than you can
+create and edit such a script with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ touch myscript.sh
+$ emacs myscripts.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next you need to add the following line to the top ogf the script:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!# /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To demonstrate how to continue writing a script we will be using the
+bash &lt;code&gt;echo&lt;/code&gt; command that allows you to print text. Lets make the second
+line&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now save and start executing your script. Click &amp;ldquo;File&amp;rdquo; and then
+&amp;ldquo;Save&amp;rdquo;. Open Terminal and type in &lt;code&gt;cd&lt;/code&gt; followed by the name of the
+folder you put the document in. Now we need to execute the script.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Executing&lt;/em&gt; a Bash script is rather easy. In order to execute a script,
+we need to first execute the &lt;em&gt;permission set&lt;/em&gt;. In order to give Terminal
+permission to read/execute a Bash script, you have to type&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod u+x myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After the script has been granted permission to be executed, you can
+test it by typing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into the terminal. You will see it prints&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hello World
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+&lt;p&gt;This installation is optional. In the event that there is a TTY error,
+you will need to install Arduino, since your Mac may be missing some
+drivers that are included in Arduino. Simply go to
+&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; and follow the
+installation instructions.&lt;/p&gt;
+&lt;h2 id=&#34;osx-terminal&#34;&gt;OSX Terminal&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.sparkfun.com/tutorials/terminal-basics/coolterm-windows-mac-linux&#34;&gt;CoolTerm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;download &lt;a href=&#34;http://freeware.the-meiers.org/CoolTermMac.zip&#34;&gt;http://freeware.the-meiers.org/CoolTermMac.zip&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Turtle Graphics</title>
+      <link>/docs/old/iot/turtle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/turtle/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Python comes with a nice demonstration program that allows you to learn
+some simple programming concepts while moving a turtle on the screen. It
+can be started with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python -m turtledemo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;program-example&#34;&gt;Program example&lt;/h2&gt;
+&lt;p&gt;You can also create programs with your favorite editor and run it. Let
+us put the following code into the program &lt;code&gt;turtle_demo.py&lt;/code&gt;. Never save
+a file with the name &lt;code&gt;turtle.py&lt;/code&gt; because python will import it instead
+of the built-in turtle import that you need.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import turtle
+
+window = turtle.Screen()
+robot = turtle.Turtle()
+
+robot.forward(50)   # Moves forward 50 pixels
+robot.right(90)     # Rotate clockwise by 90 degrees
+
+robot.forward(50)
+robot.right(90)
+
+robot.forward(50)
+robot.right(90)
+
+robot.forward(50)
+robot.right(90)
+
+turtle.done()
+
+window.mainloop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After saving it you can run it from a terminal with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ python turtle_demo.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;shape&#34;&gt;Shape&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;shapes: &amp;quot;arrow&amp;quot;, &amp;quot;turtle&amp;quot;, &amp;quot;circle&amp;quot;, &amp;quot;square&amp;quot;, &amp;quot;triangle&amp;quot;, &amp;quot;classic&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can change the shape of your turtle to any of these shapes with the
+Turtle method &lt;code&gt;shape(name)&lt;/code&gt;. For example, if you have an instance of the
+Turtle class called &lt;code&gt;robot&lt;/code&gt;, you can make it appear as a turtle by
+calling &lt;code&gt;robot.shape(&amp;quot;turtle&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can add your own shapes with the following functions:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;turtle.register_shape(name, shape=None)
+
+turtle.addshape(name, shape=None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are three different ways to call this function:&lt;/p&gt;
+&lt;p&gt;name is the name of a gif-file and shape is None: Install the
+corresponding image shape.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;window.register_shape(&amp;quot;turtle.gif&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note: Image shapes do not rotate when turning the turtle, so they do not
+display the heading of the turtle!&lt;/p&gt;
+&lt;p&gt;name is an arbitrary string and shape is a tuple of pairs of
+coordinates: Install the corresponding polygon shape.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;window.register_shape(&amp;quot;triangle&amp;quot;, ((5,-3), (0,5), (-5,-3)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;name is an arbitrary string and shape is a (compound) Shape object:
+Install the corresponding compound shape.&lt;/p&gt;
+&lt;p&gt;Add a turtle shape to TurtleScreen&amp;rsquo;s shapelist. Only the registered
+shapes can be used by issuing the command shape(shapename).&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://openbookproject.net/thinkcs/python/english3e/hello_little_turtles.html&#34;&gt;http://openbookproject.net/thinkcs/python/english3e/hello_little_turtles.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/turtle.html&#34;&gt;https://docs.python.org/3/library/turtle.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;robot-dance-simulator&#34;&gt;Robot Dance Simulator&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;cms robot dance dance.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;scratch&#34;&gt;Scratch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scratch.mit.edu/scratchr2/static/sa/Scratch-456.0.2.dmg&#34;&gt;Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mblock&#34;&gt;MBlock&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mblock.cc/download/&#34;&gt;MBlock&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
