@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cluster PI – Old Documentation</title>
+    <title>Cluster PI – Old</title>
     <link>/docs/old/</link>
-    <description>Recent content in Old Documentation on Cluster PI</description>
+    <description>Recent content in Old on Cluster PI</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/old/index.xml" rel="self" type="application/rss+xml" />

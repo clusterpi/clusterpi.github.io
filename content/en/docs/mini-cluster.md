@@ -16,9 +16,9 @@ Put team names here
 
 * Adam
 * Logan
-* 
-* Sunny
-* Richie (pi burn)
+* Reilly Markowitz
+* Sunny Gandhi 
+* Richie Otten (pi burn)
 
 
 ## Equipmemt
@@ -28,6 +28,34 @@ put list of equipment here
 | Name | Quantity | Purpose |
 | :--- | :--- | :--- |
 | Power Switch | 1 | Allows the cluster do be switched on and of easily |
+
+## Links
+
+* <https://github.com/cloudmesh/cloudmesh-pi-burn>
+* working draft paper with more graphics
+  <https://github.com/cloudmesh/cloudmesh-pi-burn/blob/master/paper/vonLaszewski-cmburn.md>
+* AI REST Service specification <https://github.com/cloudmesh/cloudmesh-openapi>
+* Cloudmesh PI cluster <https://github.com/cloudmesh/cloudmesh-pi-cluster>
+  * SPark and hadook are not working or the way we want it
+  * Kubernetes may be a start, but was I believe not completed or does not use properly PI burn
+  
+## Other Links
+
+* NIST Spec
+<https://github.com/cloudmesh/cloudmesh-nist>
+* Cloudmesh manual <https://cloudmesh.github.io/cloudmesh-manual/>
+* Cloudmesh common <https://github.com/cloudmesh/cloudmesh-common>
+
+
+Status of this is unclear
+
+* <https://github.com/cloudmesh/cloudmesh-cluster/tree/master/cloudmesh/cluster>
+* <https://github.com/cloudmesh/cloudmesh-kubernetes>
+
+Not done here but potentially useful if we get far enough:
+
+* Job management <https://github.com/cloudmesh/cloudmesh-job>
+* Cloudmesh flow <https://github.com/cloudmesh/cloudmesh-flow>
 
 ## Progress
 

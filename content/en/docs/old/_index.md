@@ -1,6 +1,6 @@
 ---
-title: "Old Documentation"
-linkTitle: "Old Documentation"
+title: "Old"
+linkTitle: "Old"
 weight: 100
 ---
 
