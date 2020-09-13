@@ -3,6 +3,8 @@ title: "Easy Plug"
 linkTitle: "Easy Plug"
 ---
 
+Note: Easy plug is no longer available. We leave it here just in case someone has easy plug.
+
 Copied from:
 
 * http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board
