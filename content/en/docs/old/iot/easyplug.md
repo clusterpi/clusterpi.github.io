@@ -25,7 +25,7 @@ separately connect the VCC and GND. The pins on the original UNO are
 all redesigned into plug interface. On the board, you can find ports
 D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.
 
-![](images/easyplug.png)
+![](../images/easyplug.png)
 
 
 
@@ -96,7 +96,7 @@ void loop() {
 
 * http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html
 
-![](images/easyplugkit.jpg)
+![](../images/easyplugkit.jpg)
 
 
 Part | Number
