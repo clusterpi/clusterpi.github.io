@@ -21,24 +21,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Docker Installation | Cluster PI</title><meta property="og:title" content="Docker Installation" />
-<meta property="og:description" content="First we need to make sure the Raspberry Pi is up to date so we can install a recent version of docker. The automated script maintained by the Docker project will create a systemd service file and copy the relevant Docker binaries into /usr/bin/.
-pi$ sudo apt-get update pi$ curl -sSL https://get.docker.com | sh In order for us to start the docker daemon at the next boot, we add it as follows:" />
+<meta property="og:description" content="Install docker on a single Raspberry PI
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/cluster/docker/pi-docker-single/" />
-<meta property="og:site_name" content="Cluster PI" />
+<meta property="article:modified_time" content="2020-09-14T17:01:26-04:00" /><meta property="og:site_name" content="Cluster PI" />
 <meta itemprop="name" content="Docker Installation">
-<meta itemprop="description" content="First we need to make sure the Raspberry Pi is up to date so we can install a recent version of docker. The automated script maintained by the Docker project will create a systemd service file and copy the relevant Docker binaries into /usr/bin/.
-pi$ sudo apt-get update pi$ curl -sSL https://get.docker.com | sh In order for us to start the docker daemon at the next boot, we add it as follows:">
-
-<meta itemprop="wordCount" content="215">
+<meta itemprop="description" content="Install docker on a single Raspberry PI
+">
+<meta itemprop="dateModified" content="2020-09-14T17:01:26-04:00" />
+<meta itemprop="wordCount" content="411">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker Installation"/>
-<meta name="twitter:description" content="First we need to make sure the Raspberry Pi is up to date so we can install a recent version of docker. The automated script maintained by the Docker project will create a systemd service file and copy the relevant Docker binaries into /usr/bin/.
-pi$ sudo apt-get update pi$ curl -sSL https://get.docker.com | sh In order for us to start the docker daemon at the next boot, we add it as follows:"/>
+<meta name="twitter:description" content="Install docker on a single Raspberry PI
+"/>
 
 
 
@@ -1354,7 +1354,7 @@ pi$ sudo apt-get update pi$ curl -sSL https://get.docker.com | sh In order for u
             
 <div class="td-content">
 	<h1>Docker Installation</h1>
-    
+    <div class="lead">Install docker on a single Raspberry PI</div>
 	       
 	<p>First we need to make sure the Raspberry Pi is up to date so we can
 install a recent version of docker.  The automated script maintained
@@ -1381,10 +1381,53 @@ docker image with the command:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ docker run hello-world
 </code></pre></div><p>If Docker is installed properly, we will see a <code>Hello from Docker!</code>
 message.</p>
+<h2 id="excersise">Excersise</h2>
+<ol>
+<li>
+<p>Develop a cloudmesh cms program that given a range of hostnames or
+IPs deployes docker on all of them</p>
+</li>
+<li>
+<p>Develops a cloudmesh cms program that verifies if docker is
+installed on a range of machines.</p>
+</li>
+</ol>
+<p>We suggest to have a command similar to</p>
+<p><code>cms docker --action=deploy --host=&quot;198.168.50.[10-20]&quot;</code></p>
+<p>Please use cloudmeash Parameter.expand command to deal with the
+hostnames and convert them to a list</p>
+<p>A command template can be generated with</p>
+<p><code> cms command generate doscker .</code></p>
+<p>Once you have cloudmesh installed. See for more details the cloudmesh
+manual. Work with Gregor on this as we may already have a docker
+command fro cloudmesh. The command template has already been created
+and is available at</p>
+<ul>
+<li><a href="https://github.com/cloudmesh/cloudmesh-docker">https://github.com/cloudmesh/cloudmesh-docker</a></li>
+</ul>
+<p>However, the command is not yet properly defined nor is the manual page verified</p>
+<p>In addition we have a second repo that is dedicated to pi cluster
+activities at</p>
+<ul>
+<li><a href="https://github.com/cloudmesh/cloudmesh-pi-cluster">https://github.com/cloudmesh/cloudmesh-pi-cluster</a></li>
+</ul>
+<p>This repo also does not have a docker depoy command, However it has
+k3s which may include docker deployment implicitly. This has to be
+checked.</p>
+<p>In any case the command docker deploy is missing and needs to be
+implemented. This can done even with the help of either</p>
+<ul>
+<li></li>
+</ul>
+<p><a href="https://github.com/cloudmesh/cloudmesh-inventory/blob/master/cloudmesh/host/command/host.py">https://github.com/cloudmesh/cloudmesh-inventory/blob/master/cloudmesh/host/command/host.py</a></p>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/cloudmesh/cloudmesh-job">https://github.com/cloudmesh/cloudmesh-job</a></li>
+</ul>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified January 1, 0001
+	<div class="text-muted mt-5 pt-3 border-top">Last modified September 14, 2020: <a  href="https://github.com/clusterpi/clusterpi.github.io/commit/f4ce150e112a2745762595148a7db44d13a65bf6">add docker section (f4ce150)</a>
 </div>
 </div>
 

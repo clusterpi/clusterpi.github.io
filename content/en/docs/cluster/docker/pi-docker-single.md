@@ -2,6 +2,8 @@
 title: "Docker Installation"
 linkTitle: "Installation"
 weight: 10
+description: >
+  Install docker on a single Raspberry PI
 ---
 
 First we need to make sure the Raspberry Pi is up to date so we can
@@ -53,3 +55,49 @@ pi$ docker run hello-world
 If Docker is installed properly, we will see a `Hello from Docker!`
 message.
 
+## Excersise
+
+1. Develop a cloudmesh cms program that given a range of hostnames or
+   IPs deployes docker on all of them
+
+2. Develops a cloudmesh cms program that verifies if docker is
+   installed on a range of machines.
+
+We suggest to have a command similar to
+
+```cms docker --action=deploy --host="198.168.50.[10-20]"```
+
+Please use cloudmeash Parameter.expand command to deal with the
+hostnames and convert them to a list
+
+A command template can be generated with
+
+``` cms command generate doscker .```
+
+Once you have cloudmesh installed. See for more details the cloudmesh
+manual. Work with Gregor on this as we may already have a docker
+command fro cloudmesh. The command template has already been created
+and is available at
+
+* <https://github.com/cloudmesh/cloudmesh-docker>
+
+However, the command is not yet properly defined nor is the manual page verified
+
+In addition we have a second repo that is dedicated to pi cluster
+activities at
+
+* <https://github.com/cloudmesh/cloudmesh-pi-cluster>
+
+This repo also does not have a docker depoy command, However it has
+k3s which may include docker deployment implicitly. This has to be
+checked.
+
+In any case the command docker deploy is missing and needs to be
+implemented. This can done even with the help of either
+
+*
+<https://github.com/cloudmesh/cloudmesh-inventory/blob/master/cloudmesh/host/command/host.py>
+
+or
+
+* <https://github.com/cloudmesh/cloudmesh-job> 

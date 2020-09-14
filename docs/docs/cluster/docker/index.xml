@@ -47,6 +47,49 @@ docker image with the command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ docker run hello-world
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If Docker is installed properly, we will see a &lt;code&gt;Hello from Docker!&lt;/code&gt;
 message.&lt;/p&gt;
+&lt;h2 id=&#34;excersise&#34;&gt;Excersise&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Develop a cloudmesh cms program that given a range of hostnames or
+IPs deployes docker on all of them&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Develops a cloudmesh cms program that verifies if docker is
+installed on a range of machines.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We suggest to have a command similar to&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cms docker --action=deploy --host=&amp;quot;198.168.50.[10-20]&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Please use cloudmeash Parameter.expand command to deal with the
+hostnames and convert them to a list&lt;/p&gt;
+&lt;p&gt;A command template can be generated with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; cms command generate doscker .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Once you have cloudmesh installed. See for more details the cloudmesh
+manual. Work with Gregor on this as we may already have a docker
+command fro cloudmesh. The command template has already been created
+and is available at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-docker&#34;&gt;https://github.com/cloudmesh/cloudmesh-docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, the command is not yet properly defined nor is the manual page verified&lt;/p&gt;
+&lt;p&gt;In addition we have a second repo that is dedicated to pi cluster
+activities at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi-cluster&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi-cluster&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This repo also does not have a docker depoy command, However it has
+k3s which may include docker deployment implicitly. This has to be
+checked.&lt;/p&gt;
+&lt;p&gt;In any case the command docker deploy is missing and needs to be
+implemented. This can done even with the help of either&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-inventory/blob/master/cloudmesh/host/command/host.py&#34;&gt;https://github.com/cloudmesh/cloudmesh-inventory/blob/master/cloudmesh/host/command/host.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-job&#34;&gt;https://github.com/cloudmesh/cloudmesh-job&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
