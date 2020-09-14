@@ -14,6 +14,341 @@
     
     
     <item>
+      <title>Docs: Easy Plug</title>
+      <link>/docs/old/iot/easyplug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/easyplug/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note: Easy plug is no longer available. We leave it here just in case someone has easy plug.&lt;/p&gt;
+&lt;p&gt;Copied from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keyestudio Easy-plug control board is a microcontroller board based on
+the ATmega328P-PU. It has 14 digital input/outputs (of which 6 can be
+used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB
+connection, a power jack, an ICSP header and a reset button. It
+contains everything needed to support the microcontroller; simply
+connect it to a computer with a USB cable or power it with a AC-to-DC
+adapter or battery to get started.You can tinker with your UNO without
+worrying too much about doing something wrong, worst case scenario you
+can replace the chip for a few dollars and start over again.  For
+convenience of wire connection, we simplify pins GND and VCC into each
+plug, so you only need one wire to connect a module, no need to
+separately connect the VCC and GND. The pins on the original UNO are
+all redesigned into plug interface. On the board, you can find ports
+D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/easyplug.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;specifications&#34;&gt;Specifications&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Microcontroller core&lt;/th&gt;
+&lt;th&gt;ATmega328P-PU&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Working voltage&lt;/td&gt;
+&lt;td&gt;+5V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage&lt;/td&gt;
+&lt;td&gt;$+7V - +12V$ (suggested)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage  (externum)&lt;/td&gt;
+&lt;td&gt;$+6V \leq Vin \leq +20V$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Digital signal I/O interface&lt;/td&gt;
+&lt;td&gt;14 (of which 6 provide PWM output)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analog signal input interface&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DCI/O interface current&lt;/td&gt;
+&lt;td&gt;20 mA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FlashMemory&lt;/td&gt;
+&lt;td&gt;32KB (ATmega328) of which 0.5 KB used by bootloader&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SRAM static storage capacity&lt;/td&gt;
+&lt;td&gt;2KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;1 KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;16 MHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;p&gt;Tools -&amp;gt; Arduino/Genuine Arduino&lt;/p&gt;
+&lt;p&gt;port oon OSX will lock something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/dev/cu.usbmodem1461&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;test-code&#34;&gt;Test code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;int command;
+int port;
+
+int pin_from = 5;
+int pin_to = 13;
+
+void Light(int pin){
+  digitalWrite(pin,HIGH);
+  delay(500);
+  digitalWrite(pin,LOW);
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+ command=Serial.read();
+  if(command==&#39;a&#39;) {
+    int i;
+    for (i = pin_from; i &amp;lt;= pin_to; i++){
+      Light(i);
+      Serial.print(&amp;quot;Led &amp;quot;);
+      Serial.println(i);
+      delay(100);
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;kit-list&#34;&gt;Kit List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&#34;&gt;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../images/easyplugkit.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Part&lt;/th&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug controller Board&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Acrylic Board + Copper bush set&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug cable&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB cable&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Piranha LED Module&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Line Tracking Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Infrared obstacle avoidance sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Photo Interrupter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug PIR Motion Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS18B20 Temperature Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Receiver Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Transmitter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Single Relay Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug ADXL345 Three Axis Acceleration Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DHT11 Temperature and Humidity Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS3231 Clock Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Gas Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Alcohol Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug MQ135 Air Quality Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug BMP180 Barometric Pressure Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Bluetooth Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug 1602 I2C Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug I2C 8x8 LED Matrix&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;command-language&#34;&gt;Command Language&lt;/h2&gt;
+&lt;p&gt;on PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches PORT on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches port off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;on all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goes serially through ports and switches them on and off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;String command;
+
+
+int pin_from = 5;
+int pin_to = 13;
+
+String getValue(String data, char separator, int index)
+{
+  // copied from internet
+    int found = 0;
+    int strIndex[] = { 0, -1 };
+    int maxIndex = data.length() - 1;
+
+    for (int i = 0; i &amp;lt;= maxIndex &amp;amp;&amp;amp; found &amp;lt;= index; i++) {
+        if (data.charAt(i) == separator || i == maxIndex) {
+            found++;
+            strIndex[0] = strIndex[1] + 1;
+            strIndex[1] = (i == maxIndex) ? i+1 : i;
+        }
+    }
+    return found &amp;gt; index ? data.substring(strIndex[0], strIndex[1]) : &amp;quot;&amp;quot;;
+}
+
+void Light(int pin, int action){
+  if (action ==  1) {
+    digitalWrite(pin,HIGH);
+  } else {
+    digitalWrite(pin,LOW);
+  }
+}
+
+void wait_for_input() {
+  while (Serial.available()==0) { }
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+
+  Serial.print(&amp;quot;command:&amp;quot;);
+  wait_for_input();
+  command=Serial.readString();
+  Serial.println (command);
+
+   if (command==&amp;quot;dance&amp;quot;) {
+      for (int i = pin_from; i &amp;lt;= pin_to; i++) {
+        Light(i,1);
+        delay(100);
+        Light(i,0);
+        Serial.print(&amp;quot;Led &amp;quot;);
+        Serial.println(i);
+        delay(100);
+      }
+    } else {
+
+      int action;
+      String action_name = getValue(command, &#39; &#39;, 0);
+      String port_name = getValue(command, &#39; &#39;, 1);
+
+      action = action_name == &amp;quot;on&amp;quot;;
+
+      if (port_name == &amp;quot;all&amp;quot;) {
+        for (int i = pin_from; i &amp;lt;= pin_to; i++){
+          Light(i,action);
+          Serial.print(&amp;quot;Led &amp;quot;);
+          Serial.println(i);
+        }
+      } else {
+        int port = port_name.toInt();
+
+        Serial.println(action);
+        Serial.println(port);
+        Light(port, action);
+     }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Introduction</title>
       <link>/docs/old/iot/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

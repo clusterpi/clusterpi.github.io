@@ -14,6 +14,44 @@
     
     
     <item>
+      <title>Docs: Docker Installation</title>
+      <link>/docs/cluster/docker/pi-docker-single/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/docker/pi-docker-single/</guid>
+      <description>
+        
+        
+        &lt;p&gt;First we need to make sure the Raspberry Pi is up to date so we can
+install a recent version of docker.  The automated script maintained
+by the Docker project will create a systemd service file and copy the
+relevant Docker binaries into &lt;code&gt;/usr/bin/&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo apt-get update
+pi$ curl -sSL https://get.docker.com | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In order for us to start the docker daemon at the next boot, we add it
+as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo systemctl &lt;span style=&#34;color:#a2f&#34;&gt;enable&lt;/span&gt; docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now if we reboot, the Docker daemon will start. In case you like to
+avoid the first reboot, you can use the command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Naturally you do not have to do this after you reboot the next time.&lt;/p&gt;
+&lt;p&gt;The Docker client can only be used by &lt;code&gt;root&lt;/code&gt; or members of the
+&lt;code&gt;docker&lt;/code&gt; group.  Thus, let us add the user pi (or your equivalent
+user) to the docker group using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo usermod -aG docker pi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After executing the previous command, we log out of the terminal restart
+it so we are sure the user permissions are available in the shell we
+use.&lt;/p&gt;
+&lt;p&gt;To test docker is installed successfully, we run the &lt;code&gt;hello-world&lt;/code&gt;
+docker image with the command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If Docker is installed properly, we will see a &lt;code&gt;Hello from Docker!&lt;/code&gt;
+message.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: IoT Project Ideas</title>
       <link>/docs/projects/ideas/iot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -53,6 +91,235 @@ contact &lt;a href=&#34;mailto:laszewski@gmail.com&#34;&gt;laszewski@gmail.com&l
 &lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;Suggest your own&lt;/li&gt;
 &lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Docker Swarm</title>
+      <link>/docs/cluster/docker/pi-docker-swarm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/docker/pi-docker-swarm/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;prerequisit&#34;&gt;Prerequisit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker on all nodes of the swarm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
+&lt;p&gt;Swarm is a native clustering and scheduling tool for Docker. Instead
+of just managing containers on a single server, we can manage
+containers on a set of servers. The containers will be automatically
+scheduled on the pool of servers making them appear as a single
+resource. We will set up and use Docker on a number of Raspberry Pi&amp;rsquo;s
+install Docker on them and register them into a Docker Swarm.&lt;/p&gt;
+&lt;h2 id=&#34;creating-a-network-of-pis-with-docker&#34;&gt;Creating a Network of Pi&amp;rsquo;s with docker&lt;/h2&gt;
+&lt;p&gt;In &lt;a href=&#34;#pi-now-main&#34;&gt;Network of Pis&lt;/a&gt; section we explained how to set up a network
+of Pis. Here we assume that we start from such a network. The Pi&amp;rsquo;s have all
+different names, and are registered on the network. Each Pi has the public key
+installed from the machine where you will login from for setting up the swarm.&lt;/p&gt;
+&lt;p&gt;Let us assume the names of the hosts are stored in a shell variable called&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hostnames = (red00 red01 red02 red03 red04)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Naturally, we want to install on these machines docker and register
+them to the swarm. A variety of tools exist to simplify this process,
+such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parallel shell &lt;a href=&#34;https://github.com/vallard/psh&#34;&gt;https://github.com/vallard/psh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cloudmesh parallel (TODO: find the link)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For now we use this simple shell program to install docker on each of
+the hosts in the hostnames&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;red00 red01 red02 red03 red04&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; host in &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt;[@]&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;do&lt;/span&gt;
+      ssh pi@&lt;span style=&#34;color:#b8860b&#34;&gt;$host&lt;/span&gt; curl -sSL https://get.docker.com | sh
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save this script in a file called &lt;code&gt;docker-install.sh&lt;/code&gt; and set the executable rights with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod u+x docker-install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When we execute it with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker-install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will sequentially install docker on each host. This is not very
+efficient and only works for a small number of hosts.&lt;/p&gt;
+&lt;h2 id=&#34;registering-the-pi-to-the-swarm&#34;&gt;Registering the Pi to the Swarm&lt;/h2&gt;
+&lt;p&gt;Next we need to run on one of the nodes the management node for the
+swarm to which all others servers register as workers. Although we
+could run on this node als a worker, we will just run the manager on
+it as we want to avoid overloading it and make sure it operates
+smoothly.&lt;/p&gt;
+&lt;p&gt;We select the first host in our hostlist for it called &lt;code&gt;red00&lt;/code&gt; Let us
+assume the host has the ipaddress &lt;code&gt;&amp;lt;manager-ip-address&amp;gt;&lt;/code&gt;. We can log
+into this computer and execute the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm init --advertise-addr &amp;lt;manager-ip-address&amp;gt;:2377
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will print out a token that we can use on the workers to
+register with our swarm. The token will look something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SWMTKN-abc...xyz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let us use the term &lt;code&gt;&amp;lt;token&amp;gt;&lt;/code&gt; to indicate the token. To register a
+worker a two step process is used.&lt;/p&gt;
+&lt;p&gt;If you ever forget the token, you simply can use the following command
+on the manager&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker swarm join-token worker
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will print out the command that you will have to execute on a worker.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm join --token SWMTKN-abc...manager...xyz &amp;lt;manager-ip-address&amp;gt;:2377
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see the list of nodes, you can use the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;I $ sudo docker node ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;exercise&#34;&gt;Exercise&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;Swarm.1&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Your task is is to identify technologies to execute the Installation
+in parallel. Suitable technologies include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;psh&lt;/li&gt;
+&lt;li&gt;ansible&lt;/li&gt;
+&lt;li&gt;puppet&lt;/li&gt;
+&lt;li&gt;python threads&lt;/li&gt;
+&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We like that the class is split up in groups and each group develops this
+solution. Naturally you can test this first with not installing docker, but
+with a simple command such as &lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Swarm.2&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Develop a python cloudmesh command called&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cms swarm config hostnames.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;where the yaml file looks something like&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;manager&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&amp;lt;ip00&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;worker&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip01&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip02&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip03&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Similarly create other convenient functions such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cms swarm kill&lt;/code&gt;, which kills the swarm&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cms swarm ls&lt;/code&gt;, which gives details about the swarm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Docker Cheatsheet</title>
+      <link>/docs/cluster/docker/docker-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/docker/docker-cheatsheet/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The following table is copied from the
+&lt;a href=&#34;https://github.com/docker/labs/blob/master/developer-tools/java/chapters/appa-common-commands.adoc&#34;&gt;docker manual&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Image&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Build an image&lt;/td&gt;
+&lt;td&gt;docker image build &amp;ndash;rm=true .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Install an image&lt;/td&gt;
+&lt;td&gt;docker image pull ${IMAGE}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of installed images&lt;/td&gt;
+&lt;td&gt;docker image ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of installed images (detailed listing)&lt;/td&gt;
+&lt;td&gt;docker image ls &amp;ndash;no-trunc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove an image&lt;/td&gt;
+&lt;td&gt;docker image rm ${IMAGE_ID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove unused images&lt;/td&gt;
+&lt;td&gt;docker image prune&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all images&lt;/td&gt;
+&lt;td&gt;docker image rm $(docker image ls -aq)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Containers&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Run a container&lt;/td&gt;
+&lt;td&gt;docker container run&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of running containers&lt;/td&gt;
+&lt;td&gt;docker container ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of all containers&lt;/td&gt;
+&lt;td&gt;docker container ls -a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stop a container&lt;/td&gt;
+&lt;td&gt;docker container stop ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stop all running containers&lt;/td&gt;
+&lt;td&gt;docker container stop $(docker container ls -q)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List all exited containers with status 1&lt;/td&gt;
+&lt;td&gt;docker container ls -a &amp;ndash;filter &amp;ldquo;exited=1&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove a container&lt;/td&gt;
+&lt;td&gt;docker container rm ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove container by a regular expression&lt;/td&gt;
+&lt;td&gt;docker container ls -a &lt;code&gt;|&lt;/code&gt; grep gregor &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{print $1}&amp;rsquo; &lt;code&gt;|&lt;/code&gt; xargs docker container rm -f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all exited containers&lt;/td&gt;
+&lt;td&gt;docker container rm -f $(docker container ls -a &lt;code&gt;|&lt;/code&gt; grep Exit &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{ print $1 }&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all containers&lt;/td&gt;
+&lt;td&gt;docker container rm $(docker container ls -aq)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Find IP address of the container&lt;/td&gt;
+&lt;td&gt;docker container inspect &amp;ndash;format &amp;lsquo;{{ .NetworkSettings.IPAddress }}&amp;rsquo; ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Attach to a container&lt;/td&gt;
+&lt;td&gt;docker container attach ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open a shell in to a container&lt;/td&gt;
+&lt;td&gt;docker container exec -it ${CID} bash&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Get container id for an image by a regular expression&lt;/td&gt;
+&lt;td&gt;docker container ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
       </description>
     </item>
@@ -352,263 +619,337 @@ could write and overwrite it on the SD card. See also&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Docker</title>
-      <link>/docs/old/pi/clusters/pi-docker/</link>
+      <title>Docs: Easy Plug</title>
+      <link>/docs/old/iot/easyplug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/old/pi/clusters/pi-docker/</guid>
+      <guid>/docs/old/iot/easyplug/</guid>
       <description>
         
         
-        &lt;p&gt;Docker is a tool that allows us to deploy applications inside of
-software containers.  A container allows a developer to package the
-application along with dependencies associated with it and put all in
-a box which is an isolated environment so that the underlying host
-operating system is completely abstracted from the application running
-inside the box.&lt;/p&gt;
-&lt;p&gt;It is a method of packaging software, to include not only our code,
-but also other components such as a full file system, system tools,
-services, and libraries. This can be useful for the Raspberry Pi
-because it allows users to run applications without lot of steps, as
-long as the application is packaged inside of a Docker image. We
-simply install Docker and run the container.&lt;/p&gt;
-&lt;p&gt;According to the developers of Docker it includes the following
-features:&lt;/p&gt;
+        &lt;p&gt;Note: Easy plug is no longer available. We leave it here just in case someone has easy plug.&lt;/p&gt;
+&lt;p&gt;Copied from:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Portability&lt;/li&gt;
-&lt;li&gt;Density&lt;/li&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Security&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;First we need to make sure the Raspberry Pi is up to date so we can
-install a recent version of docker.  The automated script maintained
-by the Docker project will create a systemd service file and copy the
-relevant Docker binaries into &lt;code&gt;/usr/bin/&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo apt-get update
-pi$ curl -sSL https://get.docker.com | sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In order for us to start the docker daemon at the next boot, we add it
-as follows:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo systemctl &lt;span style=&#34;color:#a2f&#34;&gt;enable&lt;/span&gt; docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now if we reboot, the Docker daemon will start. In case you like to
-avoid the first reboot, you can use the command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo systemctl start docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Naturally you do not have to do this after you reboot the next time.&lt;/p&gt;
-&lt;p&gt;The Docker client can only be used by &lt;code&gt;root&lt;/code&gt; or members of the
-&lt;code&gt;docker&lt;/code&gt; group.  Thus, let us add the user pi (or your equivalent
-user) to the docker group using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo usermod -aG docker pi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After executing the previous command, we log out of the terminal restart
-it so we are sure the user permissions are available in the shell we
-use.&lt;/p&gt;
-&lt;p&gt;To test docker is installed successfully, we run the &lt;code&gt;hello-world&lt;/code&gt;
-docker image with the command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ docker run hello-world
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If Docker is installed properly, we will see a &lt;code&gt;Hello from Docker!&lt;/code&gt;
-message.&lt;/p&gt;
-&lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
-&lt;p&gt;Swarm is a native clustering and scheduling tool for Docker. Instead
-of just managing containers on a single server, we can manage
-containers on a set of servers. The containers will be automatically
-scheduled on the pool of servers making them appear as a single
-resource. We will set up and use Docker on a number of Raspberry Pi&amp;rsquo;s
-install Docker on them and register them into a Docker Swarm.&lt;/p&gt;
-&lt;h2 id=&#34;creating-a-network-of-pis-with-docker&#34;&gt;Creating a Network of Pi&amp;rsquo;s with docker&lt;/h2&gt;
-&lt;p&gt;In &lt;a href=&#34;#pi-now-main&#34;&gt;Network of Pis&lt;/a&gt; section we explained how to set up a network
-of Pis. Here we assume that we start from such a network. The Pi&amp;rsquo;s have all
-different names, and are registered on the network. Each Pi has the public key
-installed from the machine where you will login from for setting up the swarm.&lt;/p&gt;
-&lt;p&gt;Let us assume the names of the hosts are stored in a shell variable called&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hostnames = (red00 red01 red02 red03 red04)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Naturally, we want to install on these machines docker and register
-them to the swarm. A variety of tools exist to simplify this process,
-such as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;parallel shell &lt;a href=&#34;https://github.com/vallard/psh&#34;&gt;https://github.com/vallard/psh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cloudmesh parallel (TODO: find the link)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For now we use this simple shell program to install docker on each of
-the hosts in the hostnames&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;red00 red01 red02 red03 red04&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; host in &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt;[@]&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;do&lt;/span&gt;
-      ssh pi@&lt;span style=&#34;color:#b8860b&#34;&gt;$host&lt;/span&gt; curl -sSL https://get.docker.com | sh
-&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save this script in a file called &lt;code&gt;docker-install.sh&lt;/code&gt; and set the executable rights with&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;chmod u+x docker-install.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When we execute it with&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ docker-install.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It will sequentially install docker on each host. This is not very
-efficient and only works for a small number of hosts.&lt;/p&gt;
-&lt;h2 id=&#34;registering-the-pi-to-the-swarm&#34;&gt;Registering the Pi to the Swarm&lt;/h2&gt;
-&lt;p&gt;Next we need to run on one of the nodes the management node for the
-swarm to which all others servers register as workers. Although we
-could run on this node als a worker, we will just run the manager on
-it as we want to avoid overloading it and make sure it operates
-smoothly.&lt;/p&gt;
-&lt;p&gt;We select the first host in our hostlist for it called &lt;code&gt;red00&lt;/code&gt; Let us
-assume the host has the ipaddress &lt;code&gt;&amp;lt;manager-ip-address&amp;gt;&lt;/code&gt;. We can log
-into this computer and execute the command&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm init --advertise-addr &amp;lt;manager-ip-address&amp;gt;:2377
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will print out a token that we can use on the workers to
-register with our swarm. The token will look something like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;SWMTKN-abc...xyz
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let us use the term &lt;code&gt;&amp;lt;token&amp;gt;&lt;/code&gt; to indicate the token. To register a
-worker a two step process is used.&lt;/p&gt;
-&lt;p&gt;If you ever forget the token, you simply can use the following command
-on the manager&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ docker swarm join-token worker
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It will print out the command that you will have to execute on a worker.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm join --token SWMTKN-abc...manager...xyz &amp;lt;manager-ip-address&amp;gt;:2377
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see the list of nodes, you can use the command&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;I $ sudo docker node ls
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-cheat-sheet&#34;&gt;Docker Cheat Sheet&lt;/h2&gt;
-&lt;p&gt;The following table is copied from the
-&lt;a href=&#34;https://github.com/docker/labs/blob/master/developer-tools/java/chapters/appa-common-commands.adoc&#34;&gt;docker manual&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;.&lt;div class=&#34;smalltable&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Keyestudio Easy-plug control board is a microcontroller board based on
+the ATmega328P-PU. It has 14 digital input/outputs (of which 6 can be
+used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB
+connection, a power jack, an ICSP header and a reset button. It
+contains everything needed to support the microcontroller; simply
+connect it to a computer with a USB cable or power it with a AC-to-DC
+adapter or battery to get started.You can tinker with your UNO without
+worrying too much about doing something wrong, worst case scenario you
+can replace the chip for a few dollars and start over again.  For
+convenience of wire connection, we simplify pins GND and VCC into each
+plug, so you only need one wire to connect a module, no need to
+separately connect the VCC and GND. The pins on the original UNO are
+all redesigned into plug interface. On the board, you can find ports
+D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/easyplug.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;specifications&#34;&gt;Specifications&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Purpose&lt;/th&gt;
-&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Microcontroller core&lt;/th&gt;
+&lt;th&gt;ATmega328P-PU&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Image&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Working voltage&lt;/td&gt;
+&lt;td&gt;+5V&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Build an image&lt;/td&gt;
-&lt;td&gt;docker image build &amp;ndash;rm=true .&lt;/td&gt;
+&lt;td&gt;External input voltage&lt;/td&gt;
+&lt;td&gt;$+7V - +12V$ (suggested)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Install an image&lt;/td&gt;
-&lt;td&gt;docker image pull ${IMAGE}&lt;/td&gt;
+&lt;td&gt;External input voltage  (externum)&lt;/td&gt;
+&lt;td&gt;$+6V \leq Vin \leq +20V$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;List of installed images&lt;/td&gt;
-&lt;td&gt;docker image ls&lt;/td&gt;
+&lt;td&gt;Digital signal I/O interface&lt;/td&gt;
+&lt;td&gt;14 (of which 6 provide PWM output)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;List of installed images (detailed listing)&lt;/td&gt;
-&lt;td&gt;docker image ls &amp;ndash;no-trunc&lt;/td&gt;
+&lt;td&gt;Analog signal input interface&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Remove an image&lt;/td&gt;
-&lt;td&gt;docker image rm ${IMAGE_ID}&lt;/td&gt;
+&lt;td&gt;DCI/O interface current&lt;/td&gt;
+&lt;td&gt;20 mA&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Remove unused images&lt;/td&gt;
-&lt;td&gt;docker image prune&lt;/td&gt;
+&lt;td&gt;FlashMemory&lt;/td&gt;
+&lt;td&gt;32KB (ATmega328) of which 0.5 KB used by bootloader&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Remove all images&lt;/td&gt;
-&lt;td&gt;docker image rm $(docker image ls -aq)&lt;/td&gt;
+&lt;td&gt;SRAM static storage capacity&lt;/td&gt;
+&lt;td&gt;2KB&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Containers&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;1 KB&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Run a container&lt;/td&gt;
-&lt;td&gt;docker container run&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;List of running containers&lt;/td&gt;
-&lt;td&gt;docker container ls&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;List of all containers&lt;/td&gt;
-&lt;td&gt;docker container ls -a&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Stop a container&lt;/td&gt;
-&lt;td&gt;docker container stop ${CID}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Stop all running containers&lt;/td&gt;
-&lt;td&gt;docker container stop $(docker container ls -q)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;List all exited containers with status 1&lt;/td&gt;
-&lt;td&gt;docker container ls -a &amp;ndash;filter &amp;ldquo;exited=1&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Remove a container&lt;/td&gt;
-&lt;td&gt;docker container rm ${CID}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Remove container by a regular expression&lt;/td&gt;
-&lt;td&gt;docker container ls -a &lt;code&gt;|&lt;/code&gt; grep gregor &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{print $1}&amp;rsquo; &lt;code&gt;|&lt;/code&gt; xargs docker container rm -f&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Remove all exited containers&lt;/td&gt;
-&lt;td&gt;docker container rm -f $(docker container ls -a &lt;code&gt;|&lt;/code&gt; grep Exit &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{ print $1 }&#39;)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Remove all containers&lt;/td&gt;
-&lt;td&gt;docker container rm $(docker container ls -aq)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Find IP address of the container&lt;/td&gt;
-&lt;td&gt;docker container inspect &amp;ndash;format &amp;lsquo;{{ .NetworkSettings.IPAddress }}&amp;rsquo; ${CID}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Attach to a container&lt;/td&gt;
-&lt;td&gt;docker container attach ${CID}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Open a shell in to a container&lt;/td&gt;
-&lt;td&gt;docker container exec -it ${CID} bash&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Get container id for an image by a regular expression&lt;/td&gt;
-&lt;td&gt;docker container ls&lt;/td&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;16 MHz&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;exercise&#34;&gt;Exercise&lt;/h2&gt;
-&lt;dl&gt;
-&lt;dt&gt;Swarm.1&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;Your task is is to identify technologies to execute the Installation
-in parallel. Suitable technologies include&lt;/p&gt;
+&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;p&gt;Tools -&amp;gt; Arduino/Genuine Arduino&lt;/p&gt;
+&lt;p&gt;port oon OSX will lock something like this:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;psh&lt;/li&gt;
-&lt;li&gt;ansible&lt;/li&gt;
-&lt;li&gt;puppet&lt;/li&gt;
-&lt;li&gt;python threads&lt;/li&gt;
-&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;li&gt;/dev/cu.usbmodem1461&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We like that the class is split up in groups and each group develops this
-solution. Naturally you can test this first with not installing docker, but
-with a simple command such as &lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;Swarm.2&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;Develop a python cloudmesh command called&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;cms swarm config hostnames.yaml&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;where the yaml file looks something like&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;manager&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&amp;lt;ip00&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;worker&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip01&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip02&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip03&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Similarly create other convenient functions such as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cms swarm kill&lt;/code&gt;, which kills the swarm&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cms swarm ls&lt;/code&gt;, which gives details about the swarm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;h2 id=&#34;test-code&#34;&gt;Test code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;int command;
+int port;
 
+int pin_from = 5;
+int pin_to = 13;
+
+void Light(int pin){
+  digitalWrite(pin,HIGH);
+  delay(500);
+  digitalWrite(pin,LOW);
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+ command=Serial.read();
+  if(command==&#39;a&#39;) {
+    int i;
+    for (i = pin_from; i &amp;lt;= pin_to; i++){
+      Light(i);
+      Serial.print(&amp;quot;Led &amp;quot;);
+      Serial.println(i);
+      delay(100);
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;kit-list&#34;&gt;Kit List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&#34;&gt;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../images/easyplugkit.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Part&lt;/th&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug controller Board&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Acrylic Board + Copper bush set&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug cable&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB cable&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Piranha LED Module&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Line Tracking Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Infrared obstacle avoidance sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Photo Interrupter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug PIR Motion Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS18B20 Temperature Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Receiver Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Transmitter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Single Relay Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug ADXL345 Three Axis Acceleration Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DHT11 Temperature and Humidity Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS3231 Clock Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Gas Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Alcohol Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug MQ135 Air Quality Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug BMP180 Barometric Pressure Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Bluetooth Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug 1602 I2C Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug I2C 8x8 LED Matrix&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;command-language&#34;&gt;Command Language&lt;/h2&gt;
+&lt;p&gt;on PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches PORT on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches port off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;on all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goes serially through ports and switches them on and off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;String command;
+
+
+int pin_from = 5;
+int pin_to = 13;
+
+String getValue(String data, char separator, int index)
+{
+  // copied from internet
+    int found = 0;
+    int strIndex[] = { 0, -1 };
+    int maxIndex = data.length() - 1;
+
+    for (int i = 0; i &amp;lt;= maxIndex &amp;amp;&amp;amp; found &amp;lt;= index; i++) {
+        if (data.charAt(i) == separator || i == maxIndex) {
+            found++;
+            strIndex[0] = strIndex[1] + 1;
+            strIndex[1] = (i == maxIndex) ? i+1 : i;
+        }
+    }
+    return found &amp;gt; index ? data.substring(strIndex[0], strIndex[1]) : &amp;quot;&amp;quot;;
+}
+
+void Light(int pin, int action){
+  if (action ==  1) {
+    digitalWrite(pin,HIGH);
+  } else {
+    digitalWrite(pin,LOW);
+  }
+}
+
+void wait_for_input() {
+  while (Serial.available()==0) { }
+}
+
+void setup() {
+  Serial.begin(9600);
+  int i;
+  for (i = pin_from; i &amp;lt;= pin_to; i++){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+
+  Serial.print(&amp;quot;command:&amp;quot;);
+  wait_for_input();
+  command=Serial.readString();
+  Serial.println (command);
+
+   if (command==&amp;quot;dance&amp;quot;) {
+      for (int i = pin_from; i &amp;lt;= pin_to; i++) {
+        Light(i,1);
+        delay(100);
+        Light(i,0);
+        Serial.print(&amp;quot;Led &amp;quot;);
+        Serial.println(i);
+        delay(100);
+      }
+    } else {
+
+      int action;
+      String action_name = getValue(command, &#39; &#39;, 0);
+      String port_name = getValue(command, &#39; &#39;, 1);
+
+      action = action_name == &amp;quot;on&amp;quot;;
+
+      if (port_name == &amp;quot;all&amp;quot;) {
+        for (int i = pin_from; i &amp;lt;= pin_to; i++){
+          Light(i,action);
+          Serial.print(&amp;quot;Led &amp;quot;);
+          Serial.println(i);
+        }
+      } else {
+        int port = port_name.toInt();
+
+        Serial.println(action);
+        Serial.println(port);
+        Light(port, action);
+     }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -859,6 +1200,221 @@ which you can do with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cssh -l pi rpcluster
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This opens a new SSH window with username &lt;em&gt;pi&lt;/em&gt; for each hostname in rpcluster (defined in &lt;strong&gt;/etc/clusters&lt;/strong&gt;). Click on the gray box to type commands into each node.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Docker Installation</title>
+      <link>/docs/old/pi/clusters/pi-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/pi/clusters/pi-docker/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
+&lt;p&gt;Swarm is a native clustering and scheduling tool for Docker. Instead
+of just managing containers on a single server, we can manage
+containers on a set of servers. The containers will be automatically
+scheduled on the pool of servers making them appear as a single
+resource. We will set up and use Docker on a number of Raspberry Pi&amp;rsquo;s
+install Docker on them and register them into a Docker Swarm.&lt;/p&gt;
+&lt;h2 id=&#34;creating-a-network-of-pis-with-docker&#34;&gt;Creating a Network of Pi&amp;rsquo;s with docker&lt;/h2&gt;
+&lt;p&gt;In &lt;a href=&#34;#pi-now-main&#34;&gt;Network of Pis&lt;/a&gt; section we explained how to set up a network
+of Pis. Here we assume that we start from such a network. The Pi&amp;rsquo;s have all
+different names, and are registered on the network. Each Pi has the public key
+installed from the machine where you will login from for setting up the swarm.&lt;/p&gt;
+&lt;p&gt;Let us assume the names of the hosts are stored in a shell variable called&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hostnames = (red00 red01 red02 red03 red04)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Naturally, we want to install on these machines docker and register
+them to the swarm. A variety of tools exist to simplify this process,
+such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parallel shell &lt;a href=&#34;https://github.com/vallard/psh&#34;&gt;https://github.com/vallard/psh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cloudmesh parallel (TODO: find the link)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For now we use this simple shell program to install docker on each of
+the hosts in the hostnames&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;red00 red01 red02 red03 red04&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; host in &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostnames&lt;/span&gt;[@]&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;do&lt;/span&gt;
+      ssh pi@&lt;span style=&#34;color:#b8860b&#34;&gt;$host&lt;/span&gt; curl -sSL https://get.docker.com | sh
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save this script in a file called &lt;code&gt;docker-install.sh&lt;/code&gt; and set the executable rights with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod u+x docker-install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When we execute it with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker-install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will sequentially install docker on each host. This is not very
+efficient and only works for a small number of hosts.&lt;/p&gt;
+&lt;h2 id=&#34;registering-the-pi-to-the-swarm&#34;&gt;Registering the Pi to the Swarm&lt;/h2&gt;
+&lt;p&gt;Next we need to run on one of the nodes the management node for the
+swarm to which all others servers register as workers. Although we
+could run on this node als a worker, we will just run the manager on
+it as we want to avoid overloading it and make sure it operates
+smoothly.&lt;/p&gt;
+&lt;p&gt;We select the first host in our hostlist for it called &lt;code&gt;red00&lt;/code&gt; Let us
+assume the host has the ipaddress &lt;code&gt;&amp;lt;manager-ip-address&amp;gt;&lt;/code&gt;. We can log
+into this computer and execute the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm init --advertise-addr &amp;lt;manager-ip-address&amp;gt;:2377
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will print out a token that we can use on the workers to
+register with our swarm. The token will look something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SWMTKN-abc...xyz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let us use the term &lt;code&gt;&amp;lt;token&amp;gt;&lt;/code&gt; to indicate the token. To register a
+worker a two step process is used.&lt;/p&gt;
+&lt;p&gt;If you ever forget the token, you simply can use the following command
+on the manager&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker swarm join-token worker
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will print out the command that you will have to execute on a worker.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo docker swarm join --token SWMTKN-abc...manager...xyz &amp;lt;manager-ip-address&amp;gt;:2377
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see the list of nodes, you can use the command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;I $ sudo docker node ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-cheat-sheet&#34;&gt;Docker Cheat Sheet&lt;/h2&gt;
+&lt;p&gt;The following table is copied from the
+&lt;a href=&#34;https://github.com/docker/labs/blob/master/developer-tools/java/chapters/appa-common-commands.adoc&#34;&gt;docker manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.&lt;div class=&#34;smalltable&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Image&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Build an image&lt;/td&gt;
+&lt;td&gt;docker image build &amp;ndash;rm=true .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Install an image&lt;/td&gt;
+&lt;td&gt;docker image pull ${IMAGE}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of installed images&lt;/td&gt;
+&lt;td&gt;docker image ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of installed images (detailed listing)&lt;/td&gt;
+&lt;td&gt;docker image ls &amp;ndash;no-trunc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove an image&lt;/td&gt;
+&lt;td&gt;docker image rm ${IMAGE_ID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove unused images&lt;/td&gt;
+&lt;td&gt;docker image prune&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all images&lt;/td&gt;
+&lt;td&gt;docker image rm $(docker image ls -aq)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Containers&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Run a container&lt;/td&gt;
+&lt;td&gt;docker container run&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of running containers&lt;/td&gt;
+&lt;td&gt;docker container ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List of all containers&lt;/td&gt;
+&lt;td&gt;docker container ls -a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stop a container&lt;/td&gt;
+&lt;td&gt;docker container stop ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stop all running containers&lt;/td&gt;
+&lt;td&gt;docker container stop $(docker container ls -q)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List all exited containers with status 1&lt;/td&gt;
+&lt;td&gt;docker container ls -a &amp;ndash;filter &amp;ldquo;exited=1&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove a container&lt;/td&gt;
+&lt;td&gt;docker container rm ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove container by a regular expression&lt;/td&gt;
+&lt;td&gt;docker container ls -a &lt;code&gt;|&lt;/code&gt; grep gregor &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{print $1}&amp;rsquo; &lt;code&gt;|&lt;/code&gt; xargs docker container rm -f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all exited containers&lt;/td&gt;
+&lt;td&gt;docker container rm -f $(docker container ls -a &lt;code&gt;|&lt;/code&gt; grep Exit &lt;code&gt;|&lt;/code&gt; awk &amp;lsquo;{ print $1 }&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Remove all containers&lt;/td&gt;
+&lt;td&gt;docker container rm $(docker container ls -aq)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Find IP address of the container&lt;/td&gt;
+&lt;td&gt;docker container inspect &amp;ndash;format &amp;lsquo;{{ .NetworkSettings.IPAddress }}&amp;rsquo; ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Attach to a container&lt;/td&gt;
+&lt;td&gt;docker container attach ${CID}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open a shell in to a container&lt;/td&gt;
+&lt;td&gt;docker container exec -it ${CID} bash&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Get container id for an image by a regular expression&lt;/td&gt;
+&lt;td&gt;docker container ls&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;exercise&#34;&gt;Exercise&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;Swarm.1&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Your task is is to identify technologies to execute the Installation
+in parallel. Suitable technologies include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;psh&lt;/li&gt;
+&lt;li&gt;ansible&lt;/li&gt;
+&lt;li&gt;puppet&lt;/li&gt;
+&lt;li&gt;python threads&lt;/li&gt;
+&lt;li&gt;cloudmesh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We like that the class is split up in groups and each group develops this
+solution. Naturally you can test this first with not installing docker, but
+with a simple command such as &lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Swarm.2&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Develop a python cloudmesh command called&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cms swarm config hostnames.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;where the yaml file looks something like&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;manager&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&amp;lt;ip00&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;worker&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip01&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip02&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip03&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Similarly create other convenient functions such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cms swarm kill&lt;/code&gt;, which kills the swarm&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cms swarm ls&lt;/code&gt;, which gives details about the swarm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
 
       </description>
     </item>

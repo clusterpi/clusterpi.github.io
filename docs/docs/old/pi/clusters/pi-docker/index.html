@@ -20,25 +20,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Docker | Cluster PI</title><meta property="og:title" content="Docker" />
-<meta property="og:description" content="Docker is a tool that allows us to deploy applications inside of software containers. A container allows a developer to package the application along with dependencies associated with it and put all in a box which is an isolated environment so that the underlying host operating system is completely abstracted from the application running inside the box.
-It is a method of packaging software, to include not only our code, but also other components such as a full file system, system tools, services, and libraries." />
+<title>Docker Installation | Cluster PI</title><meta property="og:title" content="Docker Installation" />
+<meta property="og:description" content="Docker Swarm Swarm is a native clustering and scheduling tool for Docker. Instead of just managing containers on a single server, we can manage containers on a set of servers. The containers will be automatically scheduled on the pool of servers making them appear as a single resource. We will set up and use Docker on a number of Raspberry Pi&rsquo;s install Docker on them and register them into a Docker Swarm." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/old/pi/clusters/pi-docker/" />
 <meta property="article:modified_time" content="2020-09-12T08:05:37-04:00" /><meta property="og:site_name" content="Cluster PI" />
-<meta itemprop="name" content="Docker">
-<meta itemprop="description" content="Docker is a tool that allows us to deploy applications inside of software containers. A container allows a developer to package the application along with dependencies associated with it and put all in a box which is an isolated environment so that the underlying host operating system is completely abstracted from the application running inside the box.
-It is a method of packaging software, to include not only our code, but also other components such as a full file system, system tools, services, and libraries.">
+<meta itemprop="name" content="Docker Installation">
+<meta itemprop="description" content="Docker Swarm Swarm is a native clustering and scheduling tool for Docker. Instead of just managing containers on a single server, we can manage containers on a set of servers. The containers will be automatically scheduled on the pool of servers making them appear as a single resource. We will set up and use Docker on a number of Raspberry Pi&rsquo;s install Docker on them and register them into a Docker Swarm.">
 <meta itemprop="dateModified" content="2020-09-12T08:05:37-04:00" />
-<meta itemprop="wordCount" content="1175">
+<meta itemprop="wordCount" content="820">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="Docker is a tool that allows us to deploy applications inside of software containers. A container allows a developer to package the application along with dependencies associated with it and put all in a box which is an isolated environment so that the underlying host operating system is completely abstracted from the application running inside the box.
-It is a method of packaging software, to include not only our code, but also other components such as a full file system, system tools, services, and libraries."/>
+<meta name="twitter:title" content="Docker Installation"/>
+<meta name="twitter:description" content="Docker Swarm Swarm is a native clustering and scheduling tool for Docker. Instead of just managing containers on a single server, we can manage containers on a set of servers. The containers will be automatically scheduled on the pool of servers making them appear as a single resource. We will set up and use Docker on a number of Raspberry Pi&rsquo;s install Docker on them and register them into a Docker Swarm."/>
 
 
 
@@ -887,6 +884,47 @@ It is a method of packaging software, to include not only our code, but also oth
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/cluster/docker/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Docker</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsclusterdocker">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsclusterdockerpi-docker-single" href="/docs/cluster/docker/pi-docker-single/">Installation</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsclusterdockerpi-docker-swarm" href="/docs/cluster/docker/pi-docker-swarm/">Swarm</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsclusterdockerdocker-cheatsheet" href="/docs/cluster/docker/docker-cheatsheet/">Cheatsheet</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsclustermini-cluster" href="/docs/cluster/mini-cluster/">Build a Mini Cluster</a>
       
@@ -1009,6 +1047,12 @@ It is a method of packaging software, to include not only our code, but also oth
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldioteasyplug" href="/docs/old/iot/easyplug/">Easy Plug</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldiotintroduction" href="/docs/old/iot/introduction/">Introduction</a>
       
       
@@ -1051,12 +1095,6 @@ It is a method of packaging software, to include not only our code, but also oth
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoldpiclusterspi-docker" href="/docs/old/pi/clusters/pi-docker/">Docker</a>
-      
-      
-      
-      
-      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpiexercise" href="/docs/old/pi/exercise/">Exercise</a>
       
       
@@ -1064,6 +1102,12 @@ It is a method of packaging software, to include not only our code, but also oth
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoldpikubernetes526headhead_node_readme" href="/docs/old/pi/kubernetes/526/head/head_node_readme/">Head Node Setup</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoldpiclusterspi-docker" href="/docs/old/pi/clusters/pi-docker/">Installation</a>
       
       
       
@@ -1241,7 +1285,7 @@ It is a method of packaging software, to include not only our code, but also oth
 
 
 <a href="https://github.com/clusterpi/clusterpi.github.io/edit/master/content/en/docs/old/pi/clusters/pi-docker.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/clusterpi/clusterpi.github.io/issues/new?title=Docker" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/clusterpi/clusterpi.github.io/issues/new?title=Docker%20Installation" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/clusterpi/clusterpi.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -1255,7 +1299,6 @@ It is a method of packaging software, to include not only our code, but also oth
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#installation">Installation</a></li>
     <li><a href="#docker-swarm">Docker Swarm</a></li>
     <li><a href="#creating-a-network-of-pis-with-docker">Creating a Network of Pi&rsquo;s with docker</a></li>
     <li><a href="#registering-the-pi-to-the-swarm">Registering the Pi to the Swarm</a></li>
@@ -1299,7 +1342,7 @@ It is a method of packaging software, to include not only our code, but also oth
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/old/pi/clusters/pi-docker/">Docker</a>
+	<a href="/docs/old/pi/clusters/pi-docker/">Installation</a>
 </li>
 
 	</ol>
@@ -1307,56 +1350,10 @@ It is a method of packaging software, to include not only our code, but also oth
 
             
 <div class="td-content">
-	<h1>Docker</h1>
+	<h1>Docker Installation</h1>
     
 	       
-	<p>Docker is a tool that allows us to deploy applications inside of
-software containers.  A container allows a developer to package the
-application along with dependencies associated with it and put all in
-a box which is an isolated environment so that the underlying host
-operating system is completely abstracted from the application running
-inside the box.</p>
-<p>It is a method of packaging software, to include not only our code,
-but also other components such as a full file system, system tools,
-services, and libraries. This can be useful for the Raspberry Pi
-because it allows users to run applications without lot of steps, as
-long as the application is packaged inside of a Docker image. We
-simply install Docker and run the container.</p>
-<p>According to the developers of Docker it includes the following
-features:</p>
-<ul>
-<li>Portability</li>
-<li>Density</li>
-<li>Scalability</li>
-<li>Security</li>
-</ul>
-<h2 id="installation">Installation</h2>
-<p>First we need to make sure the Raspberry Pi is up to date so we can
-install a recent version of docker.  The automated script maintained
-by the Docker project will create a systemd service file and copy the
-relevant Docker binaries into <code>/usr/bin/</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ sudo apt-get update
-pi$ curl -sSL https://get.docker.com | sh
-</code></pre></div><p>In order for us to start the docker daemon at the next boot, we add it
-as follows:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ sudo systemctl <span style="color:#a2f">enable</span> docker
-</code></pre></div><p>Now if we reboot, the Docker daemon will start. In case you like to
-avoid the first reboot, you can use the command:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ sudo systemctl start docker
-</code></pre></div><p>Naturally you do not have to do this after you reboot the next time.</p>
-<p>The Docker client can only be used by <code>root</code> or members of the
-<code>docker</code> group.  Thus, let us add the user pi (or your equivalent
-user) to the docker group using:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ sudo usermod -aG docker pi
-</code></pre></div><p>After executing the previous command, we log out of the terminal restart
-it so we are sure the user permissions are available in the shell we
-use.</p>
-<p>To test docker is installed successfully, we run the <code>hello-world</code>
-docker image with the command:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi$ docker run hello-world
-</code></pre></div><p>If Docker is installed properly, we will see a <code>Hello from Docker!</code>
-message.</p>
-<h2 id="docker-swarm">Docker Swarm</h2>
+	<h2 id="docker-swarm">Docker Swarm</h2>
 <p>Swarm is a native clustering and scheduling tool for Docker. Instead
 of just managing containers on a single server, we can manage
 containers on a set of servers. The containers will be automatically

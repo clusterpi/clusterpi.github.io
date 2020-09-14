@@ -7,6 +7,10 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/docker/pi-docker-single/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/projects/ideas/iot/</loc>
   </url>
   
@@ -16,6 +20,10 @@
   
   <url>
     <loc>/docs/projects/ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/docker/</loc>
   </url>
   
   <url>
@@ -34,7 +42,7 @@
   
   <url>
     <loc>/docs/old/iot/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -50,6 +58,10 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/docker/pi-docker-swarm/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
@@ -59,8 +71,12 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/docker/docker-cheatsheet/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/old/</loc>
-    <lastmod>2020-09-12T08:34:17-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -80,7 +96,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -129,12 +145,12 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-09-11T13:18:39-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -160,16 +176,16 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/clusters/pi-docker/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/iot/sensors/temperature/ds18b20/</loc>
   </url>
   
   <url>
     <loc>/docs/iot/adruino/easyplug/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/old/iot/easyplug/</loc>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -223,6 +239,11 @@
   </url>
   
   <url>
+    <loc>/docs/old/pi/clusters/pi-docker/</loc>
+    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/old/iot/introduction/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
@@ -233,7 +254,7 @@
   
   <url>
     <loc>/docs/old/case/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -314,7 +335,7 @@
   
   <url>
     <loc>/categories/programming/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -332,7 +353,7 @@
   
   <url>
     <loc>/docs/old/iot/pi/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
@@ -411,12 +432,12 @@
   
   <url>
     <loc>/tags/tools/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/old/iot/tools/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
   </url>
   
   <url>

@@ -5,7 +5,7 @@ weight: 60
 ---
 
 {{% pageinfo %}}
-Here we gather some documents to build PI Clusters.
+Here we dgather some documents to build PI Clusters.
 {{% /pageinfo %}}
 
 

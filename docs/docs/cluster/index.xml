@@ -15,6 +15,45 @@
     
     
     <item>
+      <title>Docs: Docker</title>
+      <link>/docs/cluster/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/docker/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Here we gather some documents about Docker.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Docker is a tool that allows us to deploy applications inside of
+software containers. A container allows a developer to package the
+application along with dependencies associated with it and put all in
+a box which is an isolated environment so that the underlying host
+operating system is completely abstracted from the application running
+inside the box.&lt;/p&gt;
+&lt;p&gt;It is a method of packaging software, to include not only our code,
+but also other components such as a full file system, system tools,
+services, and libraries. This can be useful for the Raspberry Pi
+because it allows users to run applications without lot of steps, as
+long as the application is packaged inside of a Docker image. We
+simply install Docker and run the container.&lt;/p&gt;
+&lt;p&gt;According to the developers of Docker it includes the following features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portability&lt;/li&gt;
+&lt;li&gt;Density&lt;/li&gt;
+&lt;li&gt;Scalability&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Build a Mini Cluster</title>
       <link>/docs/cluster/mini-cluster/</link>
       <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
