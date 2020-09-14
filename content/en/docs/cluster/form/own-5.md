@@ -93,4 +93,8 @@ TODO: replace the images with one that has white background
 | ![Figure 3](../images/pi-cluster-no-wires.jpg) |  After attaching the heat syncs, threaded hexagonal spacer supports are used to connect the Pis together. A fully-assembled 5-node Pi cluster is shown.   |
 | ![Figure 4](../images/complete-pi-cluster.jpg) |  Each node of the cluster is then attached to the switch using an Ethernet cables and to the power supply using a USB cables. The fully wired cluster is shown.  |
 
+## Alternative and Additional Hardware
+
+Put your substitutes here
+
 
