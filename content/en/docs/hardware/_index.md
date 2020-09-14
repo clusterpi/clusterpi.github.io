@@ -2,6 +2,8 @@
 title: "Project Hardware"
 linkTitle: "Project Hardware"
 weight: 10
+description: > 
+  Project Hardware
 ---
 
 {{% pageinfo %}}
