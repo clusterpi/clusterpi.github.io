@@ -1,0 +1,370 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Adruino</title>
+    <link>/docs/iot/adruino/</link>
+    <description>Recent content in Adruino on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/iot/adruino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Easy Plug</title>
+      <link>/docs/iot/adruino/easyplug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/adruino/easyplug/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The ooriginal Easyplug board was replaced in 2019 by a new kit&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-ed&#34;&gt;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-ed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This system is highly recommended as it eliminates breadboard and
+soldering. An alternative to easyplug is GrovePI which directly
+interfaces with the Raspberry PI. However it is possible to
+communicate from PIs to Arduinos.&lt;/p&gt;
+&lt;p&gt;Please note that the system is now also available for Microbit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.keyestudio.com/search/?Keyword=easy&#34;&gt;https://www.keyestudio.com/search/?Keyword=easy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Copied from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keyestudio Easy-plug control board is a microcontroller board based on
+the ATmega328P-PU. It has 14 digital input/outputs (of which 6 can be
+used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB
+connection, a power jack, an ICSP header and a reset button. It
+contains everything needed to support the microcontroller; simply
+connect it to a computer with a USB cable or power it with a AC-to-DC
+adapter or battery to get started.You can tinker with your UNO without
+worrying too much about doing something wrong, worst case scenario you
+can replace the chip for a few dollars and start over again.  For
+convenience of wire connection, we simplify pins GND and VCC into each
+plug, so you only need one wire to connect a module, no need to
+separately connect the VCC and GND. The pins on the original UNO are
+all redesigned into plug interface. On the board, you can find ports
+D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;easyplug.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;specifications&#34;&gt;Specifications&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Microcontroller core&lt;/th&gt;
+&lt;th&gt;ATmega328P-PU&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Working voltage&lt;/td&gt;
+&lt;td&gt;+5V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage&lt;/td&gt;
+&lt;td&gt;$+7V - +12V$ (suggested)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;External input voltage  (externum)&lt;/td&gt;
+&lt;td&gt;$+6V \leq Vin \leq +20V$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Digital signal I/O interface&lt;/td&gt;
+&lt;td&gt;14 (of which 6 provide PWM output)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analog signal input interface&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DCI/O interface current&lt;/td&gt;
+&lt;td&gt;20 mA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FlashMemory&lt;/td&gt;
+&lt;td&gt;32KB (ATmega328) of which 0.5 KB used by bootloader&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SRAM static storage capacity&lt;/td&gt;
+&lt;td&gt;2KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;1 KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM storage capacity&lt;/td&gt;
+&lt;td&gt;16 MHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;p&gt;Tools -&amp;gt; Arduino/Genuine Arduino&lt;/p&gt;
+&lt;p&gt;port oon OSX will lock something like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/dev/cu.usbmodem1461&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;test-code&#34;&gt;Test code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; command;
+&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; port;
+
+&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin_from &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;5&lt;/span&gt;;
+&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin_to &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;13&lt;/span&gt;;
+
+void Light(&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin){
+  digitalWrite(pin,HIGH);
+  delay(&lt;span style=&#34;color:#666&#34;&gt;500&lt;/span&gt;);
+  digitalWrite(pin,LOW);
+}
+
+void setup() {
+  Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;begin(&lt;span style=&#34;color:#666&#34;&gt;9600&lt;/span&gt;);
+  &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i;
+  &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin_from; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; pin_to; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+ command&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;read();
+  &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt;(command&lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;) {
+    &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i;
+    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin_from; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; pin_to; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;){
+      Light(i);
+      Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Led &amp;#34;&lt;/span&gt;);
+      Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println(i);
+      delay(&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;);
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kit-list&#34;&gt;Kit List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&#34;&gt;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;easyplugkit.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Part&lt;/th&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug controller Board&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Acrylic Board + Copper bush set&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug cable&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB cable&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Piranha LED Module&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Line Tracking Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Infrared obstacle avoidance sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Photo Interrupter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug PIR Motion Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS18B20 Temperature Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Receiver Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug IR Transmitter Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Single Relay Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug ADXL345 Three Axis Acceleration Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DHT11 Temperature and Humidity Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug DS3231 Clock Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Gas Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Analog Alcohol Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug MQ135 Air Quality Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug BMP180 Barometric Pressure Sensor&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug Bluetooth Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug 1602 I2C Module&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EASY plug I2C 8x8 LED Matrix&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;command-language&#34;&gt;Command Language&lt;/h2&gt;
+&lt;p&gt;on PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches PORT on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off PORT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches port off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;on all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;off all&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switches all ports off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goes serially through ports and switches them on and off&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;String command;
+
+
+&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin_from &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;5&lt;/span&gt;;
+&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin_to &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;13&lt;/span&gt;;
+
+String getValue(String data, char separator, &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; index)
+{
+  &lt;span style=&#34;color:#666&#34;&gt;//&lt;/span&gt; copied &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;internet&lt;/span&gt;
+    &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; found &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;;
+    &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; strIndex[] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; { &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt; };
+    &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; maxIndex &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;length() &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;;
+
+    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; maxIndex &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; found &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; index; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;) {
+        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (data&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;charAt(i) &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; separator &lt;span style=&#34;color:#666&#34;&gt;||&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; maxIndex) {
+            found&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;;
+            strIndex[&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; strIndex[&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;;
+            strIndex[&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; (i &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; maxIndex) &lt;span style=&#34;&#34;&gt;?&lt;/span&gt; i&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt; : i;
+        }
+    }
+    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; found &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; index &lt;span style=&#34;&#34;&gt;?&lt;/span&gt; data&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;substring(strIndex[&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;], strIndex[&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;]) : &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+}
+
+void Light(&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; pin, &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; action){
+  &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (action &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt;  &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;) {
+    digitalWrite(pin,HIGH);
+  } &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt; {
+    digitalWrite(pin,LOW);
+  }
+}
+
+void wait_for_input() {
+  &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;available()&lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;) { }
+}
+
+void setup() {
+  Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;begin(&lt;span style=&#34;color:#666&#34;&gt;9600&lt;/span&gt;);
+  &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i;
+  &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin_from; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; pin_to; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;){
+    pinMode(i,OUTPUT);
+  }
+}
+
+
+void loop() {
+
+  Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;command:&amp;#34;&lt;/span&gt;);
+  wait_for_input();
+  command&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;readString();
+  Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println (command);
+
+   &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (command&lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;dance&amp;#34;&lt;/span&gt;) {
+      &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin_from; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; pin_to; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;) {
+        Light(i,&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;);
+        delay(&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;);
+        Light(i,&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;);
+        Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Led &amp;#34;&lt;/span&gt;);
+        Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println(i);
+        delay(&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;);
+      }
+    } &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt; {
+
+      &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; action;
+      String action_name &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; getValue(command, &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;);
+      String port_name &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; getValue(command, &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;);
+
+      action &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; action_name &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;;
+
+      &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (port_name &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;all&amp;#34;&lt;/span&gt;) {
+        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin_from; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;=&lt;/span&gt; pin_to; i&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;){
+          Light(i,action);
+          Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Led &amp;#34;&lt;/span&gt;);
+          Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println(i);
+        }
+      } &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt; {
+        &lt;span style=&#34;color:#a2f&#34;&gt;int&lt;/span&gt; port &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; port_name&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;toInt();
+
+        Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println(action);
+        Serial&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;println(port);
+        Light(port, action);
+     }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;refernces&#34;&gt;Refernces&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.keyestudio.com/search/?Keyword=easy&#34;&gt;https://www.keyestudio.com/search/?Keyword=easy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;~~&lt;a href=&#34;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html~~&#34;&gt;http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html~~&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

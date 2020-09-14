@@ -1,0 +1,69 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Editors</title>
+    <link>/tags/editors/</link>
+    <description>Recent content in Editors on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/editors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Editors</title>
+      <link>/docs/prg/editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/editor/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;pycharm&#34;&gt;PyCharm&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;
+is an Integrated Development Environment for Python.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.jetbrains.com/pycharm/img/screenshots/simpleLook@2x.jpg&#34; alt=&#34;Image from Pycharm Web page&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;aquaemacs-for-macos&#34;&gt;Aquaemacs for macOS&lt;/h2&gt;
+&lt;p&gt;There are many different versions of emacs available on OSX. Aquamacs is
+often used as it integrates nicely with the OSX GUI interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aquamacs.org/download.shtml&#34;&gt;AquaEmacs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Aquamacs&lt;/em&gt; is a program for Mac devices which allows the user to edit
+text, HTML, LaTeX, C++, Java, Python, R, Perl, Ruby, PHP, and more.
+Aquamacs integrates well with OSX and provides many functions through a
+menu. You will mostly be using the File, Edit, menus or toolbar icons.&lt;/p&gt;
+&lt;p&gt;Emacs provides convenient keyboard shortcuts, most of which are
+combinations with the Control or Meta key (The Meta key is the ESC key).
+If you accidentally end up doing something wrong simply press &lt;code&gt;CTRL-g&lt;/code&gt;
+to get out without issue. Other Keyboard Shortcuts include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CTRL-x u&lt;/code&gt; or File&amp;gt;Undo will cancel any command that you did not
+want done. (CHECK)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ESC-g&lt;/code&gt; will cancel any command you are in the middle of.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can break paragraph lines with &lt;code&gt;Ctrl-x w&lt;/code&gt;, where &lt;code&gt;w&lt;/code&gt; will wrap
+text around word boundaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To delete text to the end of the current word, press &lt;code&gt;ESC-d&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;to delete the whole line from the position of the cursor to the end,
+press &lt;code&gt;CTRL-k&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A started manual is avalaible &lt;a href=&#34;http://oracc.museum.upenn.edu/doc/help/usingemacs/aquamacs/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

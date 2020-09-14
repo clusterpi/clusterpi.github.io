@@ -1,0 +1,320 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Programming</title>
+    <link>/categories/programming/</link>
+    <description>Recent content in Programming on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Programming</title>
+      <link>/docs/prg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Bash</title>
+      <link>/docs/prg/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/bash/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxconfig.org/bash-scripting-tutorial&#34;&gt;Bash&lt;/a&gt; it the
+command language used in terminal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bash is a shell and is pre-installed. A &lt;em&gt;bash&lt;/em&gt; script contains &lt;em&gt;commands&lt;/em&gt; in
+plain text. In order to create a bash script please decide for a
+convenient name. Let us assume we name our script &lt;em&gt;myscript&lt;/em&gt;. Than you can
+create and edit such a script with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ touch myscript.sh
+$ emacs myscripts.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next you need to add the following line to the top ogf the script:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!# /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To demonstrate how to continue writing a script we will be using the
+bash &lt;code&gt;echo&lt;/code&gt; command that allows you to print text. Lets make the second
+line&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now save and start executing your script. Click &amp;ldquo;File&amp;rdquo; and then
+&amp;ldquo;Save&amp;rdquo;. Open Terminal and type in &lt;code&gt;cd&lt;/code&gt; followed by the name of the
+folder you put the document in. Now we need to execute the script.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Executing&lt;/em&gt; a Bash script is rather easy. In order to execute a script,
+we need to first execute the &lt;em&gt;permission set&lt;/em&gt;. In order to give Terminal
+permission to read/execute a Bash script, you have to type&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod u+x myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After the script has been granted permission to be executed, you can
+test it by typing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into the terminal. You will see it prints&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hello World
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;osx-terminal&#34;&gt;OSX terminal:&lt;/h2&gt;
+&lt;p&gt;On macOS, when you navigate to the search magnification glass, you can
+type in &lt;em&gt;terminal&lt;/em&gt; to start it. A terminal allows you to execute a
+number of commands to interact with the computer from a commandline
+interface, e.g. the terminal.&lt;/p&gt;
+&lt;p&gt;MOst recently the terminal has in macOS switched from bash to
+zsh. Please: consult with zsh tutorials. However the Linux commands
+you use in zsh are the same.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Editors</title>
+      <link>/docs/prg/editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/editor/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;pycharm&#34;&gt;PyCharm&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;
+is an Integrated Development Environment for Python.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.jetbrains.com/pycharm/img/screenshots/simpleLook@2x.jpg&#34; alt=&#34;Image from Pycharm Web page&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;aquaemacs-for-macos&#34;&gt;Aquaemacs for macOS&lt;/h2&gt;
+&lt;p&gt;There are many different versions of emacs available on OSX. Aquamacs is
+often used as it integrates nicely with the OSX GUI interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aquamacs.org/download.shtml&#34;&gt;AquaEmacs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Aquamacs&lt;/em&gt; is a program for Mac devices which allows the user to edit
+text, HTML, LaTeX, C++, Java, Python, R, Perl, Ruby, PHP, and more.
+Aquamacs integrates well with OSX and provides many functions through a
+menu. You will mostly be using the File, Edit, menus or toolbar icons.&lt;/p&gt;
+&lt;p&gt;Emacs provides convenient keyboard shortcuts, most of which are
+combinations with the Control or Meta key (The Meta key is the ESC key).
+If you accidentally end up doing something wrong simply press &lt;code&gt;CTRL-g&lt;/code&gt;
+to get out without issue. Other Keyboard Shortcuts include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CTRL-x u&lt;/code&gt; or File&amp;gt;Undo will cancel any command that you did not
+want done. (CHECK)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ESC-g&lt;/code&gt; will cancel any command you are in the middle of.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can break paragraph lines with &lt;code&gt;Ctrl-x w&lt;/code&gt;, where &lt;code&gt;w&lt;/code&gt; will wrap
+text around word boundaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To delete text to the end of the current word, press &lt;code&gt;ESC-d&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;to delete the whole line from the position of the cursor to the end,
+press &lt;code&gt;CTRL-k&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A started manual is avalaible &lt;a href=&#34;http://oracc.museum.upenn.edu/doc/help/usingemacs/aquamacs/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Fortran</title>
+      <link>/docs/prg/fortran/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/fortran/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Although this section is not about parallel programming, you may find
+still that many scientific programs are written in fortran. For some
+smaller fortran programs it is even possible to run them on a
+Raspberry pi. Naturally you will need to install a FORTRAN compiler,
+which you can do with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ sudo apt-get install gfortran
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To test it out store the following program into &lt;code&gt;hello.f90&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fortran&#34; data-lang=&#34;fortran&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;program &lt;/span&gt;hello
+    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;, &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;end program &lt;/span&gt;hello
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you can compile it with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pi$ gfortran -o hello hello.f90
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Execute it with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ hello
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Markdown</title>
+      <link>/docs/prg/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/markdown/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MarkDown is a format convention that produces nicely formatted text with
+simple ASCII text. Markdown has very good support for editors that
+render the final output in a view window next to the editor pane. Two
+such editors are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt;: MacDown provides a nice
+integrated editor that works well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;:
+We have successfully used Vladimir Schhneiders &lt;a href=&#34;https://plugins.jetbrains.com/plugin/7896-markdown-navigator&#34;&gt;Markdown Navigator
+plugin&lt;/a&gt;.
+Once installed you click on a .md file pycharm will automatically
+ask to install the plugins from Markdown for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links for markdown include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt; a macdown editor for macOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.ghost.org/markdown/&#34;&gt;Markdown&lt;/a&gt; (from Markdown)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A detailed set of syntax rules can be found at: &lt;strong&gt;BUG: LINK TO MARKDOWN
+SYNTAX MISSING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following are some basic examples&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;To &lt;em&gt;emphasise&lt;/em&gt; a text you use &lt;code&gt;*emphasize*&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;strong&gt;bold&lt;/strong&gt; use &lt;code&gt;**bold**&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;em&gt;&lt;strong&gt;bold-and-emphasize&lt;/strong&gt;&lt;/em&gt; use &lt;code&gt;***bold-and-emphasize***&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To create a hyperlink use &lt;code&gt;[Google](https://google.com)&lt;/code&gt; which will
+result in &lt;a href=&#34;https://google.com&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To include an image use &lt;code&gt;![Bracketed Text](link)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A list can be created by item starting with *, a - , or a + or a number&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. one
+2. two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* one
+* two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to indent items underneath already bulleted items, precede
+the indent items with four spaces and they will be nested under the item
+previous to them.&lt;/p&gt;
+&lt;p&gt;To qoute textc precede it with a &amp;ldquo;&amp;gt;&amp;rdquo;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Quote
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Other syntax options can be found in the Format drop-down at the top of
+the screen between View and Plug-ins of macdown.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Positioning</title>
+      <link>/docs/iot/sensors/positioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/sensors/positioning/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;marvelmind&#34;&gt;Marvelmind&lt;/h2&gt;
+&lt;p&gt;An indoor positioning and navigation system
+for autonomous robots, drones, vehicles and humans. Its precision is +- 2 cm&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://marvelmind.com/&#34;&gt;Marvelmind&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Tools</title>
+      <link>/docs/old/iot/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/tools/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;pyenv&#34;&gt;Pyenv&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;refers to usiing anaconda within pyenv anaconda &lt;a href=&#34;https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osx&#34;&gt;Pyenv&lt;/a&gt;
+allows to manage multiple versions of python easily. &lt;a href=&#34;https://github.com/pyenv/pyenv#how-it-works&#34;&gt;Pyenv
+link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;matplotlib&#34;&gt;Matplotlib&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Matplotlib&lt;/em&gt;: Matplotlib is a library that allows us to create nice
+graphs in python. As we typically install python with virtualenv, we
+need to configure matplotlib properly to use it. The easiest way to
+do this is to execute the following commands. After you run them you
+can use matplotlib.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ pip install numpy
+$ pip install matplotlib
+$ echo &amp;quot;backend : TkAgg&amp;quot; &amp;gt; ~/.matplotlib/matplotlibrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; (from Arduino if
+you like to use their interface to access the esp8266 boards)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+&lt;p&gt;This installation is optional. In the event that there is a TTY error,
+you will need to install Arduino, since your Mac may be missing some
+drivers that are included in Arduino. Simply go to
+&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; and follow the
+installation instructions.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

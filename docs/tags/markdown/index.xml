@@ -1,0 +1,111 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – markdown</title>
+    <link>/tags/markdown/</link>
+    <description>Recent content in markdown on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Markdown</title>
+      <link>/docs/prg/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/markdown/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MarkDown is a format convention that produces nicely formatted text with
+simple ASCII text. Markdown has very good support for editors that
+render the final output in a view window next to the editor pane. Two
+such editors are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt;: MacDown provides a nice
+integrated editor that works well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;amp;code=PCC&#34;&gt;pyCharm&lt;/a&gt;:
+We have successfully used Vladimir Schhneiders &lt;a href=&#34;https://plugins.jetbrains.com/plugin/7896-markdown-navigator&#34;&gt;Markdown Navigator
+plugin&lt;/a&gt;.
+Once installed you click on a .md file pycharm will automatically
+ask to install the plugins from Markdown for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links for markdown include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://macdown.uranusjr.com/&#34;&gt;Macdown&lt;/a&gt; a macdown editor for macOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.ghost.org/markdown/&#34;&gt;Markdown&lt;/a&gt; (from Markdown)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A detailed set of syntax rules can be found at: &lt;strong&gt;BUG: LINK TO MARKDOWN
+SYNTAX MISSING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following are some basic examples&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;To &lt;em&gt;emphasise&lt;/em&gt; a text you use &lt;code&gt;*emphasize*&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;strong&gt;bold&lt;/strong&gt; use &lt;code&gt;**bold**&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To make text &lt;em&gt;&lt;strong&gt;bold-and-emphasize&lt;/strong&gt;&lt;/em&gt; use &lt;code&gt;***bold-and-emphasize***&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To create a hyperlink use &lt;code&gt;[Google](https://google.com)&lt;/code&gt; which will
+result in &lt;a href=&#34;https://google.com&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To include an image use &lt;code&gt;![Bracketed Text](link)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A list can be created by item starting with *, a - , or a + or a number&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. one
+2. two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* one
+* two
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;one&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;two&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to indent items underneath already bulleted items, precede
+the indent items with four spaces and they will be nested under the item
+previous to them.&lt;/p&gt;
+&lt;p&gt;To qoute textc precede it with a &amp;ldquo;&amp;gt;&amp;rdquo;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Quote
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Other syntax options can be found in the Format drop-down at the top of
+the screen between View and Plug-ins of macdown.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

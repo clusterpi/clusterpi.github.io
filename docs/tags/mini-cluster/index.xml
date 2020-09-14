@@ -1,0 +1,112 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Mini Cluster</title>
+    <link>/tags/mini-cluster/</link>
+    <description>Recent content in Mini Cluster on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 Apr 2017 10:58:08 -0400</lastBuildDate>
+    
+	  <atom:link href="/tags/mini-cluster/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Build a Mini Cluster</title>
+      <link>/docs/cluster/mini-cluster/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>/docs/cluster/mini-cluster/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Please describe here the steps on how you build the mini cluster.&lt;/p&gt;
+&lt;p&gt;Include some image. Make sure the background is white.&lt;/p&gt;
+&lt;h2 id=&#34;team&#34;&gt;Team&lt;/h2&gt;
+&lt;p&gt;Put team names here&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adam&lt;/li&gt;
+&lt;li&gt;Logan&lt;/li&gt;
+&lt;li&gt;Reilly Markowitz&lt;/li&gt;
+&lt;li&gt;Sunny Gandhi&lt;/li&gt;
+&lt;li&gt;Richie Otten (pi burn)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;equipmemt&#34;&gt;Equipmemt&lt;/h2&gt;
+&lt;p&gt;put list of equipment here&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Quantity&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Purpose&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Power Switch&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Allows the cluster do be switched on and of easily&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi-burn&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi-burn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;working draft paper with more graphics
+&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi-burn/blob/master/paper/vonLaszewski-cmburn.md&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi-burn/blob/master/paper/vonLaszewski-cmburn.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AI REST Service specification &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-openapi&#34;&gt;https://github.com/cloudmesh/cloudmesh-openapi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudmesh PI cluster &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi-cluster&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi-cluster&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;SPark and hadook are not working or the way we want it&lt;/li&gt;
+&lt;li&gt;Kubernetes may be a start, but was I believe not completed or does not use properly PI burn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-links&#34;&gt;Other Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NIST Spec
+&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-nist&#34;&gt;https://github.com/cloudmesh/cloudmesh-nist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudmesh manual &lt;a href=&#34;https://cloudmesh.github.io/cloudmesh-manual/&#34;&gt;https://cloudmesh.github.io/cloudmesh-manual/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudmesh common &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-common&#34;&gt;https://github.com/cloudmesh/cloudmesh-common&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Status of this is unclear&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-cluster/tree/master/cloudmesh/cluster&#34;&gt;https://github.com/cloudmesh/cloudmesh-cluster/tree/master/cloudmesh/cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-kubernetes&#34;&gt;https://github.com/cloudmesh/cloudmesh-kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Not done here but potentially useful if we get far enough:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Job management &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-job&#34;&gt;https://github.com/cloudmesh/cloudmesh-job&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudmesh flow &lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-flow&#34;&gt;https://github.com/cloudmesh/cloudmesh-flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;progress&#34;&gt;Progress&lt;/h2&gt;
+&lt;h3 id=&#34;week-1&#34;&gt;Week 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Distributed mini cluster equipment&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Set up cluster with cloudmesh-pi-burn&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Get more SD Cards&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more tasks &amp;hellip; ;-)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more weeks &amp;hellip; ;-)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add dates to Weeks &amp;hellip; ;-)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add weekly meeting&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add slack to web page: &lt;a href=&#34;https://app.slack.com/client/TFQC2P62D/CTP848QDV&#34;&gt;https://app.slack.com/client/TFQC2P62D/CTP848QDV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Is there a build in slack module for hugo?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;week-2&#34;&gt;Week 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; find k3s and see if that can be set up. Remember they may do it
+differently than we need. We assume a cluster network is setup. We
+need to build form existing cluster with network. Can k3s do this?
+Evaluate report.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; By end of week 2 we want a mechnaism to set up while using
+cloudmesh-pi-burn before hand&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

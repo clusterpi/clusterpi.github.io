@@ -1,0 +1,181 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Raspberry PI</title>
+    <link>/docs/hardware/raspberry/</link>
+    <description>Recent content in Raspberry PI on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/hardware/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Raspberry Pi 3b&#43;</title>
+      <link>/docs/hardware/raspberry/pi3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/raspberry/pi3/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note: a new version 4 has come out and we recommend to use
+that.&lt;/p&gt;
+&lt;p&gt;The raspberry PI 3B+ is a very good development platform. With its base
+price of $35 it is quite a bargain. You will need some additional
+components to make sure you can use it. Please be reminded to never
+connect or power the raspberry with your computers USB port. It draws
+some significant amperage and we do not want you to destroy your
+computer. We recommend that you buy a certified power adapter. The price
+is so cheap that you could even create your own mini cluster as a
+project. We do not recommend any older versions of Raspberry as they are
+less powerful and do not contain built-in Bluetooth or WiFi.&lt;/p&gt;
+&lt;h2 id=&#34;specification-raspberry-pi-3-b&#34;&gt;Specification Raspberry PI 3 B&lt;/h2&gt;
+&lt;p&gt;Note: This model is replaced bythe PI3B+ and now by the PI4&lt;/p&gt;
+&lt;p&gt;The Raspberry PI 3 B is shown in @fig:pi3&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/pi-3.jpg&#34; alt=&#34;Raspberry PI 3B&#34;&gt;{#fig:pi3}&lt;/p&gt;
+&lt;p&gt;The board has the following properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quad Core 1.2GHz Broadcom BCM2837 64bit CPU&lt;/li&gt;
+&lt;li&gt;1GB RAM&lt;/li&gt;
+&lt;li&gt;BCM43438 wireless LAN and Bluetooth Low Energy (BLE) on board&lt;/li&gt;
+&lt;li&gt;40-pin extended GPIO&lt;/li&gt;
+&lt;li&gt;4 USB 2 ports&lt;/li&gt;
+&lt;li&gt;4 Pole stereo output and composite video port&lt;/li&gt;
+&lt;li&gt;Full size HDMI&lt;/li&gt;
+&lt;li&gt;CSI camera port for connecting a Raspberry Pi camera&lt;/li&gt;
+&lt;li&gt;DSI display port for connecting a Raspberry Pi touchscreen display&lt;/li&gt;
+&lt;li&gt;Micro SD port for loading your operating system and storing data&lt;/li&gt;
+&lt;li&gt;Switched Micro USB power source up to 2.5A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spefification-raspberry-pi-3-b&#34;&gt;Spefification Raspberry PI 3 B+&lt;/h2&gt;
+&lt;p&gt;Note: This model is replaced by the PI4.&lt;/p&gt;
+&lt;p&gt;The Rasspberry PI 3 B+ is shown in @fig:pi3.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/pi3bplus.jpg&#34; alt=&#34;Raspberry PI 3 B+&#34;&gt;{#fig:pi3bplus}&lt;/p&gt;
+&lt;p&gt;The board has the following properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit SoC @ 1.4GHz&lt;/li&gt;
+&lt;li&gt;1GB LPDDR2 SDRAM&lt;/li&gt;
+&lt;li&gt;2.4GHz and 5GHz IEEE 802.11.b/g/n/ac wireless LAN&lt;/li&gt;
+&lt;li&gt;Bluetooth 4.2, BLE&lt;/li&gt;
+&lt;li&gt;Gigabit Ethernet over USB 2.0 (maximum throughput 300 Mbps)&lt;/li&gt;
+&lt;li&gt;Extended 40-pin GPIO header&lt;/li&gt;
+&lt;li&gt;Full-size HDMI&lt;/li&gt;
+&lt;li&gt;4 USB 2.0 ports&lt;/li&gt;
+&lt;li&gt;CSI camera port for connecting a Raspberry Pi camera&lt;/li&gt;
+&lt;li&gt;DSI display port for connecting a Raspberry Pi touchscreen display&lt;/li&gt;
+&lt;li&gt;4-pole stereo output and composite video port&lt;/li&gt;
+&lt;li&gt;Micro SD port for loading your operating system and storing data&lt;/li&gt;
+&lt;li&gt;5V/2.5A DC power input&lt;/li&gt;
+&lt;li&gt;Power-over-Ethernet (PoE) support (requires separate PoE HAT)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$37.50 &lt;a href=&#34;https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/&#34;&gt;Pi
+3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$7.69
+&lt;a href=&#34;https://www.amazon.com/Eleduino-Raspberry-Model-Acrylic-Enclosure/dp/B01CQRROLW/ref=sr_1_7?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251106&amp;amp;sr=1-7&amp;amp;keywords=raspberry+pi+3+case&#34;&gt;Case&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$7.99 &lt;a href=&#34;https://www.amazon.com/Enokay-Supply-Raspberry-Charger-Adapter/dp/B01MZX466R/ref=sr_1_3?ie=UTF8&amp;amp;qid=1498443576&amp;amp;sr=8-3&amp;amp;keywords=raspberry+pi+power+adapter+micro+usb+switch&#34;&gt;Power
+Adapter&lt;/a&gt;
+This is an aftermarket power adapter. Lots uof us use this one.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$6.99 &lt;a href=&#34;https://www.amazon.com/AmazonBasics-High-Speed-HDMI-Cable-Standard/dp/B014I8SSD0/ref=sr_1_3?ie=UTF8&amp;amp;qid=1499253502&amp;amp;sr=8-3&amp;amp;keywords=hdmi+cable&#34;&gt;HDMI
+cable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monitor/TV with hdmi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/SanDisk-Ultra-microSDXC-Memory-Adapter/dp/B073JWXGNT/ref=asc_df_B073JWXGNT/?tag=hyprod-20&amp;amp;linkCode=df0&amp;amp;hvadid=309776868400&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=13189001702770838448&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=9016563&amp;amp;hvtargid=pla-348080513499&amp;amp;psc=1&#34;&gt;SD Card 32GB&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Advantages:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Full Linux like OS based on debian&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Good environment for learning Linux and Python&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reasonable interfaces to IoT sensors&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Excellent camera support&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Excellent choice of expansion packages including Grove Sensors that
+make it easy to attach sensors and actuators. An example package is
+the &lt;a href=&#34;https://www.amazon.com/GrovePi-Starter-Kit-Dexter-Industries/dp/B00TXTZ5SQ/ref=pd_lpo_vtph_147_bs_tr_img_1?_encoding=UTF8&amp;amp;psc=1&amp;amp;refRID=45QX6XSNZAG1NT8NES79&#34;&gt;Grove Starter
+Kit&lt;/a&gt;
+for about $90&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pin-layout&#34;&gt;Pin Layout&lt;/h2&gt;
+&lt;p&gt;The PI 3B, 3B+ and Zero come with a number of pins that can be used to
+attach sensors. It is convenient to have the pinout available for your
+project. Hence we provide a pinout layout in @fig:pi-layout. Other
+Pis will have a differnt pinout and you will have to locate them on
+the internet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rasp3.jpg&#34; alt=&#34;Pinout&#34;&gt;{#fig:pi-layout}&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&#34;&gt;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Raspberry Pi Zero</title>
+      <link>/docs/hardware/raspberry/pizero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/raspberry/pizero/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note: Pi Zero W comes with WIFI. Make sure you get this one.&lt;/p&gt;
+&lt;p&gt;In addition to the the bigger PI&amp;rsquo;s another interesting platform is the
+PI Zero, which is a very low cost system that can serve as IoT
+board. However it is also powerful enough to run more sophisticated
+applications on it. The newest Raspberry PI Zero is shown in
+@fig:pizero.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Raspberry-Pi-Zero-462x322.jpg&#34; alt=&#34;Raspbery Pi Zero (source)&#34;&gt;{#fig:pizero}&lt;/p&gt;
+&lt;p&gt;The board has the following properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1GHz single-core CPU&lt;/li&gt;
+&lt;li&gt;512MB RAM&lt;/li&gt;
+&lt;li&gt;Mini HDMI port&lt;/li&gt;
+&lt;li&gt;Micro USB OTG port&lt;/li&gt;
+&lt;li&gt;Micro USB power&lt;/li&gt;
+&lt;li&gt;HAT-compatible 40-pin header&lt;/li&gt;
+&lt;li&gt;Composite video and reset headers&lt;/li&gt;
+&lt;li&gt;CSI camera connector (v1.3 only)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pin-layout&#34;&gt;Pin Layout&lt;/h2&gt;
+&lt;p&gt;The PI 3B, 3B+ and Zero come with a number of pins that can be used to
+attach sensors. It is convenient to have the pinout available for your
+project. Hence we provide a pinout layout in @fig:pi-layout. Other
+Pis will have a differnt pinout and you will have to locate them on
+the internet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rasp3.jpg&#34; alt=&#34;Pinout&#34;&gt;{#fig:pi-layout}&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&#34;&gt;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

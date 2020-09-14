@@ -1,0 +1,163 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Output</title>
+    <link>/docs/iot/output/</link>
+    <description>Recent content in Output on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/iot/output/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: LCD</title>
+      <link>/docs/iot/output/lcd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/output/lcd/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The 16x2 LCD screen can be used as a display for the Raspberry Pi.  To
+set up the LCD screen connect the wires as shown in @fig:LCD_setup.
+You will also need two potentiometers in order to adjust the contrast
+and the brightness.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lcd_setup.png&#34; alt=&#34;LCD Setup&#34;&gt;{#fig:lcd_setup}&lt;/p&gt;
+&lt;p&gt;Once everything is correctly wired up the LCD class can be used to
+print text to the LCD display.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;RPLCD&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;import&lt;/span&gt; CharLCD
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;RPi&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;import&lt;/span&gt; GPIO
+
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#00f&#34;&gt;LCD_Display&lt;/span&gt;(&lt;span style=&#34;color:#a2f&#34;&gt;object&lt;/span&gt;):
+	&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&amp;#34;&amp;#34;docstring for LCD_Display
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;	This class is for the 16 x 2 LCD component
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;	&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;def&lt;/span&gt; __init__(self, cols&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;16&lt;/span&gt;, rows&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;, rs&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;37&lt;/span&gt;, e&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;35&lt;/span&gt;, data_pins &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#666&#34;&gt;33&lt;/span&gt;,&lt;span style=&#34;color:#666&#34;&gt;31&lt;/span&gt;,&lt;span style=&#34;color:#666&#34;&gt;29&lt;/span&gt;,&lt;span style=&#34;color:#666&#34;&gt;23&lt;/span&gt;], mode&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;BOARD&amp;#39;&lt;/span&gt;):
+		GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;setwarnings(False)
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; mode &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;BCM&amp;#39;&lt;/span&gt;:
+			self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;lcd &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; CharLCD(cols&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;cols, rows&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;rows, pin_rs&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;rs, pin_e&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;e, pins_data&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;data_pins, numbering_mode&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;BCM)
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt;:
+			self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;lcd &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; CharLCD(cols&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;cols, rows&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;rows, pin_rs&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;rs, pin_e&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;e, pins_data&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;data_pins, numbering_mode&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;BOARD)
+		
+
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;display_string&lt;/span&gt;(self, string, clear&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;N&amp;#39;&lt;/span&gt;, pos&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;)):
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; clear &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;Y&amp;#39;&lt;/span&gt;:
+			self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;lcd&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;clear()
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt;:
+			&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;pass&lt;/span&gt;
+		self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;lcd&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;cursor_pos &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pos
+		self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;lcd&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;write_string(string)
+
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+	LCD_Display()&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;display_string(&lt;span style=&#34;color:#b44&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;refernces&#34;&gt;Refernces&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/LCD.py&#34;&gt;LCD Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PI Motherboard LED</title>
+      <link>/docs/iot/output/motherboard-led/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/output/motherboard-led/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Raspberry pi contains an LED that can also be used to provide us
+with some information as to the status of the PI. It is usually used
+for reporting the power status.&lt;/p&gt;
+&lt;p&gt;The green LED can be made blinking as follows in root&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo 1 &amp;gt; /sys/class/leds/led0/brightness
+echo 0 &amp;gt; /sys/class/leds/led0/brightness
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Naturally this ac be done via a remote command if your ssh keys are
+uploaded and your originating computer is added to the
+authorized_keys. Now you can can control them via ssh&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh pi@red03 &amp;quot;echo 1 &amp;gt; led; sudo cp led /sys/class/leds/led0/brightness&amp;quot;
+ssh pi@red03 &amp;quot;echo 0 &amp;gt; led; sudo cp led /sys/class/leds/led0/brightness&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is extremely useful as it allows us to check if we the OS is
+available and we can access the PI.&lt;/p&gt;
+&lt;p&gt;One strategy is to for example switch the light of, once it is booted,
+so we can see which board may be in trouble.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Relay</title>
+      <link>/docs/iot/output/relay/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/output/relay/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The relay module can be used as a switch to complete a circuit.  The module can be purchased as an individual component or may be included on a board with 2, 4 or more relay switches.  In this example we will be using a two channel relay module. To set up the relay module connect the wires to the Raspberry Pi as shown in @fig:relay_setup.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;relay_setup.png&#34; alt=&#34;Relay Module Setup&#34;&gt;{#fig:relay_setup}&lt;/p&gt;
+&lt;p&gt;Once the module is set up you can use the relay_switch class to turn the relays on and off.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Code modified from source: https://tutorials-raspberrypi.com/raspberry-pi-control-relay-switch-via-gpio/&lt;/span&gt;
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Actual pins in example: 16 &amp;amp; 18&lt;/span&gt;
+
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;RPi.GPIO&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;GPIO&lt;/span&gt;
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;time&lt;/span&gt;
+
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#00f&#34;&gt;relay_switch&lt;/span&gt;(&lt;span style=&#34;color:#a2f&#34;&gt;object&lt;/span&gt;):
+	&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&amp;#34;&amp;#34;docstring for relay_switch
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;	currently set up for a 2 channel relay
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;	&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;def&lt;/span&gt; __init__(self, pin&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;8&lt;/span&gt;, pin_setup&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;BOARD&amp;#39;&lt;/span&gt;):
+		self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;pin &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; pin
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; pin_setup &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;BCM&amp;#39;&lt;/span&gt;:
+			GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;setmode(GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;BCM)
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt;:
+			GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;setmode(GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;BOARD)
+		GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;setwarnings(False)
+		GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;setup(self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;pin, GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;OUT)
+		
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;on&lt;/span&gt;(self):
+		GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;output(self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;pin, GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;LOW)
+
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;off&lt;/span&gt;(self):
+		GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;output(self&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;pin, GPIO&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;HIGH)
+		
+
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Create loop to flash LEDs&lt;/span&gt;
+
+&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;try&lt;/span&gt;:
+		r1 &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; relay_switch(pin&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;16&lt;/span&gt;)
+		r2 &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; relay_switch(pin&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;18&lt;/span&gt;)
+		counter &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;15&lt;/span&gt;
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; counter &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;:
+			r1&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;on()
+			time&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#666&#34;&gt;0.5&lt;/span&gt;)
+			r2&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;on()
+			time&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#666&#34;&gt;0.5&lt;/span&gt;)
+			r1&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;off()
+			time&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#666&#34;&gt;0.5&lt;/span&gt;)
+			r2&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;off()
+			time&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#666&#34;&gt;0.5&lt;/span&gt;)
+			counter &lt;span style=&#34;color:#666&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;
+	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#d2413a;font-weight:bold&#34;&gt;KeyboardInterrupt&lt;/span&gt;:
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt; *** Stopping Program ***&amp;#39;&lt;/span&gt;)
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;try&lt;/span&gt;:
+			sys&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;exit(&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;)
+		&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#d2413a;font-weight:bold&#34;&gt;SystemExit&lt;/span&gt;:
+			os&lt;span style=&#34;color:#666&#34;&gt;.&lt;/span&gt;_exit(&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;refernces&#34;&gt;Refernces&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/paper/code/relay_switch.py&#34;&gt;Relay  Class&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

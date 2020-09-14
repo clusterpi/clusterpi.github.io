@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Project Hardware</title>
+    <link>/docs/hardware/</link>
+    <description>Recent content in Project Hardware on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/hardware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: ESP8266</title>
+      <link>/docs/hardware/esp8266/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/esp8266/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Therea re many ESP8266 available from amazon. They are super cheep but can be used for Python programming with micropython. We used in the past the following models. Adafruit has some added features, but may need
+soldering&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$6.49
+&lt;a href=&#34;https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES/ref=sr_1_3?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251149&amp;amp;sr=1-3&amp;amp;keywords=esp8266&#34;&gt;NodeMCU&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$16.95 &lt;a href=&#34;https://www.adafruit.com/product/2821&#34;&gt;Adafruit Feather&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: ESP8266 Robot Car Kit</title>
+      <link>/docs/hardware/esp8266robot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/esp8266robot/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The ESP8266 has many variants. Some of which are difficult to interface
+with. However, this does not apply for the ESP8266 NodeMCU. This board
+is originally flashed with &lt;em&gt;Lua&lt;/em&gt;, however it can easily be reflashed
+with MicroPython. In addition it is often offered as part of a platform
+to develop a robot car. There are arguably better kits available, but
+the price of $24 for the entire kit is hard to beat. Unfortunately the
+version of python, as well as the limited memory make the esp8266 not a
+full fledged platform for python programming and you will quickly see
+its limitations. Interfacing with it, however, as an IoT device will
+gain you a lot of insights.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Configuration:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$7.99  &lt;a href=&#34;https://www.amazon.com/ESP8266-Development-NodeMCU-CP2102-Shield/dp/B075VMNLZR/ref=sr_1_3?dchild=1&amp;amp;keywords=esp8266+motor+shield&amp;amp;qid=1600101846&amp;amp;sr=8-3&#34;&gt;esp8266 &amp;amp;
+shield&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/71aUsnAhjeL._AC_UL115_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$12.59
+&lt;a href=&#34;https://www.amazon.com/Emgreat-Chassis-Encoder-wheels-Battery/dp/B00GLO5SMY/ref=pd_rhf_se_s_cp_10?_encoding=UTF8&amp;amp;pd_rd_i=B00GLO5SMY&amp;amp;pd_rd_r=77XYGK6BE54FGDTGQ0AC&amp;amp;pd_rd_w=FNQFl&amp;amp;pd_rd_wg=wKMdb&amp;amp;psc=1&amp;amp;refRID=77XYGK6BE54FGDTGQ0AC&#34;&gt;Chasis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/71T352IJKnL._AC_UL160_SR160,160_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4 * AA Rechargable Batteries &amp;amp; charger&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optionally you may want to get additional sensors such as wheel Encoders&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$9.99 &lt;a href=&#34;https://www.amazon.com/Wheel-Encoder-Kit-Robot-Car/dp/B00NPWGEIM/ref=sr_1_4?s=toys-and-games&amp;amp;ie=UTF8&amp;amp;qid=1499254488&amp;amp;sr=1-4&amp;amp;keywords=speed+sensor+robot+car+wheel&#34;&gt;Wheel Encoder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/61p8uKwL%2BJL._AC_UL320_SR320,320_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We have not use the encoder much&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Advantages:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Very low price for what it can do&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We have macOS software available that makes it easy to setup (Other
+tutorials for other platforms are available on the internet, you can
+contribute by creating documentation we distribute in class for
+points)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;alternative-parts&#34;&gt;Alternative Parts&lt;/h2&gt;
+&lt;p&gt;There are many alternatives available to build a car chasis. Two examples are her. One of them uses not the ESP8266 but an Arduino.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$14.59 &lt;a href=&#34;https://www.amazon.com/Ardokit-Chassis-Encoder-Battery-Arduino/dp/B00K5OWHXO/ref=sr_1_3?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251712&amp;amp;sr=1-3&amp;amp;keywords=robot+car&#34;&gt;Car Chasis&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$22.88 &lt;a href=&#34;https://www.amazon.com/VKmaker-Avoidance-tracking-Chassis-Ultrasonic/dp/B01CXVA6IO/ref=sr_1_6?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251770&amp;amp;sr=1-6&amp;amp;keywords=robot+car&#34;&gt;Car Chasis and Arduino&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Flying Fish</title>
+      <link>/docs/hardware/fish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/fish/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In this build you will be using a flying alloon and replace the remote
+control with an ESP3299. It is important to keep the equipment as
+light as possible. Make sure not to poke any wholes in the ballon
+during the build phase.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://m.media-amazon.com/images/I/51lpk-ITdeL._AC_UL480_FMwebp_QL65_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$34.99
+&lt;a href=&#34;https://www.amazon.com/Swimmer-Inflatable-Flying-Replacement-Balloon/dp/B00658LN3E/ref=pd_bxgy_21_img_2?_encoding=UTF8&amp;amp;pd_rd_i=B00658LN3E&amp;amp;pd_rd_r=F71N2YCYE6Z0BCCEPQJC&amp;amp;pd_rd_w=AwYab&amp;amp;pd_rd_wg=rHTnv&amp;amp;psc=1&amp;amp;refRID=F71N2YCYE6Z0BCCEPQJC&#34;&gt;shark&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cheaper balloons leak&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;before assembly and putting gas in, make sure components work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gas will last typically for one week&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$39.99 gas can be purchased in party store&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2 g9 servo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;soldering (for cable, so cheap one will do)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pins&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ESP8266&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;double sided scotch tape&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hot glue gun&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;paper clips&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;light insulated wires&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Raspberry PI</title>
+      <link>/docs/hardware/raspberry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/raspberry/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/&#34;&gt;Raspberry PI&amp;rsquo;s&lt;/a&gt; are a convenient cheap
+compute platform that allow us to explore create cloud clusters
+with various software that otherwise
+would not be accessible to most. The point is not to create a complex
+compute platform, but to create a &lt;em&gt;testbed&lt;/em&gt; in which we can explore
+configuration aspects and prepare benchmarks that are run on larger
+and expensive cloud environments. In addition Raspberry Pis can be used
+as a simple Linux terminal to log into other machines.&lt;/p&gt;
+&lt;p&gt;We will give a small introduction to the platform next.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Sensors</title>
+      <link>/docs/hardware/sensors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/sensors/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;IoT Sensor Kits&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;There are meny sensor kits that you can purchase. SOme require you to
+use breadboards, while others are haveing ready made plugs.
+The breadboards are typically more difficult to put together. If in
+doubt and you use Raspberry Pis, we recommend to use GrovePI.
+You find links to them in our Web page.&lt;/p&gt;
+&lt;p&gt;In our IoT Section you will also find information about specific sensors.&lt;/p&gt;
+&lt;h2 id=&#34;sensor-kit&#34;&gt;Sensor Kit&lt;/h2&gt;
+&lt;p&gt;It is fun to attach sensors to your IoT board. There are many kits
+available and we encourage you to do comparisons. One such kit is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$29.99 &lt;a href=&#34;https://www.amazon.com/Elegoo-Upgraded-Modules-Tutorial-Arduino/dp/B01MG49ZQ5/ref=sr_1_7?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1499251441&amp;amp;sr=1-7&amp;amp;keywords=elegoo&#34;&gt;Elegoo 37
+Sensors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/81QX8aKR0yL._AC_UL115_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;However it does not include a breadboard like other kits. Hence we
+recommend that you get a breadboard as it makes experimenting easier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$12.59 &lt;a href=&#34;https://www.amazon.com/SunFounder-Raspberry-Breadboard-solderless-Circuit/dp/B01MQSWUGY/ref=sr_1_2?dchild=1&amp;amp;keywords=elego+breadboard&amp;amp;qid=1600101463&amp;amp;sr=8-2&#34;&gt;Bread board and
+wires&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/814z4MojN6L._AC_UL115_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In case you need cables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/Breadboard-Wires-Aoyoho-Multicolored-Jumper/dp/B01GK2Q4ZQ/ref=sr_1_1?s=electronics&amp;amp;ie=UTF8&amp;amp;qid=1500678142&amp;amp;sr=1-1&amp;amp;keywords=bread+board+cab%3Be&#34;&gt;Breadboard
+Cable&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

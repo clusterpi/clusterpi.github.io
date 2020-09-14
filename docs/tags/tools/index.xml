@@ -1,0 +1,134 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Tools</title>
+    <link>/tags/tools/</link>
+    <description>Recent content in Tools on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Bash</title>
+      <link>/docs/prg/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/prg/bash/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxconfig.org/bash-scripting-tutorial&#34;&gt;Bash&lt;/a&gt; it the
+command language used in terminal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bash is a shell and is pre-installed. A &lt;em&gt;bash&lt;/em&gt; script contains &lt;em&gt;commands&lt;/em&gt; in
+plain text. In order to create a bash script please decide for a
+convenient name. Let us assume we name our script &lt;em&gt;myscript&lt;/em&gt;. Than you can
+create and edit such a script with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ touch myscript.sh
+$ emacs myscripts.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next you need to add the following line to the top ogf the script:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!# /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To demonstrate how to continue writing a script we will be using the
+bash &lt;code&gt;echo&lt;/code&gt; command that allows you to print text. Lets make the second
+line&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now save and start executing your script. Click &amp;ldquo;File&amp;rdquo; and then
+&amp;ldquo;Save&amp;rdquo;. Open Terminal and type in &lt;code&gt;cd&lt;/code&gt; followed by the name of the
+folder you put the document in. Now we need to execute the script.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Executing&lt;/em&gt; a Bash script is rather easy. In order to execute a script,
+we need to first execute the &lt;em&gt;permission set&lt;/em&gt;. In order to give Terminal
+permission to read/execute a Bash script, you have to type&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod u+x myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After the script has been granted permission to be executed, you can
+test it by typing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./myscript.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into the terminal. You will see it prints&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hello World
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;osx-terminal&#34;&gt;OSX terminal:&lt;/h2&gt;
+&lt;p&gt;On macOS, when you navigate to the search magnification glass, you can
+type in &lt;em&gt;terminal&lt;/em&gt; to start it. A terminal allows you to execute a
+number of commands to interact with the computer from a commandline
+interface, e.g. the terminal.&lt;/p&gt;
+&lt;p&gt;MOst recently the terminal has in macOS switched from bash to
+zsh. Please: consult with zsh tutorials. However the Linux commands
+you use in zsh are the same.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Positioning</title>
+      <link>/docs/iot/sensors/positioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/sensors/positioning/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;marvelmind&#34;&gt;Marvelmind&lt;/h2&gt;
+&lt;p&gt;An indoor positioning and navigation system
+for autonomous robots, drones, vehicles and humans. Its precision is +- 2 cm&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://marvelmind.com/&#34;&gt;Marvelmind&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Tools</title>
+      <link>/docs/old/iot/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/old/iot/tools/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;pyenv&#34;&gt;Pyenv&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;refers to usiing anaconda within pyenv anaconda &lt;a href=&#34;https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osx&#34;&gt;Pyenv&lt;/a&gt;
+allows to manage multiple versions of python easily. &lt;a href=&#34;https://github.com/pyenv/pyenv#how-it-works&#34;&gt;Pyenv
+link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;matplotlib&#34;&gt;Matplotlib&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Matplotlib&lt;/em&gt;: Matplotlib is a library that allows us to create nice
+graphs in python. As we typically install python with virtualenv, we
+need to configure matplotlib properly to use it. The easiest way to
+do this is to execute the following commands. After you run them you
+can use matplotlib.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ pip install numpy
+$ pip install matplotlib
+$ echo &amp;quot;backend : TkAgg&amp;quot; &amp;gt; ~/.matplotlib/matplotlibrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; (from Arduino if
+you like to use their interface to access the esp8266 boards)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+&lt;p&gt;This installation is optional. In the event that there is a TTY error,
+you will need to install Arduino, since your Mac may be missing some
+drivers that are included in Arduino. Simply go to
+&lt;a href=&#34;https://www.arduino.cc/en/guide/macOSX&#34;&gt;Arduino&lt;/a&gt; and follow the
+installation instructions.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,139 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – OS</title>
+    <link>/docs/os/</link>
+    <description>Recent content in OS on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/os/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Dexter</title>
+      <link>/docs/os/dexter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/os/dexter/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note: we recommend that you try to switch to Raspberry PI OS and use
+the dexceter modules in it. We have not tried this for the newest versions.&lt;/p&gt;
+&lt;h2 id=&#34;creating-an-sd-card&#34;&gt;Creating an SD Card&lt;/h2&gt;
+&lt;h3 id=&#34;macos&#34;&gt;macOS&lt;/h3&gt;
+&lt;p&gt;First, install Etcher from &lt;a href=&#34;https://etcher.io/&#34;&gt;etcher.io&lt;/a&gt; which allows
+you to flash images onto the SD card. When flashing make sure you only
+attach one USB SD card reader/writer or use the build in SD card slot
+provided in some Mac&amp;rsquo;s.&lt;/p&gt;
+&lt;p&gt;The version of etcher we used is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/resin-io/etcher/releases/download/v1.1.1/Etcher-1.1.1-darwin-x64.dmg&#34;&gt;Etcher-1.1.1-darwin-x64.dmg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Make sure to check if there is a newer version&lt;/p&gt;
+&lt;h3 id=&#34;dexteros&#34;&gt;DexterOS&lt;/h3&gt;
+&lt;p&gt;Note: The information on ths page may be outdated. We have recntly
+just used Raspbery PI OS,&lt;/p&gt;
+&lt;p&gt;DexterOS:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics&#34;&gt;https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dexterindustries.com/download/dexteros&#34;&gt;https://www.dexterindustries.com/download/dexteros&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pJZURHLeTs0&#34;&gt;&lt;img src=&#34;../images/video.png&#34; alt=&#34;Video&#34;&gt; DexterOS 9:15 Set up SDCard (original Video)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The video is published on the Dexter Web site.&lt;/p&gt;
+&lt;h3 id=&#34;dexter-raspbian&#34;&gt;Dexter Raspbian&lt;/h3&gt;
+&lt;p&gt;Dexter provides a special image that contains the drivers and sample
+programs for the GrovePi shield. We had some issues installing it on a
+plain Raspbian OS, thus we recommend that you use dexters version if you
+use the GrovePi shield. It is available from&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/dexterindustriesraspbianflavor/&#34;&gt;Google
+Drive&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/dexterindustriesraspbianflavor/&#34;&gt;Sourceforge&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed information on how to generate an SD card while using your OS
+is provided at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card&#34;&gt;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;github&#34;&gt;Github&lt;/h3&gt;
+&lt;p&gt;Dexter maintains a github repository that includes their code for the
+shield and many other projects at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd&#34;&gt;https://github.com/DexterInd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cloning-grove-pi&#34;&gt;Cloning Grove PI&lt;/h3&gt;
+&lt;p&gt;To clone the GrovePI library on other computers you can use the command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/DexterInd/GrovePi.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dexter-sample-programs&#34;&gt;Dexter Sample programs&lt;/h3&gt;
+&lt;p&gt;Dexter maintains all GrovePi related programs at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi&#34;&gt;https://github.com/DexterInd/GrovePi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The python related programs are in a subdirectory at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DexterInd/GrovePi/tree/master/Software/Python&#34;&gt;https://github.com/DexterInd/GrovePi/tree/master/Software/Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here you find many programs and for a complete list visit that link.
+Dependent on the sensors and actuators you have, inspect some programs.
+Some of them may inspire you to purchase some sensors.&lt;/p&gt;
+&lt;p&gt;We have developed a partial library of GrovePi module classes at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh/cloudmesh-pi/tree/master/cloudmesh/pi&#34;&gt;https://github.com/cloudmesh/cloudmesh-pi/tree/master/cloudmesh/pi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: macOS</title>
+      <link>/docs/os/osx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/os/osx/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Selected Information about macOS&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;macos-terminal-tricks&#34;&gt;macOS Terminal Tricks&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192&#34;&gt;40 OSX Terminal Commands/Tricks&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;xcode&#34;&gt;XCode&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode#install-pyenv-on-osx&#34;&gt;XCode&lt;/a&gt;
+is an integrated development environment for macOS containing a suite
+of software development tools developed by Apple for developing
+software for macOS, iOS, watchOS and tvOS.&lt;/p&gt;
+&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://brew.sh&#34;&gt;Homebrew&lt;/a&gt; is a &lt;em&gt;package manager&lt;/em&gt; for OS X which lets
+the user &lt;em&gt;install software&lt;/em&gt; from &lt;em&gt;UNIX&lt;/em&gt; and &lt;em&gt;open source software&lt;/em&gt;
+that is not included in macOS.&lt;/p&gt;
+&lt;h2 id=&#34;cool-term&#34;&gt;Cool Term&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;CoolTerm is useful no matter which operating system you&amp;rsquo;re using.
+However, it is especially useful in Mac OS where there aren&amp;rsquo;t as many
+terminal options as there are in Windows.&amp;rdquo; &lt;a href=&#34;https://learn.sparkfun.com/tutorials/terminal-basics/coolterm-windows-mac-linux&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.sparkfun.com/tutorials/terminal-basics/coolterm-windows-mac-linux&#34;&gt;CoolTerm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;download &lt;a href=&#34;http://freeware.the-meiers.org/CoolTermMac.zip&#34;&gt;http://freeware.the-meiers.org/CoolTermMac.zip&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

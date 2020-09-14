@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Raspberry Pi Robot Car with Face Recognition and Identification</title>
+    <link>/docs/projects/car/</link>
+    <description>Recent content in Raspberry Pi Robot Car with Face Recognition and Identification on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/projects/car/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

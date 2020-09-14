@@ -1,0 +1,22 @@
+  /Users/grey/Desktop/github/cloudmesh-community/cm/clusterpi.github.io/content/en/docs/old/pi:
+  total used in directory 264 available 19533530402
+  drwxr-xr-x  22 grey  staff    704 Sep 14 09:14 .
+  drwxr-xr-x   6 grey  staff    192 Sep 12 08:06 ..
+  drwxr-xr-x   4 grey  staff    128 Sep 12 07:43 car
+  -rw-r--r--   1 grey  staff  16059 Sep 12 07:27 case.md
+  drwxr-xr-x  13 grey  staff    416 Sep 12 07:42 clusters
+  -rw-r--r--   1 grey  staff   5508 Sep 12 07:30 config-display.md
+  -rw-r--r--   1 grey  staff   4151 Sep 12 07:30 exercise.md
+  drwxr-xr-x  31 grey  staff    992 Sep 12 07:09 images
+  drwxr-xr-x   4 grey  staff    128 Sep 12 07:09 kubernetes
+  -rw-r--r--   1 grey  staff   4518 Sep 12 07:31 links.md
+  -rw-r--r--   1 grey  staff    402 Sep 12 07:33 mpi.md
+  -rw-r--r--   1 grey  staff    540 Sep 12 07:33 preface.md
+  -rw-r--r--   1 grey  staff   2101 Sep 12 07:33 run-at-boot.md
+  -rw-r--r--   1 grey  staff   3112 Sep 12 07:35 setup-dev.md
+  -rw-r--r--   1 grey  staff  16863 Sep 12 07:35 setup-multiple.md
+  -rw-r--r--   1 grey  staff  28353 Sep 12 07:36 setup-ultimate.md
+  -rw-r--r--   1 grey  staff   1639 Sep 12 07:36 setup.md
+  -rw-r--r--   1 grey  staff    466 Sep 12 07:34 slurm.md
+  -rw-r--r--   1 grey  staff   4776 Sep 12 07:36 software2.md
+  -rw-r--r--   1 grey  staff   1826 Sep 12 07:34 vnc.md

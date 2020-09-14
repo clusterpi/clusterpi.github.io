@@ -1,0 +1,802 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Projects</title>
+    <link>/docs/projects/</link>
+    <description>Recent content in Projects on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Project Ideas</title>
+      <link>/docs/projects/ideas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/projects/ideas/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;A collection of project ideas.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Please contribute and let us  know your ideas so we list them here.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Raspberry Pi Robot Car with Face Recognition and Identification</title>
+      <link>/docs/projects/car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/projects/car/</guid>
+      <description>
+        
+        
+        &lt;p&gt;| Mani Kumar Kagita
+| &lt;a href=&#34;mailto:mkagita@iu.edu&#34;&gt;mkagita@iu.edu&lt;/a&gt;
+| Indiana University - Bloomington
+| hid: SP18-711&lt;/p&gt;
+&lt;p&gt;Keywords: I523, HID319, SP18-711, Robot Car, Face Recognition&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A Computer Vision application which has always encouraged people,
+concern about the capability and capacity of robots and computers to
+determine, detect, recognize and interact with human
+beings [@Boris2014]. We will prevail the advantage of cheaper tools that
+are available in the market for computing and detecting a human face
+from the image, recognizing the face using hardware like Raspberry Pi
+and a video camera that is dedicated to Raspberry Pi. Simple and open
+source software like OpenCV is used to detect a human face from the
+video that is being captured and the image will be sent to Kairos face
+recognition software which allows a high-level approach to this process.&lt;/p&gt;
+&lt;p&gt;In this fastest information era, every information is travelled in a
+split of a second. There is much more need for accurate and fastest
+methods for identifying, recognizing and authentication of humans. In
+the present world, face recognition had become most important and
+crucial form of human identification methods. As per Literature survey
+statistics in face recognition, the two trends to receive significant
+attention for the past several years are; the first is the law
+enforcement applications and also a wide range of commercial techniques,
+and the second is exponential booming of applications and feasible
+technologies after 30 years of research [@riddhi2013].&lt;/p&gt;
+&lt;p&gt;The aim is achieved by a possibility to locate human beings or
+identities like faces from the live video capture and within the context
+of the picture. Most advanced human detection applications have this
+functionality already available. When the picture is captured and loaded
+into the system, it will scan the picture and will look for human faces
+in it. The current implementation is to detect face and register them
+with a name. If the face is detected and not recognized, Robot car will
+ask to register the detected face with a name. If the human is already
+registered in Kairos, then once the face is detected, Robot car will
+greet the human with the associated name.This whole process determines
+the Face detection and Face recognition techniques using Raspberry Pi
+and Robot car.&lt;/p&gt;
+&lt;p&gt;Facial biometric data is to be computed first in creating a complete
+recognition system. This biometric data is then compared with the face
+database and to associate with the human identity. The difference
+between a human and machine is, a human can easily and quickly identify
+characteristics of a human face but then can only save few hundreds of
+faces. Whereas a machine or computers prevails at storing and mapping
+human characteristics and meta data. In the current generation, facial
+recognition software can identify a human face within millions of images
+from the database in seconds. Humans tend to forget human faces as time
+pass by. Machines store them forever. Most of the Law firms across the
+world follow the process and spend huge money on the development of
+these facial recognition systems that can easily identify criminals in
+real-time. A well-known example is studying human faces in airports and
+bus stations.&lt;/p&gt;
+&lt;p&gt;The design of the Robot car integrated with Face recognition system will
+navigate through dangerous or natural disaster locations where humans
+unable to enter. Robot car while avoiding obstacles on its way, will
+continuously monitor for human faces who got stuck or in danger and will
+recognize the faces based on the user database. Once the human face is
+recognized, it will intimate to corresponding authorities about the
+human and will help in guiding assistance.&lt;/p&gt;
+&lt;h2 id=&#34;face-detection&#34;&gt;Face Detection&lt;/h2&gt;
+&lt;p&gt;Face Detection is a technique referred to computer vision technology
+which is able to identify human faces within digital
+images [@divya2013]. Face detection applications work using algorithms
+and machine learning formulas for detecting human faces in the visual
+images. Identifying only human faces from these images which can contain
+landscapes, houses, animals is called Face Detection technique.&lt;/p&gt;
+&lt;p&gt;Face Detection is termed to only identify if there are any humans
+present in the image or a video. It lacks the inability to recognize
+which human face is present. Common widely used face detection
+techniques are in auto-focus of a digital camera. During auto-focus,
+camera lens will look for human faces in the range and identify them to
+have focus in that particular area. Face Detection techniques will be
+widely used in counting how many numbers of visitors attending a
+particular event.&lt;/p&gt;
+&lt;h3 id=&#34;how-face-detection-works&#34;&gt;How Face Detection Works&lt;/h3&gt;
+&lt;p&gt;While Face Detection process is somewhat complex, the algorithms will
+start off by searching for human eyes at first. Eyes usually represent a
+valley region and its the easiest feature in human face to detect. Once
+the eyes are detected, then the algorithms will look for rest of the
+characteristics of a human face such as iris, nose, mouth, eyebrows, and
+nostrils. Face detection algorithm then summarizes the data and shows
+that it has successfully detected a human face from the facial region.
+Additional tests can be conducted by the algorithm to make sure and
+validate if the human face is detected [@jesse2017].&lt;/p&gt;
+&lt;h2 id=&#34;face-recognition&#34;&gt;Face Recognition&lt;/h2&gt;
+&lt;p&gt;Like most of the biometric solutions, face recognition technology will
+be used for identification and authentication purposes by measuring and
+matching the unique facial characteristics of a human face. Using a
+digital camera connected to the Raspberry Pi, once the face is detected,
+face recognition software will quantify the characteristics of face and
+then will match with the stored images in the database. Once the match
+is positive, then the corresponding name will be displayed as
+output [@biometrics2016].&lt;/p&gt;
+&lt;p&gt;Facial biometrics can be integrated with any system having a camera.
+Border control agencies use face recognition to verify identities of the
+travellers and can separate them from the trespassers. Government Law
+agencies replace all the security cameras around the world with
+biometric applications to scan faces in CCTV footage and to identify
+persons of interest in the field. Face recognition has become one of the
+fastest and human un-intervention techniques to find out the identity of
+a particular human [@biometrics2016].&lt;/p&gt;
+&lt;p&gt;For the past few years, Face recognition has become one of the most
+commonly used biometric authentication techniques. It mainly deals with
+the pattern recognition and analysing the images. Two main tasks of face
+recognition are: Face Verification and Face Identification. Face
+Verification is comparing a human face in an image with a template image
+and recognizing the correct patterns. Face Identification is comparing
+human face in an image with multiple images in the database. Face
+recognition techniques have more advantages than any other biometrics.
+With well-sophisticated algorithms and coding, face recognition has a
+high recognition rate or high identification rate of more than
+90% [@riddhi2013]. @fig:face-recognition shows the various levels
+of face recognition process [@viola2001].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/Face-recognition.jpg&#34; alt=&#34;Block Diagram of a Face RecognitionSystem&#34;&gt;{#fig:face-recognition}&lt;/p&gt;
+&lt;h3 id=&#34;face-recognition-and-big-data-analysis&#34;&gt;Face Recognition and Big Data Analysis&lt;/h3&gt;
+&lt;p&gt;Face Recognition and Big Data are two distinct technologies which are
+having hardly anything in common. But when they both are put together, a
+technology drift takes place in terms of biometric authentication.
+Storing a massive unique characteristics and libraries of human faces,
+algorithms are used to run on these characteristics to recognize the
+human face accurately. Using big data, a real-time analysis can be done
+which identifies faces and applies the rules as they are happening.&lt;/p&gt;
+&lt;p&gt;Robot car is designed to collect all the facial features that are
+encountered on its path and store them in the cloud. When the face is
+detected by the camera, it sends the picture to the cloud and facial
+recognition software will compare with huge database of faces that are
+located in the cloud. Once the face features match, robot car will
+respond with the unique name that is set for that human face.&lt;/p&gt;
+&lt;h2 id=&#34;software-and-hardware-specifications&#34;&gt;Software and Hardware Specifications&lt;/h2&gt;
+&lt;p&gt;OpenCV is to be installed in Raspberry Pi to detect human faces within
+the captured images. Kairos face recognition software is used to
+recognize a human face and identify with the corresponding name.&lt;/p&gt;
+&lt;h3 id=&#34;software-used&#34;&gt;Software Used&lt;/h3&gt;
+&lt;h5 id=&#34;raspbian-os&#34;&gt;Raspbian OS&lt;/h5&gt;
+&lt;p&gt;This is the recommended OS for Raspberry Pi 3. Raspbian OS is Debian
+based operating system. It can be installed from NOOBS installer.
+Raspbian comes with various pre-installed software such as Python, Sonic
+Pi, Java, Mathematica for programming and education.&lt;/p&gt;
+&lt;h5 id=&#34;putty&#34;&gt;Putty&lt;/h5&gt;
+&lt;p&gt;PuTTY is an SSH and telnet client for the Windows platform. PuTTY is
+open source software that is available with source code and is developed
+and supported by a group of volunteers. Here we are using putty for
+accessing our Raspberry Pi remotely.&lt;/p&gt;
+&lt;h5 id=&#34;opencv&#34;&gt;OpenCV&lt;/h5&gt;
+&lt;p&gt;Open Source Computer Vision Library (OpenCV) is an open source computer
+vision and machine learning software library. OpenCV was built to
+provide a common infrastructure for computer vision applications and to
+accelerate the use of machine perception in the commercial products.
+Being a BSD-licensed product, OpenCV makes it easy for businesses to
+utilize and modify the code. The library has more than 2500 optimized
+algorithms, which includes a comprehensive set of both classic and
+state-of-the-art computer vision and machine learning algorithms. These
+algorithms can be used to detect and recognize faces, identify objects,
+classify human actions in videos, track camera movements, track moving
+objects and extract 3D models of objects [@opencv].&lt;/p&gt;
+&lt;h5 id=&#34;python-2-ide&#34;&gt;Python 2 IDE&lt;/h5&gt;
+&lt;p&gt;Python 2.7.x version Integrated Development Environment is used to
+compile python program in Raspberry Pi. IDE is a text editor plus
+terminal combination which is used to work on large projects with
+complex code bases.&lt;/p&gt;
+&lt;h5 id=&#34;kairos-face-recognition-software&#34;&gt;Kairos Face Recognition Software&lt;/h5&gt;
+&lt;p&gt;Kairos is an artificial intelligence company specializing in face
+recognition. Through computer vision and machine learning, Kairos can
+recognize faces in videos,photos, and the real-world. A captured image
+is sent to Kairos using an API call and then Kairos will search with the
+face database. If it matches then will reply with the human name.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Emotions&lt;/li&gt;
+&lt;li&gt;Demographics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Kairos navigates the complexities of face analysis technology.&lt;/p&gt;
+&lt;h3 id=&#34;hardware-used&#34;&gt;Hardware Used&lt;/h3&gt;
+&lt;h5 id=&#34;raspberry-pi-3&#34;&gt;Raspberry Pi 3&lt;/h5&gt;
+&lt;p&gt;Raspberry Pi 3 is the latest version of Raspberry Pi. Unless previous
+versions, this have an inbuilt Bluetooth platform and a wifi support
+module. There are total 40 pins in RPI3. Of the 40 pins, 26 are GPIO
+pins and the others are power or ground pins (plus two ID EEPROM pins).
+There are 4 USB ports, 1 Ethernet slot, one HDMI port, 1 audio output
+port and 1 micro USB port. And also we have one micro SD card slot
+wherein we have to install the recommended operating system on the micro
+SD card. There are two ways to interact with your Raspberry Pi. Either
+you can interact directly through HDMI port by connecting HDMI to VGA
+cable, and keyboard and mouse or else you can interact from any other
+system through Secure Shell (SSH) [@deligence2017].&lt;/p&gt;
+&lt;h5 id=&#34;raspberry-pi-camera&#34;&gt;Raspberry Pi Camera&lt;/h5&gt;
+&lt;p&gt;The Raspberry Pi camera module can be used to take high-definition
+video, as well as stills photographs. It&amp;rsquo;s easy to use for beginners but
+has plenty to offer advanced users if you&amp;rsquo;re looking to expand your
+knowledge. There are lots of examples online of people using it for
+time-lapse, slow-motion and other video cleverness. You can also use the
+libraries we bundle with the camera to create effects.&lt;/p&gt;
+&lt;h5 id=&#34;robot-car-chassis-kit&#34;&gt;Robot Car Chassis Kit&lt;/h5&gt;
+&lt;p&gt;The Mechanical design of the Robot car includes hardware such as motor
+and wheel placement and body set-up. Robot car uses two gear-motors
+attached to wheels and one free-wheel for having various movements like
+forward, backward, left and right. Free-wheel ball is placed at the rear
+side of the robot which helps for 360 degrees free
+movement [@arduino2015]. L298N DC Stepper Motor Drive controller is used
+to control the speed and direction of the two gear motor wheels.
+Ultrasonic sensors are placed on the front side of the robot which is
+capable to detect the objects on its path [@gregor2017].&lt;/p&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;System Architecture consists of following blocks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi&lt;/li&gt;
+&lt;li&gt;Raspberry Pi Camera Module&lt;/li&gt;
+&lt;li&gt;L298N Dual H-Bridge Stepper Motor Controller&lt;/li&gt;
+&lt;li&gt;DC power supply 12v and 5v&lt;/li&gt;
+&lt;li&gt;Robot Car chassis kit&lt;/li&gt;
+&lt;li&gt;HC-SR04 Ultrasonic Sensor&lt;/li&gt;
+&lt;li&gt;SG90 Servo Motor.&lt;/li&gt;
+&lt;li&gt;Wires, Breadboard, Small PCB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h3 id=&#34;connect-raspberry-pi&#34;&gt;Connect Raspberry Pi&lt;/h3&gt;
+&lt;p&gt;This section includes connectivity of Raspberry Pi to wifi.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download Raspbian operating system to an SD card with a minimum
+capacity of 8GB.&lt;/li&gt;
+&lt;li&gt;Plugin USB power cable, keyboard, mouse and monitor cables to
+Raspberry Pi.&lt;/li&gt;
+&lt;li&gt;Insert the SD card with Raspbian OS into Pi and boot the system.
+Once the Pi is booted up, a window will appear with the Raspbian
+operating system. Click on Raspbian and Install.&lt;/li&gt;
+&lt;li&gt;Once the install process has completed, the Raspberry Pi
+configuration menu (raspi-config) will load. Here set the time and
+date for your region.&lt;/li&gt;
+&lt;li&gt;Enable wifi located at the upper right corner of the desktop and
+connect to wifi sid.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;connect-raspberry-pi-camera-module&#34;&gt;Connect Raspberry Pi Camera Module&lt;/h3&gt;
+&lt;p&gt;Before setting the camera configurations, first connect the camera to
+Raspberry Pi. The cable slots into the connector situated between the
+Ethernet and HDMI ports, with the silver connectors facing the HDMI
+port. Once the connection is completed, boot up the Raspberry Pi and run
+the following commands to install various supporting libraries. Skip
+first two steps if Python is already installed on Raspberry Pi.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ sudo apt-get install python-pip
+pi$ sudo apt-get install python-dev
+pi$ sudo pip install picamera
+pi$ sudo pip install rpio
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once the libraries are installed, follow the next steps to check if camera
+is installed in Raspberry Pi.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the camera option is not listed in the options, run the following
+commands to update Raspberry Pi.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ sudo apt-get update
+pi$ sudo apt-get upgrade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;enable-camera&#34;&gt;Enable Camera&lt;/h5&gt;
+&lt;p&gt;For face detection, PiCamera should be enabled from Raspberry Pi. The
+following list of figures shows the detailed steps on how to enable
+PiCamera [@boris2014].&lt;/p&gt;
+&lt;p&gt;As shown in Figure &lt;a href=&#34;#F:raspi&#34;&gt;[F:raspi]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:raspi&amp;rdquo;}, execute the configuration command from terminal.
+From the listed options, select &amp;ldquo;Enable Camera&amp;rdquo; as shown in
+Figure &lt;a href=&#34;#F:selcamera&#34;&gt;[F:selcamera]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:selcamera&amp;rdquo;}. Click on &amp;ldquo;Yes&amp;rdquo; option to enable the camera
+interface as shown in
+Figure &lt;a href=&#34;#F:enbcamera&#34;&gt;[F:enbcamera]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:enbcamera&amp;rdquo;}.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/enablecamera1.jpg&#34; alt=&#34;EnableCamera[]{label=&#34;F:enbcamera&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/enablecamera2.jpg&#34; alt=&#34;EnableCamera[]{label=&#34;F:enbcamera&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/enablecamera3.jpg&#34; alt=&#34;EnableCamera[]{label=&#34;F:enbcamera&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-opencv-and-required-libraries&#34;&gt;Install OpenCV and Required Libraries&lt;/h3&gt;
+&lt;p&gt;OpenCV computer vision library is used to for face detection from the
+live video streaming. Execute the following commands to install OpenCV
+dependencies on the Raspberry Pi.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ sudo apt-get install build-essential
+pi$ sudo cmake pkg-config python-dev libgtk2.0-dev \
+        libgtk2.0 zlib1g-dev libpng-dev \
+        libjpeg-dev libtiff-dev libjasper-dev \
+        libavcodec-dev swig unzip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Select yes for all options and wait for the libraries and dependencies
+to be installed.&lt;/p&gt;
+&lt;p&gt;Download opencv-2.4.9 zip file to Raspberry Pi. Change to the
+corresponding directory and execute the following commands.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pi$ cd opencv-2.4.9
+pi$ sudo apt-get install build-essential cmake \
+        pkg-config
+pi$ sudo apt-get install libjpeg-dev libtiff5-dev \
+        libjasper-dev libpng12-dev
+pi$ sudo apt-get install python-dev python-numpy \
+        libtbb2 libtbb-dev libjpeg-dev \
+        libpng-dev libtiff-dev libjasper-dev \
+        libdc1394-22-dev
+pi$ sudo apt-get install python-opencv
+pi$ sudo apt-get install python-matplotlib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After executing the commands the latest version of OpenCV is now
+installed in Raspberry Pi. Time taken to install OpenCV is about 15
+minutes.&lt;/p&gt;
+&lt;h3 id=&#34;integration-of-raspberry-pi-with-robot-car&#34;&gt;Integration of Raspberry Pi with Robot Car&lt;/h3&gt;
+&lt;p&gt;Raspberry Pi connected with PiCamera is integrated with Robot car to
+navigate using a web server. During the navigation, robot car will look
+for human faces using PiCamera and then detects the face. Once the face
+is detected, python program will call Kairos face detection software to
+identify the person and greet with the name. If the human face is
+unidentified then robot car will ask human to register their name. The
+diagram in Figure &lt;a href=&#34;#F:circuit&#34;&gt;[F:circuit]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:circuit&amp;rdquo;} shows the circuit connections of Raspberry Pi to
+stepper motor controller and DC motors of a robot car.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/RaspPi_Robot.jpg&#34; alt=&#34;Raspberry Pi Robot CarIntegration[]{label=&#34;F:circuit&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Figures &lt;a href=&#34;#F:robotfront&#34;&gt;[F:robotfront]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:robotfront&amp;rdquo;}, &lt;a href=&#34;#F:robotside&#34;&gt;[F:robotside]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:robotside&amp;rdquo;}, &lt;a href=&#34;#F:robottop&#34;&gt;[F:robottop]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:robottop&amp;rdquo;} represents corresponding front view, sideview
+and topview of the robot car connections.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/RobotCar_FrontView.jpg&#34; alt=&#34;Top view of RobotCar[]{label=&#34;F:robottop&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/RobotCar_SideView.jpg&#34; alt=&#34;Top view of RobotCar[]{label=&#34;F:robottop&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/RobotCar_TopView.jpg&#34; alt=&#34;Top view of RobotCar[]{label=&#34;F:robottop&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the Table &lt;a href=&#34;#T:pinlayout&#34;&gt;[T:pinlayout]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;T:pinlayout&amp;rdquo;}, shows the connectivity of Raspberry Pi GPIO
+pins to L298N stepper motor controller.&lt;/p&gt;
+&lt;h3 id=&#34;actuator-------raspberry-pi-gpio-pin---l298n-pin&#34;&gt;Actuator       Raspberry Pi GPIO Pin   L298N Pin&lt;/h3&gt;
+&lt;p&gt;Motor1A        GPIO23                  IN1
+Motor1B        GPIO24                  IN2
+Motor1Enable   GPIO25                  ENA
+Motor2A        GPIO9                   IN3
+Motor2B        GPIO10                  IN4
+Motor2Enable   GPIO11                  ENB&lt;/p&gt;
+&lt;p&gt;: Pin connections of Raspberry Pi to stepper motor
+controller[]{label=&amp;quot;T:pinlayout&amp;rdquo;}&lt;/p&gt;
+&lt;h3 id=&#34;kairos-face-recognition-setup&#34;&gt;Kairos Face Recognition Setup&lt;/h3&gt;
+&lt;p&gt;Kairos Face Recognition system has a free developer account which is
+used to identify the human name from the images. Once registered a human
+name with an image, the code will call Kairos API with a newly detected
+human face and will look for the registered name. Kairos will do a quick
+look-up in the human database from the registered account and if it
+matches, will send the name of the human back to the code.&lt;/p&gt;
+&lt;p&gt;Setup as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Register with Kairos using url &amp;ldquo;https:/www.kairos.com&amp;rdquo; as a free
+developer account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Login with registered username and password&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create an appname&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An app id and a key will be generated. Save this for future use.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enroll a sample user and a gallery name with the user image using
+following POST request.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    POST /enroll HTTP/1.1
+    Content-Type: application/json
+    app_id: your-app-id
+    app_key: your-app-key
+    {
+    &amp;quot;image&amp;quot;:&amp;quot; http://media.kairos.com/user.jpg &amp;quot;,
+    &amp;quot;subject_id&amp;quot;:&amp;quot;User&amp;quot;,
+    &amp;quot;gallery_name&amp;quot;:&amp;quot;MyGallery&amp;quot;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With the completed steps, Kairos face recognition application will be
+created and ready for face recognition from the images.&lt;/p&gt;
+&lt;h2 id=&#34;code-explanation&#34;&gt;Code Explanation&lt;/h2&gt;
+&lt;h3 id=&#34;face-detection-1&#34;&gt;Face Detection&lt;/h3&gt;
+&lt;p&gt;Before configuring face detection for the robot car, related libraries
+including PiCamera and PiRGBArray libraries for camera to operate should
+be imported in the code. These libraries will help to capture video and
+images from the PiCamera.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+import cv2
+import sys
+import imutils
+from fractions import Fraction
+import base64
+import requests
+import json
+import random
+import os
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Haar Feature-based cascade classifier is an effective face or object
+detection method to capture the frontal features of the
+face [@viola2001]. This tool will help to continuous monitoring of any
+human face to detect. Once detected a human face, the output values will
+provide as Human Face Detected from the capturing video.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Get user supplied values
+cascPath = &#39;./haarcascade_frontalface_default.xml&#39;
+
+## Create the haar cascade
+faceCascade = cv2.CascadeClassifier(cascPath)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Camera settings need to be updated, our suggested changes are shown in the code next.
+The captured image is to be sent to Kairos for face recognition and so
+we will set the resolution to a lower level. This will help to send the
+image faster over the network without any delay.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## initialize the camera
+#camera capture
+camera = PiCamera()
+camera.resolution = (160, 120)
+camera.framerate = 32
+rawCapture = PiRGBArray(camera, size=(160, 120))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code shown next represents PiCamera continuously monitor for human faces
+detected from the grayscale video capture. Once the human face is
+detected, espeak function in Raspberry Pi will send the voice to a
+connected speaker and will output as &amp;ldquo;Human face detected&amp;rdquo;. This
+detected image is then saved as &amp;ldquo;User-Image.jpg&amp;rdquo; which is then will be
+sent to Kairos during Face recognition.&lt;/p&gt;
+&lt;p&gt;Images in Figures &lt;a href=&#34;#F:frontview&#34;&gt;[F:frontview]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:frontview&amp;rdquo;}, &lt;a href=&#34;#F:sideview1&#34;&gt;[F:sideview1]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:sideview1&amp;rdquo;}, &lt;a href=&#34;#F:sideview2&#34;&gt;[F:sideview2]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo;
+reference=&amp;quot;F:sideview2&amp;rdquo;} represents face detection of front and side
+views within the circle using OpenCV.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/Face-detect-frontview.png&#34; alt=&#34;Side view 2 Facedetection[]{label=&#34;F:sideview2&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/Face-detect-sideview1.png&#34; alt=&#34;Side view 2 Facedetection[]{label=&#34;F:sideview2&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/Face-detect-sideview2.png&#34; alt=&#34;Side view 2 Facedetection[]{label=&#34;F:sideview2&amp;rdquo;}&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## allow the camera to warm-up
+time.sleep(0.1)
+lastTime = time.time()*1000.0
+## capture frames from the camera
+for frame in camera.capture_continuous(rawCapture, \
+    format=&amp;quot;bgr&amp;quot;, use_video_port=True):
+    ## grab the raw NumPy array representing the image,
+    ## then initialize the timestamp and
+    ## occupied/unoccupied text
+    image = frame.array
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    ## Detect faces in the image
+    faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.1,
+        minNeighbors=5,
+        minSize=(30, 30),
+        flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+    )
+    print time.time()*1000.0-lastTime,&amp;quot; \
+    Found {0} faces!&amp;quot;.format(len(faces))
+    lastTime = time.time()*1000.0
+
+    ## Draw a circle around the faces
+    for (x, y, w, h) in faces:
+        cv2.circle(image, (x+w/2, y+h/2), \
+        int((w+h)/3), (255, 255, 255), 1)
+    ## show the frame
+    cv2.imshow(&amp;quot;Frame&amp;quot;, image)
+    key = cv2.waitKey(1) &amp;amp; 0xFF
+    if len(faces) == 1:
+        print(&amp;quot;Taking image...&amp;quot;)
+    camera.capture(&amp;quot;foo.jpg&amp;quot;)
+    os.system(&#39;espeak &amp;quot;Human face detected&amp;quot;&#39;)
+    inputImage= &amp;quot;./foo.jpg&amp;quot;
+    del camera
+    break
+    ## clear the stream in preparation for the
+    #next frame
+    rawCapture.truncate(0)
+
+    ## if the `q` key was pressed, break from
+    #the loop
+    if key == ord(&amp;quot;q&amp;quot;):
+        del camera
+        exit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;face-recognition-1&#34;&gt;Face Recognition&lt;/h3&gt;
+&lt;p&gt;For the Face Recognition, we use Kairos to detect the facial
+characteristics. A JSON config file is to be placed in the same folder
+as of the code with Kairos API app id and key value. When the human face
+is detected, the code will generate an API call to Kairos software along
+with the gallery name, API app id and key values. Image when sending to
+Kairos, it will be base64 encrypted and will send over the network for
+security purpose. This encrypted image will then be decrypted at Kairos
+platform.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;KAIROS = &amp;quot;api.kairos&amp;quot;
+KairosGallery = &#39;MyFace&#39;
+KairosConfig = &#39;./kairos_config.json&#39;
+
+def trainKairos(image, name):
+    global KairosGallery
+    headers = {
+        &#39;app_id&#39;: &#39;your-app-idd39fc1b1&#39;,
+        &#39;app_key&#39;: &#39;your-app-key&#39;
+    }
+    data = {
+        &#39;image&#39;: base64.b64encode(image),
+        &#39;gallery_name&#39;: KairosGallery,
+        &#39;subject_id&#39;: name
+    }
+    r = requests.post(&#39;http://api.kairos.com/enroll&#39;, \
+        headers=headers, data=json.dumps(data))
+    print(r.text)
+    return(None)
+
+class Recognize():
+    def __init__(self, API, config_file):
+        self.api = API
+        self.config = config_file
+
+    #def recognize(self, image_path):
+    ##    return self.__recognizeKairos(image_path)
+
+    def recognizeKairos(self, image):
+        with open(image, &amp;quot;rb&amp;quot;) as image_file:
+            encoded_string = base64.b64encode\
+            (image_file.read())
+        with open(self.config, &amp;quot;rb&amp;quot;) as config_file:
+            config = json.loads \
+            (config_file.read())
+        data = {
+            &amp;quot;image&amp;quot;: encoded_string,
+            &amp;quot;gallery_name&amp;quot;: config[&amp;quot;gallery_name&amp;quot;]
+        }
+
+        headers = {
+            &amp;quot;Content-Type&amp;quot;: &amp;quot;application/json&amp;quot;,
+            &amp;quot;app_id&amp;quot;: config[&amp;quot;app_id&amp;quot;],
+            &amp;quot;app_key&amp;quot;: config[&amp;quot;app_key&amp;quot;]
+        }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output from Kairos software is in JSON format. The output is then
+segregated as per the key-value pairs and then saved into local
+variables. When the image is recognized, a success transaction message
+will be obtained from Kairos along with subject id and face id.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;try:
+    r = requests.post(&amp;quot;https://api.kairos.com/recognize&amp;quot;, \
+                 headers=headers, data=json.dumps(data))
+    data = r.json()
+    print data
+    ## print json.dumps(data, indent=4)
+    faces = []
+    if &amp;quot;images&amp;quot; in data:
+        for obj in data[&amp;quot;images&amp;quot;]:
+            if obj[&amp;quot;transaction&amp;quot;][&amp;quot;status&amp;quot;] == \
+            &amp;quot;success&amp;quot;:
+                face_obj = {}
+                face_obj[&amp;quot;person&amp;quot;] = \
+                obj[&amp;quot;transaction&amp;quot;][&amp;quot;subject_id&amp;quot;]\
+                .decode(&amp;quot;utf_8&amp;quot;)
+                #face_obj[&amp;quot;faceid&amp;quot;] = \
+                obj[&amp;quot;candidates&amp;quot;][0][&amp;quot;face_id&amp;quot;]\
+                .decode(&amp;quot;utf_8&amp;quot;)
+                face_obj[&amp;quot;confidence&amp;quot;] = \
+                obj[&amp;quot;transaction&amp;quot;][&amp;quot;confidence&amp;quot;]
+                faces.append(face_obj)
+            elif obj[&amp;quot;transaction&amp;quot;][&amp;quot;status&amp;quot;] == \
+            &amp;quot;failure&amp;quot;:
+                face_obj = {}
+                face_obj[&amp;quot;person&amp;quot;] = &amp;quot;unidentified&amp;quot;
+                face_obj[&amp;quot;confidence&amp;quot;] = 0
+                faces.append(face_obj)
+            else:
+                print &amp;quot;its in last loop&amp;quot;
+            return faces
+ except requests.exceptions.RequestException as \
+ exception:
+       print exception
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output from Kairos face recognition software is to be read to
+understand if the person name is identified or not. If it is identified
+then the person name will be listed according to the corresponding
+person in the image. If the human is not identified, then the code will
+suggest if the user wants to registered for face recognition. Once the
+user key in the name, Kairos API call is generated while sending newly
+registered name and the gallery name to that corresponding application
+id. Here the newly recognized user will be registered with the name and
+his image. When the user is recognized by the camera in next
+corresponding events, then Robot car will greet the user with his name.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if __name__ == &amp;quot;__main__&amp;quot;:
+    r = Recognize(KAIROS, &amp;quot;kairos_config.json&amp;quot;)
+    x = r.recognizeKairos(inputImage)
+
+    #print x
+    #print x[&amp;quot;person&amp;quot;]
+    #print x[0][&amp;quot;person&amp;quot;]
+    string1 = x[0][&amp;quot;person&amp;quot;]
+    #print string1
+    os.system(&#39;espeak &amp;quot;Hello...&amp;quot;&amp;quot;{}&amp;quot;&#39;.format(string1))
+    if x[0][&amp;quot;person&amp;quot;] == &amp;quot;unidentified&amp;quot;:
+        os.system(&#39;espeak &amp;quot;Please enter your \
+                  name to Register&amp;quot;&#39;)
+        nameToRegister = raw_input(&amp;quot;Please enter \
+                        your name to Register :&amp;quot;)
+        binaryData = open(inputImage, &#39;rb&#39;).read()
+        print(&#39;Enrolling to Kairos&#39;)
+        trainKairos(binaryData, nameToRegister)
+        print &amp;quot;You are now Registered as :&amp;quot;, \
+        nameToRegister os.system(&#39;espeak \
+        &amp;quot;Hello...&amp;quot;&amp;quot;{}&amp;quot;&#39;.format(nameToRegister))
+        exit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;robot-car-navigation&#34;&gt;Robot Car Navigation&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;import RPi.GPIO as GPIO
+from time import sleep
+
+GPIO.setmode(GPIO.BOARD)
+
+#Connecting two wheel motors to Raspberry Pi GPIO
+#Left Motor (Motor 1) connections
+Motor1A = 16 #(GPIO 23 - Pin 16)
+Motor1B = 18 #(GPIO 24 - Pin 18)
+Motor1Enable = 22 #(GPIO 25 - Pin 22)
+
+#Right Motor (Motor 2) Connecctions
+Motor2A = 21 #(GPIO 9 - Pin 21)
+Motor2B = 19 #(GPIO 10 - Pin 19)
+Motor2Enable = 23 #(GPIO 11 - Pin 23)
+
+#Ouptut of Morors to set as OUT
+GPIO.setup(Motor1A,GPIO.OUT)
+GPIO.setup(Motor1B,GPIO.OUT)
+GPIO.setup(Motor1Enable,GPIO.OUT)
+GPIO.setup(Motor2A,GPIO.OUT)
+GPIO.setup(Motor2B,GPIO.OUT)
+GPIO.setup(Motor2Enable,GPIO.OUT)
+
+## Defining function for Robot car to move forward
+def forward():
+    GPIO.output(Motor1A,GPIO.HIGH)
+    GPIO.output(Motor1B,GPIO.LOW)
+    GPIO.output(Motor1Enable,GPIO.HIGH)
+    GPIO.output(Motor2A,GPIO.HIGH)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2Enable,GPIO.HIGH)
+
+    sleep(2)
+
+## Defining function for Robot car to move backward
+def backward():
+    GPIO.output(Motor1A,GPIO.LOW)
+    GPIO.output(Motor1B,GPIO.HIGH)
+    GPIO.output(Motor1Enable,GPIO.HIGH)
+    GPIO.output(Motor2A,GPIO.LOW)
+    GPIO.output(Motor2B,GPIO.HIGH)
+    GPIO.output(Motor2Enable,GPIO.HIGH)
+
+    sleep(2)
+
+## Defining function for Robot car to turn right
+def turnRight():
+    print(&amp;quot;Going Right&amp;quot;)
+    GPIO.output(Motor1A,GPIO.HIGH)
+    GPIO.output(Motor1B,GPIO.LOW)
+    GPIO.output(Motor1Enable,GPIO.HIGH)
+    GPIO.output(Motor2A,GPIO.LOW)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2Enable,GPIO.LOW)
+
+    sleep(2)
+
+## Defining function for Robot car to turn left
+def turnLeft():
+    print(&amp;quot;Going Left&amp;quot;)
+    GPIO.output(Motor1A,GPIO.LOW)
+    GPIO.output(Motor1B,GPIO.LOW)
+    GPIO.output(Motor1Enable,GPIO.LOW)
+    GPIO.output(Motor2A,GPIO.HIGH)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2Enable,GPIO.HIGH)
+
+    sleep(2)
+
+## Defining function for Robot car to stop
+def stop():
+    print(&amp;quot;Stopping&amp;quot;)
+    GPIO.output(Motor1A,GPIO.LOW)
+    GPIO.output(Motor1B,GPIO.LOW)
+    GPIO.output(Motor1Enable,GPIO.LOW)
+    GPIO.output(Motor2A,GPIO.LOW)
+    GPIO.output(Motor2B,GPIO.LOW)
+    GPIO.output(Motor2Enable,GPIO.LOW)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;controling-robot-car-using-webserver&#34;&gt;Controling Robot Car using webserver&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;from flask import Flask, render_template, \
+request, redirect, url_for, make_response
+import RPi.GPIO as GPIO
+import motors
+
+#set up GPIO
+GPIO.setmode(GPIO.BOARD)
+
+#set up flask server
+app = Flask(__name__)
+
+#when the root IP is selected, return index.html page
+@app.route(&#39;/&#39;)
+def index():
+
+    return render_template(&#39;index.html&#39;)
+
+#recieve which pin to change from the button press on \
+#index.html
+#each button returns a number that triggers a command in \
+#this function
+#
+#Uses methods from motors.py to send commands to the GPIO \
+## to operate the motors
+@app.route(&#39;/&amp;lt;changepin&amp;gt;&#39;, methods=[&#39;POST&#39;])
+def reroute(changepin):
+
+    changePin = int(changepin) #cast changepin to an int
+
+    if changePin == 1:
+        motors.turnLeft()
+    elif changePin == 2:
+        motors.forward()
+    elif changePin == 3:
+        motors.turnRight()
+    elif changePin == 4:
+        motors.backward()
+    else:
+        motors.stop()
+
+
+    response = make_response(redirect(url_for(&#39;index&#39;)))
+    return(response)
+
+#set up the server in debug mode to the port 8000
+app.run(debug=True, host=&#39;0.0.0.0&#39;, port=8000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;p&gt;There are lots of applications of face recognition. Face recognition is
+already being used to unlock phones and specific applications. Face
+recognition is also used for biometric surveillance. Banks, retail
+stores, stadiums, airports and other facilities use face recognition to
+reduce crime and prevent violence.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;A robot car using Raspberry Pi is designed to detect and recognize the
+human faces from the images taken from PiCamera attached to the
+Raspberry Pi. Using Python programming language, the system is being
+built such that it can face detect and recognize in real time scenarios.
+For this solution Kairos Face recognition software is being used which
+have a free developer account. Face recognition is tested with various
+types of facial views like the front view and side view. The Round Trip
+Time for robot car to take picture and recognize face is nearly 3
+seconds. The efficiency of the system was analysed based on the rate of
+face detection in real time. As per the analysis, this current system
+shows tremendous performance efficiency where the face detection and
+recognition can be performed even with very low-quality images.&lt;/p&gt;
+&lt;p&gt;The authors would like to thank Dr. Gregor von Laszewski for his support
+and suggestions in writing this paper.&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;The code is located at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/hid-sp18-711/tree/master/project-code&#34;&gt;https://github.com/cloudmesh-community/hid-sp18-711/tree/master/project-code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
