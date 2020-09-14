@@ -419,10 +419,6 @@ experiences with
 
 -   https://sourceforge.net/projects/rpiqemuwindows/
 
-### Scratch
-
--   [scratch](https://github.com/DexterInd/GrovePi/tree/master/Software/Scratch)
-
 ## Web Server
 
 -   [Web Server

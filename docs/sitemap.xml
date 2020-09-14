@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/docs/iot/sensors/temperature/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/projects/ideas/iot/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/hardware/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/projects/ideas/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/old/iot/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/</loc>
   </url>
   
   <url>
@@ -18,8 +33,34 @@
   </url>
   
   <url>
-    <loc>/docs/old/</loc>
+    <loc>/docs/old/iot/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/os/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/projects/car/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/old/</loc>
+    <lastmod>2020-09-12T08:34:17-04:00</lastmod>
   </url>
   
   <url>
@@ -28,8 +69,22 @@
   </url>
   
   <url>
-    <loc>/docs/mini-cluster/</loc>
-    <lastmod>2020-09-11T13:32:18-04:00</lastmod>
+    <loc>/docs/cluster/mini-cluster/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/mini-cluster/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/hardware/raspberry/pi3/</loc>
   </url>
   
   <url>
@@ -43,13 +98,38 @@
   </url>
   
   <url>
+    <loc>/categories/adruino/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/adruino/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/adruino/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/old/pi/clusters/pi-configure-cluster/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
+    <loc>/tags/bash/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/bash/</loc>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
     <lastmod>2020-09-11T13:18:39-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
@@ -68,8 +148,15 @@
   </url>
   
   <url>
-    <loc>/docs/old/iot/dexter/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/sensors/compass/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/os/dexter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/sensors/temperature/dht11/</loc>
   </url>
   
   <url>
@@ -78,13 +165,31 @@
   </url>
   
   <url>
-    <loc>/docs/old/iot/easyplug/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/sensors/temperature/ds18b20/</loc>
   </url>
   
   <url>
-    <loc>/docs/old/iot/esp8266/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/adruino/easyplug/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/editors/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/editor/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/hardware/esp8266/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/esp8266/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/hardware/esp8266robot/</loc>
   </url>
   
   <url>
@@ -93,18 +198,23 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/fortran/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/false/</loc>
   </url>
   
   <url>
-    <loc>/docs/old/iot/grovepi/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/hardware/fish/</loc>
   </url>
   
   <url>
-    <loc>/docs/old/iot/hardware/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/tags/fortran/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/fortran/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/grovepi/</loc>
   </url>
   
   <url>
@@ -115,6 +225,10 @@
   <url>
     <loc>/docs/old/iot/introduction/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/iot/</loc>
   </url>
   
   <url>
@@ -133,18 +247,37 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/mpi/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/output/lcd/</loc>
   </url>
   
   <url>
-    <loc>/docs/old/pi/motherboard-led/</loc>
+    <loc>/docs/iot/sensors/light/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/os/osx/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/old/pi/mpi/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/old/pi/clusters/pi-now/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/output/</loc>
   </url>
   
   <url>
@@ -158,8 +291,20 @@
   </url>
   
   <url>
+    <loc>/docs/iot/output/motherboard-led/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/old/pi/software2/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/sensors/positioning/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/power/</loc>
   </url>
   
   <url>
@@ -168,8 +313,12 @@
   </url>
   
   <url>
-    <loc>/docs/old/iot/projects/</loc>
+    <loc>/categories/programming/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/sensors/temperature/smart/</loc>
   </url>
   
   <url>
@@ -178,8 +327,7 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/board/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/hardware/raspberry/</loc>
   </url>
   
   <url>
@@ -194,11 +342,6 @@
   
   <url>
     <loc>/docs/old/pi/clusters/pi-cassandra-apache2/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/old/pi/car/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
@@ -218,8 +361,16 @@
   </url>
   
   <url>
+    <loc>/docs/iot/output/relay/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/old/pi/run-at-boot/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/scratch/</loc>
   </url>
   
   <url>
@@ -228,8 +379,11 @@
   </url>
   
   <url>
-    <loc>/docs/old/iot/sensors/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/hardware/sensors/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/sensors/</loc>
   </url>
   
   <url>
@@ -248,13 +402,33 @@
   </url>
   
   <url>
+    <loc>/tango/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/temperature/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/tools/</loc>
+    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/old/iot/tools/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/old/iot/turtle/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/iot/sensors/touch/</loc>
+  </url>
+  
+  <url>
+    <loc>/true/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prg/turtle/</loc>
   </url>
   
   <url>
@@ -265,6 +439,10 @@
   <url>
     <loc>/docs/old/pi/vnc/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/hardware/raspberry/pizero/</loc>
   </url>
   
 </urlset>

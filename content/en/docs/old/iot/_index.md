@@ -1,6 +1,6 @@
 ---
-title: "IoT"
-linkTitle: "IoT"
+title: "Old IoT"
+linkTitle: "Old IoT"
 weight: 20
 ---
 
