@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/docs/cluster/form/own-5/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/iot/sensors/temperature/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/form/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
   
   <url>
@@ -16,11 +26,22 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/form/nas/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/hardware/</loc>
+    <lastmod>2020-09-14T18:54:37-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/projects/ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/form/clusterhat/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
   
   <url>
@@ -56,7 +77,17 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/form/five/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/prg/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/form/octapi/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
   
   <url>
@@ -65,8 +96,18 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/form/bitscope/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/</loc>
     <lastmod>2020-09-14T17:01:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/form/oracle/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
   
   <url>
@@ -81,6 +122,11 @@
   <url>
     <loc>/docs/old/</loc>
     <lastmod>2020-09-14T16:46:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/form/virtual/</loc>
+    <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
   
   <url>
@@ -298,11 +344,6 @@
   
   <url>
     <loc>/docs/iot/output/</loc>
-  </url>
-  
-  <url>
-    <loc>/docs/old/pi/case/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   
   <url>
