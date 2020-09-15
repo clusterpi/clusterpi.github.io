@@ -26,6 +26,10 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/kubernetes/links/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/form/nas/</loc>
     <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
@@ -106,6 +110,10 @@
   </url>
   
   <url>
+    <loc>/docs/cluster/kubernetes/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/form/oracle/</loc>
     <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
@@ -151,6 +159,18 @@
   
   <url>
     <loc>/docs/hardware/raspberry/pi3/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/kubernetes/417/bin/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/kubernetes/526/head/head_node_readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/cluster/kubernetes/526/</loc>
   </url>
   
   <url>
@@ -284,11 +304,6 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/kubernetes/526/head/head_node_readme/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/old/iot/introduction/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
@@ -304,11 +319,6 @@
   
   <url>
     <loc>/docs/old/pi/clusters/pi-kubernetes/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/old/pi/kubernetes/417/bin/readme/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
   

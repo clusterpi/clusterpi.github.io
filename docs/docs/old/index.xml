@@ -325,32 +325,6 @@ but just provide the design.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Head Node Setup</title>
-      <link>/docs/old/pi/kubernetes/526/head/head_node_readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/old/pi/kubernetes/526/head/head_node_readme/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Your head node will give you access to your compute nodes.&lt;/p&gt;
-&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
-&lt;p&gt;The setup script will install dnsmasq for DNS/DHCP server and Cluster SSH. It will also configure the iptables to allow the compute nodes to access the internet through the head node.&lt;/p&gt;
-&lt;p&gt;Run setup script:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo sh setup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Reboot:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;reboot
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Run Cluster SSH:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cssh -l pi rpcluster
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This opens a new SSH window with username &lt;em&gt;pi&lt;/em&gt; for each hostname in rpcluster (defined in &lt;strong&gt;/etc/clusters&lt;/strong&gt;). Click on the gray box to type commands into each node.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: IU 100 Node Cluster Case</title>
       <link>/docs/old/case/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1056,48 +1030,6 @@ Here are the required commands to re-enable swap.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster/&#34;&gt;https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49&#34;&gt;https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Kubernetes Cluster in Raspberry Pi - automation</title>
-      <link>/docs/old/pi/kubernetes/417/bin/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/old/pi/kubernetes/417/bin/readme/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This section of the tutorial is targeting to automate the Kubernetes cluster setup in
-Raspberry pi.&lt;/p&gt;
-&lt;h2 id=&#34;opt_setupsh&#34;&gt;opt_setup.sh&lt;/h2&gt;
-&lt;p&gt;This is an optional setup if its required to download the cloudmesh code from 417 repo&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sh opt_setup.sh&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;dhcp_setupsh&#34;&gt;dhcp_setup.sh&lt;/h2&gt;
-&lt;p&gt;This Script will help setting up the dhcp static ip.&lt;/p&gt;
-&lt;p&gt;Please note that the shell script will execute the recommended reboot after the static IP assignment.&lt;/p&gt;
-&lt;p&gt;It needs four params:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;hostname&lt;/li&gt;
-&lt;li&gt;desired static ip&lt;/li&gt;
-&lt;li&gt;router ip&lt;/li&gt;
-&lt;li&gt;dns server ip&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;sh dhcp_setup.sh &amp;lt;hostname&amp;gt; &amp;lt;nodeIP&amp;gt; &amp;lt;routerIP&amp;gt; &amp;lt;dnsIP&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;docker_setupsh&#34;&gt;docker_setup.sh&lt;/h2&gt;
-&lt;p&gt;Now Install docker and turn off the swap memory.
-This shell will reboot the node per recommendation of the references.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sh docker_setup.sh&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The previous shell scripts are common in both worker and head.&lt;/p&gt;
-&lt;h2 id=&#34;kube_head_setupsh&#34;&gt;kube_head_setup.sh&lt;/h2&gt;
-&lt;p&gt;To be executed only on the master.
-This will initiate kubectl master and setup networking[debugging now]&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sh kube_head_setup.sh&lt;/code&gt;
-Please save the join token for the workers&lt;/p&gt;
-&lt;h1 id=&#34;kube_worker_setupsh&#34;&gt;kube_worker_setup.sh&lt;/h1&gt;
-&lt;p&gt;To be executed in the worker nodes&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sh kube_worker_setup.sh&lt;/code&gt;&lt;/p&gt;
 
       </description>
     </item>

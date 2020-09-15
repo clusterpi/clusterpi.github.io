@@ -3,7 +3,7 @@ title: "Docker"
 linkTitle: "Docker"
 weight: 20
 description: >
-  Buoilding Clusters with Docker
+  Building Clusters with Docker
 ---
 
 {{% pageinfo %}}

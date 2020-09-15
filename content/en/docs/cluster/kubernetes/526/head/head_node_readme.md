@@ -1,7 +1,13 @@
 ---
-title: "Head Node Setup"
-linkTitle: "Head Node Setup"
+title: "526 Kubernetes Head Node Setup"
+linkTitle: "526 Kube Head Node Setup"
+description: >
+  Incomplete, should be replaced
 ---
+
+SEE THE OTHER NOTE I DID ON THIS
+
+This
 
 Your head node will give you access to your compute nodes.
 

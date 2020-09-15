@@ -1,0 +1,230 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster PI – Kubernetes</title>
+    <link>/docs/cluster/kubernetes/</link>
+    <description>Recent content in Kubernetes on Cluster PI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/cluster/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Links:Kubernetes Cluster in Raspberry Pi</title>
+      <link>/docs/cluster/kubernetes/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/kubernetes/links/</guid>
+      <description>
+        
+        
+        &lt;p&gt;All tutorials ahve the same issue: &amp;ldquo;I show you how to do it on one worked, now repeat it on all others&amp;rdquo; What we want is a single command that given n ip addresses it will install the head node on one ip address and the workers on all others&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://opensource.com/article/20/6/kubernetes-raspberry-pi&#34;&gt;https://opensource.com/article/20/6/kubernetes-raspberry-pi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://opensource.com/article/20/3/kubernetes-raspberry-pi-k3s&#34;&gt;https://opensource.com/article/20/3/kubernetes-raspberry-pi-k3s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#1-overview&#34;&gt;https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#1-overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/nycdev/k8s-on-pi-9cc14843d43&#34;&gt;https://medium.com/nycdev/k8s-on-pi-9cc14843d43&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jeffgeerling.com/blog/2019/everything-i-know-about-kubernetes-i-learned-cluster-raspberry-pis&#34;&gt;https://www.jeffgeerling.com/blog/2019/everything-i-know-about-kubernetes-i-learned-cluster-raspberry-pis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/blog/2015/12/creating-raspberry-pi-cluster-running/&#34;&gt;https://kubernetes.io/blog/2015/12/creating-raspberry-pi-cluster-running/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://itnext.io/building-a-kubernetes-cluster-on-raspberry-pi-and-low-end-equipment-part-1-a768359fbba3&#34;&gt;https://itnext.io/building-a-kubernetes-cluster-on-raspberry-pi-and-low-end-equipment-part-1-a768359fbba3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/codesqueak/k18srpi4&#34;&gt;https://github.com/codesqueak/k18srpi4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/blog/five-years-of-raspberry-pi-clusters/&#34;&gt;https://www.raspberrypi.org/blog/five-years-of-raspberry-pi-clusters/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nocture.dk/2020/07/02/running-a-kubernetes-cluster-with-dashboard-on-raspberry-pi-4/&#34;&gt;https://www.nocture.dk/2020/07/02/running-a-kubernetes-cluster-with-dashboard-on-raspberry-pi-4/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dinofizzotti.com/blog/2020-05-09-raspberry-pi-cluster-part-2-todo-api-running-on-kubernetes-with-k3s/&#34;&gt;https://www.dinofizzotti.com/blog/2020-05-09-raspberry-pi-cluster-part-2-todo-api-running-on-kubernetes-with-k3s/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Videos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=DjpVtNjiXSU&#34;&gt;https://www.youtube.com/watch?v=DjpVtNjiXSU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=XvlkYL1dGbw&#34;&gt;https://www.youtube.com/watch?v=XvlkYL1dGbw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qsy1Gwa-J5o&#34;&gt;https://www.youtube.com/watch?v=qsy1Gwa-J5o&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 417: Kubernetes Cluster in Raspberry Pi</title>
+      <link>/docs/cluster/kubernetes/417/bin/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/kubernetes/417/bin/readme/</guid>
+      <description>
+        
+        
+        &lt;p&gt;NOTE: THIS PROJECT IS INCOMPLETE AND OUTDATED&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is a project from Spring 2018, so its likely outdated&lt;/li&gt;
+&lt;li&gt;all the shs scripts were not properly added and gregor had to add
+them in this md.&lt;/li&gt;
+&lt;li&gt;code should be in code repository, but not documentation repo&lt;/li&gt;
+&lt;li&gt;There is to much unneded code here&lt;/li&gt;
+&lt;li&gt;codes should use cloudmesh shell not shell scripts&lt;/li&gt;
+&lt;li&gt;code shows lots of things that need to be done by hand which is not
+needed if it were to be properly automated&lt;/li&gt;
+&lt;li&gt;a single line of cold should be able to configure &amp;ldquo;ALL&amp;rdquo; workers and
+also the head node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The original is at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/hid-sp18-417/tree/master/deprecated/tutorial/automate&#34;&gt;https://github.com/cloudmesh-community/hid-sp18-417/tree/master/deprecated/tutorial/automate&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/hid-sp18-417/blob/master/deprecated/tutorial/pi-kubernetes.md&#34;&gt;https://github.com/cloudmesh-community/hid-sp18-417/blob/master/deprecated/tutorial/pi-kubernetes.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The student may have switched to doing kubernetes on google, Bu that
+seems to be just a manaul and deos not include a project&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/hid-sp18-417/tree/master/project-code/gcloud&#34;&gt;https://github.com/cloudmesh-community/hid-sp18-417/tree/master/project-code/gcloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This section of the tutorial is targeting to automate the Kubernetes cluster setup in
+Raspberry pi.&lt;/p&gt;
+&lt;h2 id=&#34;opt_setupsh&#34;&gt;opt_setup.sh&lt;/h2&gt;
+&lt;p&gt;This is an optional setup if its required to download the cloudmesh code from 417 repo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#080&#34;&gt;#!/bin/sh
+&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;hostname&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$1&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;ip&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$2&lt;/span&gt; &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# should be of format: 192.168.1.100&lt;/span&gt;
+sudo apt-get update
+sudo apt-get install git
+mkdir /~/cloudmesh
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; installing git
+git clone https://github.com/cloudmesh-community/hid-sp18-417.git
+&lt;span style=&#34;color:#a2f&#34;&gt;cd&lt;/span&gt; *417/tutorial/dhcp
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; running initial dhcp setup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;sh opt_setup.sh&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;dhcp_setupsh&#34;&gt;dhcp_setup.sh&lt;/h2&gt;
+&lt;p&gt;This Script will help setting up the dhcp static ip.&lt;/p&gt;
+&lt;p&gt;Please note that the shell script will execute the recommended reboot after the static IP assignment.&lt;/p&gt;
+&lt;p&gt;It needs four params:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hostname&lt;/li&gt;
+&lt;li&gt;desired static ip&lt;/li&gt;
+&lt;li&gt;router ip&lt;/li&gt;
+&lt;li&gt;dns server ip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sh dhcp_setup.sh &amp;lt;hostname&amp;gt; &amp;lt;nodeIP&amp;gt; &amp;lt;routerIP&amp;gt; &amp;lt;dnsIP&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#080&#34;&gt;#!/bin/sh
+&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;hostname&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$1&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;ip&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$2&lt;/span&gt; &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# should be of format: 192.168.1.100&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;router&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$3&lt;/span&gt; &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# should be of format: 192.168.1.1&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;dns&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$4&lt;/span&gt; &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# should be of format: 192.168.1.1&lt;/span&gt;
+
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Change the hostname&lt;/span&gt;
+touch hostname
+sudo cat &lt;span style=&#34;color:#b44&#34;&gt;&amp;lt;&amp;lt;end&amp;gt;&amp;gt; hostname
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;$hostname
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;end&lt;/span&gt;
+sudo cp hostname /etc/hostname
+
+head -n -1 /etc/hosts &amp;gt; temp ; sudo mv temp /etc/hosts
+sudo cat &lt;span style=&#34;color:#b44&#34;&gt;&amp;lt;&amp;lt;end11&amp;gt;&amp;gt; /etc/hosts
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;127.0.0.1     $hostname
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;end11&lt;/span&gt;
+
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Set the static ip&lt;/span&gt;
+
+sudo cat &lt;span style=&#34;color:#b44&#34;&gt;&amp;lt;&amp;lt;EOT &amp;gt;&amp;gt; /etc/dhcpcd.conf
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;interface eth0
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static ip_address=$ip/24
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static routers=$router
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static domain_name_servers=$dns
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;interface wlan0
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static ip_address=$ip/24
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static routers=$router
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;static domain_name_servers=$dns
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;EOT&lt;/span&gt;
+reboot
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker_setupsh&#34;&gt;docker_setup.sh&lt;/h2&gt;
+&lt;p&gt;Now Install docker and turn off the swap memory.
+This shell will reboot the node per recommendation of the references.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sh docker_setup.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ERROR THIS SCRIPT DOES NOT EXIST IN THE 417 DIR&lt;/p&gt;
+&lt;p&gt;The previous shell scripts are common in both worker and head.&lt;/p&gt;
+&lt;p&gt;Maybe the student meant install_docker.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#080&#34;&gt;#!/bin/sh
+&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Install Docker&lt;/span&gt;
+curl -sSL get.docker.com | sh &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo usermod pi -aG docker
+
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Disable Swap&lt;/span&gt;
+sudo dphys-swapfile swapoff &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo dphys-swapfile uninstall &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo update-rc.d dphys-swapfile remove
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; Adding &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34; cgroup_enable=cpuset cgroup_enable=memory&amp;#34;&lt;/span&gt; to /boot/cmdline.txt and rebooting...
+sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
+&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# if you encounter problems, try changing cgroup_memory=1 to cgroup_enable=memory.&lt;/span&gt;
+&lt;span style=&#34;color:#b8860b&#34;&gt;orig&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;$(&lt;/span&gt;head -n1 /boot/cmdline.txt&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt; cgroup_enable=cpuset cgroup_memory=1&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;$orig&lt;/span&gt; | sudo tee /boot/cmdline.txt
+reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kube_head_setupsh&#34;&gt;kube_head_setup.sh&lt;/h2&gt;
+&lt;p&gt;To be executed only on the master.
+This will initiate kubectl master and setup networking[debugging now]&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sh kube_head_setup.sh&lt;/code&gt;
+Please save the join token for the workers&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Add repo list and install kubeadm&lt;/span&gt;
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;deb http://apt.kubernetes.io/ kubernetes-xenial main&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/kubernetes.list &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo apt-get update -q &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo apt-get install -qy kubeadm
+sudo kubeadm init --token-ttl&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt; --apiserver-advertise-address&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&amp;lt;internal master ip&amp;gt;
+mkdir -p &lt;span style=&#34;color:#b8860b&#34;&gt;$HOME&lt;/span&gt;/.kube
+sudo cp -i /etc/kubernetes/admin.conf &lt;span style=&#34;color:#b8860b&#34;&gt;$HOME&lt;/span&gt;/.kube/config
+sudo chown &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;$(&lt;/span&gt;id -u&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;)&lt;/span&gt;:&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;$(&lt;/span&gt;id -g&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;$HOME&lt;/span&gt;/.kube/config
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; setting up network...installing weave
+kubectl apply -f &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;https://cloud.weave.works/k8s/net?k8s-version=&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;$(&lt;/span&gt;kubectl version | base64 | tr -d &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kube_worker_setupsh&#34;&gt;kube_worker_setup.sh&lt;/h2&gt;
+&lt;p&gt;To be executed in the worker nodes&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sh kube_worker_setup.sh&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;deb http://apt.kubernetes.io/ kubernetes-xenial main&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/kubernetes.list &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo apt-get update -q &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo apt-get install -qy kubeadm
+&lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; now run the join token to join the cluster
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-files&#34;&gt;Other files&lt;/h2&gt;
+&lt;p&gt;otherfiles that are not properly documented include&lt;/p&gt;
+&lt;p&gt;kubeadm_conf.yaml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;kubeadm.k8s.io/v1alpha1&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;kind&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;MasterConfiguration&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;controllerManagerExtraArgs&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;pod-eviction-timeout&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;10s&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is also a dir called join that apparently has the join command
+that is also not properly documented&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubeadm join 10.0.1.104:6443 --token w7hmjs.tgt6hqss5i30bpvc --discovery-token-ca-cert-hash sha256:24321005a87fa8803b470e141cef51688ad411bf52d98c05488aa0f46ae8194a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also there is no reason we need to bother about the token it should be
+safed with our cloudmesh shell and than reused.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 526: Kubernetes Cluster in Raspberry Pi</title>
+      <link>/docs/cluster/kubernetes/526/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/kubernetes/526/</guid>
+      <description>
+        
+        
+        &lt;p&gt;here is another project&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudmesh-community/hid-sp18-526/tree/master/cluster&#34;&gt;https://github.com/cloudmesh-community/hid-sp18-526/tree/master/cluster&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo; status is also unclear. It has been done 3 years ago&lt;/p&gt;
+&lt;p&gt;This may have some good starts, but again ist a shell script.&lt;/p&gt;
+&lt;p&gt;I recommend to start over and look what they now do&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

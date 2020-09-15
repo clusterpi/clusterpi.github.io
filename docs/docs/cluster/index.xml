@@ -73,6 +73,26 @@ simply install Docker and run the container.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Docs: Kubernetes</title>
+      <link>/docs/cluster/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster/kubernetes/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Buildeing Kubernetes Clusters with PI&amp;rsquo;s.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Build a Mini Cluster</title>
       <link>/docs/cluster/mini-cluster/</link>
       <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
