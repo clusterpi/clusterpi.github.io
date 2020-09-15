@@ -1,6 +1,8 @@
 ---
 title: "Sensors"
 linkTitle: "Sensors"
+description: >
+  Sensors for your IoT projects.
 ---
 
 
