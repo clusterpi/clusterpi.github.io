@@ -27,6 +27,7 @@
   
   <url>
     <loc>/docs/cluster/kubernetes/links/</loc>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
@@ -50,7 +51,7 @@
   
   <url>
     <loc>/docs/cluster/docker/</loc>
-    <lastmod>2020-09-14T17:01:26-04:00</lastmod>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
@@ -81,6 +82,10 @@
   </url>
   
   <url>
+    <loc>/docs/hardware/sdcard/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/form/five/</loc>
     <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
@@ -106,11 +111,12 @@
   
   <url>
     <loc>/docs/cluster/</loc>
-    <lastmod>2020-09-14T17:01:26-04:00</lastmod>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/cluster/kubernetes/</loc>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
@@ -163,14 +169,17 @@
   
   <url>
     <loc>/docs/cluster/kubernetes/417/bin/readme/</loc>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/cluster/kubernetes/526/head/head_node_readme/</loc>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/cluster/kubernetes/526/</loc>
+    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
   </url>
   
   <url>
