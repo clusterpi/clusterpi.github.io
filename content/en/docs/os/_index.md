@@ -1,6 +1,8 @@
 ---
 title: "OS"
 linkTitle: "OS"
+description: >
+  Information about operating systems
 weight: 20
 ---
 

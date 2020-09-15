@@ -22,11 +22,13 @@
       <description>
         
         
-        &lt;p&gt;The ooriginal Easyplug board was replaced in 2019 by a new kit&lt;/p&gt;
+        &lt;h2 id=&#34;new-board&#34;&gt;New Board&lt;/h2&gt;
+&lt;p&gt;The ooriginal Easyplug board was replaced in 2019 by a new kit&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ueeshop.ly200-cdn.com/u_file/UPAH/UPAH808/1903/products/06/32acf65496.jpg.500x500.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-ed&#34;&gt;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-ed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-edu&#34;&gt;https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-edu&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This system is highly recommended as it eliminates breadboard and
 soldering. An alternative to easyplug is GrovePI which directly
 interfaces with the Raspberry PI. However it is possible to
@@ -35,6 +37,7 @@ communicate from PIs to Arduinos.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.keyestudio.com/search/?Keyword=easy&#34;&gt;https://www.keyestudio.com/search/?Keyword=easy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;older-board&#34;&gt;Older Board&lt;/h2&gt;
 &lt;p&gt;Copied from:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&#34;&gt;http://wiki.keyestudio.com/index.php/Ks0099_keyestudio_EASY_plug_Control_Board&lt;/a&gt;&lt;/li&gt;

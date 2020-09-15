@@ -1,6 +1,8 @@
 ---
 title: "Raspberry Pi Robot Car with Face Recognition and Identification"
 linkTitle: "Pi Car with Face Recognition and Identification"
+description: >
+  A project to build a Raspberry Pi Robot Car with face recognition and identification."
 weight: 20
 ---
 

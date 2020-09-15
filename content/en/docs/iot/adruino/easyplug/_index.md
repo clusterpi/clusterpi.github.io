@@ -5,10 +5,14 @@ description: >
   An easy to use adruino plug system. 
 ---
 
+## New Board
+
 The ooriginal Easyplug board was replaced in 2019 by a new kit
 
+![](https://ueeshop.ly200-cdn.com/u_file/UPAH/UPAH808/1903/products/06/32acf65496.jpg.500x500.jpg)
+
 *
-https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-ed
+<https://www.keyestudio.com/products/2019-new-keyestudio-easy-plug-super-starter-kit-for-arduino-stem-edu>
 
 This system is highly recommended as it eliminates breadboard and
 soldering. An alternative to easyplug is GrovePI which directly
@@ -21,7 +25,7 @@ Please note that the system is now also available for Microbit.
 
 
 
-
+## Older Board
 
 Copied from:
 

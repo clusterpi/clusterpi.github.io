@@ -1,7 +1,7 @@
 ---
 title: "Project Ideas"
 linkTitle: "Project Ideas"
-descrition: >
+description: >
   A small list of project ideas
 weight: 10
 ---

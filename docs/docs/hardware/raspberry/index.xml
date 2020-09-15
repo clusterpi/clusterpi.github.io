@@ -14,6 +14,121 @@
     
     
     <item>
+      <title>Docs: Raspberry Pi 4</title>
+      <link>/docs/hardware/raspberry/pi4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/hardware/raspberry/pi4/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Note: a new version 4 has come out and we recommend to use
+that.&lt;/p&gt;
+&lt;p&gt;The raspberry PI 4 is a very good development platform. It is
+available with 2GB, 4GB and 8GB main memory. If you decide to buy it
+we recommend to get the 8GB version. If money is thight get the
+4GB. Due to its small memory we suggest not to buy teh 2GB
+version. This you shoudl only get if your have a very small
+development and ready product that does not require more memory. As
+you likely will use the PI also as develoopment platform, the 8GB
+version seems approriate.&lt;/p&gt;
+&lt;p&gt;The cost is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$35 2GB&lt;/li&gt;
+&lt;li&gt;$55 4GB&lt;/li&gt;
+&lt;li&gt;$90 8GB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You will need some additional components to make sure you can use it.
+THis includes a power adapter, an SD Card writer, and a special HDMI
+cable.  As PIs are popular and often sold out, you may want to
+consider a complete kit.  Although these kits are slightly more
+expensive as if you were to buy them seperately you may not have a
+choice. The kit from Cana costs about $120 without keyboard and mouse:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.canakit.com/raspberry-pi-4-complete-starter-kit.html&#34;&gt;Cana Kit &lt;img src=&#34;https://www.canakit.com/Media/90/2499.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please be reminded to never
+connect or power the raspberry with your computers USB port. It draws
+some significant amperage and we do not want you to destroy your
+computer. We recommend that you buy a certified power adapter. The price for a board
+is so cheap that you could even create your own mini cluster as a
+project. We do not recommend any older versions of Raspberry as they are
+less powerful and do not contain built-in Bluetooth or WiFi.&lt;/p&gt;
+&lt;h2 id=&#34;specification-raspberry-pi-4b&#34;&gt;Specification Raspberry PI 4B&lt;/h2&gt;
+&lt;p&gt;The Raspberry PI 4B is shown in @fig:pi4
+&lt;img src=&#34;https://www.raspberrypi.org/homepage-9df4b/static/raspberry-pi-4-labelled-2857741801afdf1cabeaa58325e07b58.png&#34; alt=&#34;Raspberry PI 3B&#34;&gt;{#fig:pi4}&lt;/p&gt;
+&lt;p&gt;The board has the following properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2GB, 4GB or 8GB LPDDR4-3200 SDRAM (depending on model)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gigabit Ethernet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2 USB 3.0 ports; 2 USB 2.0 ports.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Raspberry Pi standard 40 pin GPIO header (fully backwards compatible with previous boards)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2 × micro-HDMI ports (up to 4kp60 supported)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2-lane MIPI DSI display port&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2-lane MIPI CSI camera port&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4-pole stereo audio and composite video port&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;H.265 (4kp60 decode), H264 (1080p60 decode, 1080p30 encode)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OpenGL ES 3.0 graphics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Micro-SD card slot for loading operating system and data storage&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5V DC via USB-C connector (minimum 3A*)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5V DC via GPIO header (minimum 3A*)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Power over Ethernet (PoE) enabled (requires separate PoE HAT)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Operating temperature: 0 – 50 degrees C ambient&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A good quality 2.5A power supply can be used if downstream USB peripherals consume less than 500mA in total.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://static.raspberrypi.org/files/product-briefs/200521+Raspberry+Pi+4+Product+Brief.pdf&#34;&gt;&lt;img src=&#34;pibrief.png&#34; alt=&#34;&#34;&gt; Product Brief&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pin-layout&#34;&gt;Pin Layout&lt;/h2&gt;
+&lt;p&gt;The PI 4, 3B, 3B+ and Zero come with a number of pins that can be used to
+attach sensors. It is convenient to have the pinout available for your
+project. Hence we provide a pinout layout in @fig:pi-layout. Other
+Pis will have a differnt pinout and you will have to locate them on
+the internet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rasp3.jpg&#34; alt=&#34;Pinout&#34;&gt;{#fig:pi-layout}&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&#34;&gt;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Raspberry Pi 3b&#43;</title>
       <link>/docs/hardware/raspberry/pi3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

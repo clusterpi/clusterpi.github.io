@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 linkTitle: "Projects"
-descrition: >
+description: >
   Project related activities
 weight: 80
 ---

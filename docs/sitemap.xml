@@ -12,6 +12,10 @@
   </url>
   
   <url>
+    <loc>/docs/hardware/raspberry/pi4/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/form/</loc>
     <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
@@ -83,7 +87,7 @@
   
   <url>
     <loc>/docs/hardware/sdcard/</loc>
-    <lastmod>2020-09-14T21:41:49-04:00</lastmod>
+    <lastmod>2020-09-14T22:00:26-04:00</lastmod>
   </url>
   
   <url>
@@ -364,6 +368,10 @@
   
   <url>
     <loc>/docs/iot/output/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/iot/power/pibatteryshield/</loc>
   </url>
   
   <url>
