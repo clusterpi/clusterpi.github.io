@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cluster PI – SD Crad</title>
+    <title>Cluster PI – SD Card</title>
     <link>/docs/hardware/sdcard/</link>
-    <description>Recent content in SD Crad on Cluster PI</description>
+    <description>Recent content in SD Card on Cluster PI</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/hardware/sdcard/index.xml" rel="self" type="application/rss+xml" />

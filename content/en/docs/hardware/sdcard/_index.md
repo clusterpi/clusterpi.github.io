@@ -1,6 +1,6 @@
 ---
-title: "SD Crad"
-linkTitle: "SD Crad"
+title: "SD Card"
+linkTitle: "SD Card"
 weight: 20
 description: >
   SD Card writers are needed to place the OS on a PI.
