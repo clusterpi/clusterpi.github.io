@@ -1,6 +1,8 @@
 ---
 title: "Cluster"
 linkTitle: "Cluster"
+description: >
+  Building a cluster with Raspberry PI's
 weight: 60
 ---
 

@@ -552,8 +552,8 @@ with a simple command such as &lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Develop a python cloudmesh command called&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cms swarm config hostnames.yaml&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;where the yaml file looks something like&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;manager&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&amp;lt;ip00&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;worker&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;manager&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&amp;lt;ip00&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;worker&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip01&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip02&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- &amp;lt;ip03&amp;gt;&lt;span style=&#34;color:#bbb&#34;&gt;
@@ -1032,10 +1032,10 @@ kubectl apply -f &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-files&#34;&gt;Other files&lt;/h2&gt;
 &lt;p&gt;otherfiles that are not properly documented include&lt;/p&gt;
 &lt;p&gt;kubeadm_conf.yaml&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;kubeadm.k8s.io/v1alpha1&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;kind&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;MasterConfiguration&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;controllerManagerExtraArgs&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;pod-eviction-timeout&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;10s&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;kubeadm.k8s.io/v1alpha1&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;kind&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;MasterConfiguration&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;controllerManagerExtraArgs&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;pod-eviction-timeout&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;10s&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is also a dir called join that apparently has the join command
 that is also not properly documented&lt;/p&gt;
@@ -1935,129 +1935,161 @@ the drivers for big data.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Kubernetes</title>
-      <link>/docs/old/pi/clusters/pi-kubernetes/</link>
+      <title>Docs: Kubernetes with sh</title>
+      <link>/docs/cluster/kubernetes/pi-kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/old/pi/clusters/pi-kubernetes/</guid>
+      <guid>/docs/cluster/kubernetes/pi-kubernetes/</guid>
       <description>
         
         
-        &lt;p&gt;:o2:&lt;/p&gt;
-&lt;p&gt;In this section we will discuss how to set up a Kubernetes cluster on a
+        &lt;p&gt;In this section we will discuss how to set up a Kubernetes cluster on a
 number of Raspberry Pis.&lt;/p&gt;
 &lt;h2 id=&#34;todo&#34;&gt;Todo&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; all the simple setup with sd cards, ssh, keys, and so on should be moved to the NOW cluster section. This way we can require simply a NOW and start without duplication on the real Kubernetes install.&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; we have two sections of Kubernetes contributed by two students. What we need is to merge them and save the usable things. We need to identify if the setup is significantly different before we can do this.&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; so before you can work on the Kubernetes section you need to make sure the NOW section is up to date.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; As we can see thsi just has too many nscripts. We neeed a single
+comamnd with cloudmesh shell cmd5 instead. When properly documented
+we can reduce the documentation considerably.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; We need to make sure to use one repo. I prefer one in cloudmesh
+instead of cloudmesh-community&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; all the simple setup with sd cards, ssh, keys, and so on should
+be moved to the NOW cluster section. This way we can require simply
+a NOW and start without duplication on the real Kubernetes install.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; cloudmesh burn should be used to create a NOW&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; we have two sections of Kubernetes contributed by two
+students. What we need is to merge them and save the usable
+things. We need to identify if the setup is significantly different
+before we can do this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; so before you can work on the Kubernetes section you need to
+make sure the NOW section is up to date.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resources-needed&#34;&gt;Resources Needed&lt;/h2&gt;
-&lt;p&gt;In &lt;a href=&#34;#pi-now-main&#34;&gt;Network of Pis&lt;/a&gt; section we explained how to set up a network
-of Pis. Here we assume that we start from such a network. We recommend that the
-cluster will have at least one master and three worker nodes. The test should
-not use too many resources otherwise the system may be unnecessarily slow. In
-particular we should have one dedicated master. We use three nodes to support
-testing the distribution of containers. (It may work with two, but we have not
-tested it). Please give us feedback on this and let us know what works for you.
-We will integrate your feedback.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;#pi-now-main&#34;&gt;Network of Pis&lt;/a&gt; section we explained how to set up a
+network of Pis. Here we assume that we start from such a network. We
+recommend that the cluster will have at least one master and three
+worker nodes. The test should not use too many resources otherwise the
+system may be unnecessarily slow. In particular we should have one
+dedicated master. We use three nodes to support testing the
+distribution of containers. (It may work with two, but we have not
+tested it). Please give us feedback on this and let us know what works
+for you.  We will integrate your feedback.&lt;/p&gt;
 &lt;h2 id=&#34;overview-of-kubernetes-cluster-setup&#34;&gt;Overview of Kubernetes Cluster Setup&lt;/h2&gt;
-&lt;p&gt;A Kubernetes cluster is made of one master and several worker nodes. Each node
-must have the standard Kubernetes setup completed and the master must also have
-additional setup. Once the master and worker nodes are setup then the worker
-nodes can join the network created by the master node. For the Raspberry Pi we
-support two modes of setting up the master and workers. The first method is to
-use the scripts that we provide to do the required installations. The second
-method is to perform each step by hand. We will begin by explaining how to use
-the scripts to setup your cluster quickly.&lt;/p&gt;
+&lt;p&gt;A Kubernetes cluster is made of one master and several worker
+nodes. Each node must have the standard Kubernetes setup completed and
+the master must also have additional setup. Once the master and worker
+nodes are setup then the worker nodes can join the network created by
+the master node. For the Raspberry Pi we support two modes of setting
+up the master and workers. The first method is to use the scripts that
+we provide to do the required installations. The second method is to
+perform each step by hand. We will begin by explaining how to use the
+scripts to setup your cluster quickly.&lt;/p&gt;
 &lt;h2 id=&#34;kubernetes-cluster-setup-with-scripts&#34;&gt;Kubernetes Cluster Setup with Scripts&lt;/h2&gt;
 &lt;p&gt;These steps have been verified with the latest build of Raspbian
 Stretch which is
 &lt;a href=&#34;https://downloads.raspberrypi.org/raspbian_lite_latest&#34;&gt;2018-11-13-raspbian-stretch-lite&lt;/a&gt;.
-If you have installed Raspbian Stretch with Desktop or Raspbian Stretch with
-Desktop and Recommended Software then some of these steps will not be required,
-but repeating them will not be a problem.&lt;/p&gt;
-&lt;p&gt;The required scripts are stored in the
-&lt;a href=&#34;https://github.com/cloudmesh-community/pi&#34;&gt;Cloudmesh Community Pi&lt;/a&gt; repository
-and must be copied to each Raspberry Pi in order to run. This guide assumes that
-each Pi has internet access which is required to download the necessary tools.
-The first steps to setup the Pi tools is listed on the
+If you have installed Raspbian Stretch with Desktop or Raspbian
+Stretch with Desktop and Recommended Software then some of these steps
+will not be required, but repeating them will not be a problem.&lt;/p&gt;
+&lt;p&gt;The required scripts are stored in the &lt;a href=&#34;https://github.com/cloudmesh-community/pi&#34;&gt;Cloudmesh Community
+Pi&lt;/a&gt; repository and must be
+copied to each Raspberry Pi in order to run. This guide assumes that
+each Pi has internet access which is required to download the
+necessary tools.  The first steps to setup the Pi tools is listed on
+the
 &lt;a href=&#34;https://github.com/cloudmesh-community/pi/blob/master/README.md&#34;&gt;README.md&lt;/a&gt;
-for the Pi tools repository. We will repeat those steps here for convenience.&lt;/p&gt;
+for the Pi tools repository. We will repeat those steps here for
+convenience.&lt;/p&gt;
 &lt;h3 id=&#34;pi-cluster-tools-setup&#34;&gt;Pi Tools Prerequisites&lt;/h3&gt;
-&lt;p&gt;To use the Cloudmesh Pi tools you need &lt;code&gt;git&lt;/code&gt; to download the tools from the
-github repository. You must also update the Pi&amp;rsquo;s list of software, install
-&lt;code&gt;git&lt;/code&gt;, and then download or clone the &lt;code&gt;git&lt;/code&gt; repository. Run these steps at the
-Pi command prompt:&lt;/p&gt;
+&lt;p&gt;To use the Cloudmesh Pi tools you need &lt;code&gt;git&lt;/code&gt; to download the tools
+from the github repository. You must also update the Pi&amp;rsquo;s list of
+software, install &lt;code&gt;git&lt;/code&gt;, and then download or clone the &lt;code&gt;git&lt;/code&gt;
+repository. Run these steps at the Pi command prompt:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get update; sudo apt-get install -y git
 $ git clone https://github.com/cloudmesh-community/pi.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When that successfully completes you will have a copy of the Pi tools on your Pi
-and you can now run them.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When that successfully completes you will have a copy of the Pi tools
+on your Pi and you can now run them.&lt;/p&gt;
 &lt;h3 id=&#34;kubernetes-shared-setup&#34;&gt;Kubernetes Shared Setup&lt;/h3&gt;
-&lt;p&gt;Every Kubernetes node, whether master or worker, needs to complete the following
-setup steps. The Pi scripts are stored in the &lt;code&gt;bin&lt;/code&gt; directory. Every
-Kubernetes Pi master and worker must run the &lt;code&gt;kubernetes-setup.sh&lt;/code&gt; script which
-will download and install Docker and Kubernetes and make the necessary system
-changes to support both. When this script completes the Pi must be rebooted to
-properly configure its memory system for Kubernetes. Execute the following
+&lt;p&gt;Every Kubernetes node, whether master or worker, needs to complete the
+following setup steps. The Pi scripts are stored in the &lt;code&gt;bin&lt;/code&gt;
+directory. Every Kubernetes Pi master and worker must run the
+&lt;code&gt;kubernetes-setup.sh&lt;/code&gt; script which will download and install Docker
+and Kubernetes and make the necessary system changes to support
+both. When this script completes the Pi must be rebooted to properly
+configure its memory system for Kubernetes. Execute the following
 commands:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo pi/bin/kubernetes-setup.sh
 $ sudo reboot
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you are connected to the Pi over &lt;code&gt;ssh&lt;/code&gt; your session may hang at this point.
-You can either wait for &lt;code&gt;ssh&lt;/code&gt; to timeout or kill the session by typing a tilde
-then a period. The tilde on a new line is a special command to &lt;code&gt;ssh&lt;/code&gt; and the
-period means to disconnect the session.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you are connected to the Pi over &lt;code&gt;ssh&lt;/code&gt; your session may hang at
+this point.  You can either wait for &lt;code&gt;ssh&lt;/code&gt; to timeout or kill the
+session by typing a tilde then a period. The tilde on a new line is a
+special command to &lt;code&gt;ssh&lt;/code&gt; and the period means to disconnect the
+session.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point the worker is ready to connect to the Kubernetes master node.
-The command to connect to the master node is &lt;code&gt;kubeadm join&lt;/code&gt; but we need to
-finish setting up the master node in order to get the token necessary to
-authenticate with it.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point the worker is ready to connect to the Kubernetes master
+node.  The command to connect to the master node is &lt;code&gt;kubeadm join&lt;/code&gt; but
+we need to finish setting up the master node in order to get the token
+necessary to authenticate with it.&lt;/p&gt;
 &lt;h3 id=&#34;kubernetes-master-setup&#34;&gt;Kubernetes Master Setup&lt;/h3&gt;
 &lt;p&gt;To setup the Kubernetes master node you should first complete the
-&lt;a href=&#34;#kubernetes-shared-setup&#34;&gt;Kubernetes Shared Setup&lt;/a&gt;. After the Pi reboots you
-can run the master setup script:&lt;/p&gt;
+&lt;a href=&#34;#kubernetes-shared-setup&#34;&gt;Kubernetes Shared Setup&lt;/a&gt;. After the Pi
+reboots you can run the master setup script:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo pi/bin/kubernetes-master-setup.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The master setup script will run &lt;code&gt;kubeadm init&lt;/code&gt; which can take a long time and
-will occasionally timeout on the Raspberry Pi without completing. This does not
-indicate a failure of the Pi setup. If the command finishes with the error&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The master setup script will run &lt;code&gt;kubeadm init&lt;/code&gt; which can take a long
+time and will occasionally timeout on the Raspberry Pi without
+completing. This does not indicate a failure of the Pi setup. If the
+command finishes with the error&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Unfortunately, an error has occurred:
         timed out waiting for the condition
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;then it is possible to restart the setup and it will usually complete
-successfully the second time. To do this (only if the master setup failed) run
-&lt;code&gt;kubeadm reset&lt;/code&gt; and be sure to answer &lt;code&gt;y&lt;/code&gt; to the prompts. Then run the master
-setup script again:&lt;/p&gt;
+successfully the second time. To do this (only if the master setup
+failed) run &lt;code&gt;kubeadm reset&lt;/code&gt; and be sure to answer &lt;code&gt;y&lt;/code&gt; to the
+prompts. Then run the master setup script again:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubeadm reset
 $ sudo pi/bin/kubernetes-master-setup.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the master setup successfully completes you should see:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Your Kubernetes master has initialized successfully!
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and there will be further instructions on how to setup the master. These steps
-have already been performed by the setup scripts so you do not need to do them.
-The output will also list the required &lt;code&gt;kubeadm join&lt;/code&gt; command that can be issued
-on each worker node that wishes to join this Kubernetes master node. In
-addition, the scripts have stored the join command, the master IP address, the
-join token, and the CA Hash in a YAML file &lt;code&gt;kubeadm-settings.yml&lt;/code&gt; in the current
-directory. If you need to add nodes in the future, you may refer to this file
-for the required parameters.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and there will be further instructions on how to setup the
+master. These steps have already been performed by the setup scripts
+so you do not need to do them.  The output will also list the required
+&lt;code&gt;kubeadm join&lt;/code&gt; command that can be issued on each worker node that
+wishes to join this Kubernetes master node. In addition, the scripts
+have stored the join command, the master IP address, the join token,
+and the CA Hash in a YAML file &lt;code&gt;kubeadm-settings.yml&lt;/code&gt; in the current
+directory. If you need to add nodes in the future, you may refer to
+this file for the required parameters.&lt;/p&gt;
 &lt;h2 id=&#34;pi-kubernetes-join-workers&#34;&gt;Join Workers to Master&lt;/h2&gt;
-&lt;p&gt;Now login to each of the workers and issue the &lt;code&gt;kubeadm join&lt;/code&gt; command from the
-master node. If you have not successfully completed the master node setup,
-please see &lt;a href=&#34;#kubernetes-master-setup&#34;&gt;Kubernetes Master Setup&lt;/a&gt; for the required
-steps.&lt;/p&gt;
-&lt;p&gt;As of this writing there is a version incompatibility between the latest
-Kubernetes and the latest Docker. Kubernetes has not yet verified Docker version
-18.09 which is installed by the default Docker install script. If you use our
-provided setup script then the version of Docker will be automatically
-downgraded to 18.06.1 which is verified by Kubernetes. You can follow the steps
-to downgrade your Docker version given in &lt;a href=&#34;#pi-install-docker&#34;&gt;Install Docker&lt;/a&gt; or
-you can skip the version check by specifying
-&lt;code&gt;--ignore-preflight-errors=SystemVerification&lt;/code&gt; on the command line. An example
-&lt;code&gt;kubeadm join&lt;/code&gt; command would be:&lt;/p&gt;
+&lt;p&gt;Now login to each of the workers and issue the &lt;code&gt;kubeadm join&lt;/code&gt; command
+from the master node. If you have not successfully completed the
+master node setup, please see &lt;a href=&#34;#kubernetes-master-setup&#34;&gt;Kubernetes Master
+Setup&lt;/a&gt; for the required steps.&lt;/p&gt;
+&lt;p&gt;As of this writing there is a version incompatibility between the
+latest Kubernetes and the latest Docker. Kubernetes has not yet
+verified Docker version 18.09 which is installed by the default Docker
+install script. If you use our provided setup script then the version
+of Docker will be automatically downgraded to 18.06.1 which is
+verified by Kubernetes. You can follow the steps to downgrade your
+Docker version given in &lt;a href=&#34;#pi-install-docker&#34;&gt;Install Docker&lt;/a&gt; or you
+can skip the version check by specifying
+&lt;code&gt;--ignore-preflight-errors=SystemVerification&lt;/code&gt; on the command line. An
+example &lt;code&gt;kubeadm join&lt;/code&gt; command would be:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubeadm join 10.0.0.101:6443 &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;    --token vstt3y.faa67q2dp383xhgv &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;    --discovery-token-ca-cert-hash &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;    sha256:7fa06185f14b89234235aa9f03ef60835ade825e2553cd97a52b5894566edeb5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the worker nodes have joined the cluster, you can login to the master node
-and see their status with the following command:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the worker nodes have joined the cluster, you can login to the
+master node and see their status with the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubectl get nodes
 NAME     STATUS   ROLES    AGE     VERSION
 blue00   Ready    master   4h56m   v1.12.2
@@ -2065,54 +2097,58 @@ blue01   Ready    &amp;lt;none&amp;gt;   4h44m   v1.12.2
 blue02   Ready    &amp;lt;none&amp;gt;   4h46m   v1.12.2
 blue03   Ready    &amp;lt;none&amp;gt;   4h42m   v1.12.2
 blue04   Ready    &amp;lt;none&amp;gt;   4h1m    v1.12.2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the workers are joining the cluster they will initially be in a &lt;code&gt;NotReady&lt;/code&gt;
-state for a while as they complete their setup. This is the normal expected
-behavior and each node should reach the &lt;code&gt;Ready&lt;/code&gt; state within a few minutes. To
-continue experimenting with your Kubernetes cluster, please see the
-&lt;a href=&#34;#kubernetes-first-steps&#34;&gt;Kubernetes First Steps&lt;/a&gt; section.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the workers are joining the cluster they will initially be in a
+&lt;code&gt;NotReady&lt;/code&gt; state for a while as they complete their setup. This is the
+normal expected behavior and each node should reach the &lt;code&gt;Ready&lt;/code&gt; state
+within a few minutes. To continue experimenting with your Kubernetes
+cluster, please see the &lt;a href=&#34;#kubernetes-first-steps&#34;&gt;Kubernetes First
+Steps&lt;/a&gt; section.&lt;/p&gt;
 &lt;h2 id=&#34;manual-kubernetes-cluster-setup&#34;&gt;Manual Kubernetes Cluster Setup&lt;/h2&gt;
-&lt;p&gt;If you do not want to use our setup scripts or would like to change some steps
-in the installation you can use the following steps to manually setup a
-Kubernetes cluster on several Pis. First, each node in the cluster must have
-Docker and Kubernetes installed along with some system configurations. Then the
-master should be launched and each worker node connected to the master. Please
-follow these instructions carefully and you should have a working Kubernetes
+&lt;p&gt;If you do not want to use our setup scripts or would like to change
+some steps in the installation you can use the following steps to
+manually setup a Kubernetes cluster on several Pis. First, each node
+in the cluster must have Docker and Kubernetes installed along with
+some system configurations. Then the master should be launched and
+each worker node connected to the master. Please follow these
+instructions carefully and you should have a working Kubernetes
 cluster.&lt;/p&gt;
 &lt;h3 id=&#34;pi-install-docker&#34;&gt;Install docker&lt;/h3&gt;
-&lt;p&gt;Kubernetes depends on a containerization platform to run applications. The
-standard platform used with Kubernetes is Docker, although other container
-platforms are also support. We will use Docker on the Pi. Install Docker with
-the convenience script at &lt;code&gt;get.docker.com&lt;/code&gt;. You may also download the script
-manually and see what operations it performs. The basic steps in the script are
-to detect your operation system and computer architecture, setup the proper
-Docker package repositories and keys for your system, and finally install the
-Docker packages and dependencies. The current version of Docker 18.09 has not
-been verified by Kubernetes, so after installation we will downgrade this
-package to 18.06 in the following steps. Once the installation finishes we
-recommend running the following &lt;code&gt;usermod&lt;/code&gt; command to run Docker as a non-root
-user. This is an optional but recommended step.&lt;/p&gt;
+&lt;p&gt;Kubernetes depends on a containerization platform to run
+applications. The standard platform used with Kubernetes is Docker,
+although other container platforms are also support. We will use
+Docker on the Pi. Install Docker with the convenience script at
+&lt;code&gt;get.docker.com&lt;/code&gt;. You may also download the script manually and see
+what operations it performs. The basic steps in the script are to
+detect your operation system and computer architecture, setup the
+proper Docker package repositories and keys for your system, and
+finally install the Docker packages and dependencies. The current
+version of Docker 18.09 has not been verified by Kubernetes, so after
+installation we will downgrade this package to 18.06 in the following
+steps. Once the installation finishes we recommend running the
+following &lt;code&gt;usermod&lt;/code&gt; command to run Docker as a non-root user. This is
+an optional but recommended step.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -sSL get.docker.com | sudo sh
 $ sudo usermod -aG docker pi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The current version of Docker 18.09 installed by the convenience script has not
-been verified by Kubernetes v1.12.2 yet so it will give an error and Kubernetes
-will fail to start. You can fix this by giving the
-&lt;code&gt;--ignore-preflight-errors=SystemVerification&lt;/code&gt; flag to &lt;code&gt;kubeadm init&lt;/code&gt; and
-&lt;code&gt;kubeadm join&lt;/code&gt;. However, a better solution is to downgrade the Docker version
-installed. The Docker install script will also setup the proper &lt;code&gt;apt-get&lt;/code&gt;
-repositories that host previous versions of Docker. To downgrade, first stop
-the &lt;code&gt;docker.service&lt;/code&gt; that is running, then downgrade the package and restart the
-service. The Docker service should restart automatically after the downgrade, so
-restarting the service with &lt;code&gt;systemctl&lt;/code&gt; is just done in case of a problem.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The current version of Docker 18.09 installed by the convenience
+script has not been verified by Kubernetes v1.12.2 yet so it will give
+an error and Kubernetes will fail to start. You can fix this by giving
+the &lt;code&gt;--ignore-preflight-errors=SystemVerification&lt;/code&gt; flag to &lt;code&gt;kubeadm init&lt;/code&gt; and &lt;code&gt;kubeadm join&lt;/code&gt;. However, a better solution is to downgrade
+the Docker version installed. The Docker install script will also
+setup the proper &lt;code&gt;apt-get&lt;/code&gt; repositories that host previous versions of
+Docker. To downgrade, first stop the &lt;code&gt;docker.service&lt;/code&gt; that is running,
+then downgrade the package and restart the service. The Docker service
+should restart automatically after the downgrade, so restarting the
+service with &lt;code&gt;systemctl&lt;/code&gt; is just done in case of a problem.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo systemctl stop docker.service
 $ sudo apt-get install -qy --allow-downgrades &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  docker-ce&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;18.06.1~ce~3-0~raspbian
 $ sudo systemctl start docker.service
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-kubernetes&#34;&gt;Install Kubernetes&lt;/h3&gt;
-&lt;p&gt;After installing Docker we must also install Kubernetes. The Kubernetes package
-sources and GPG keys need to be added to the &lt;code&gt;apt-get&lt;/code&gt; package manager first,
-then we must update the &lt;code&gt;apt-get&lt;/code&gt; package list with the new sources before we
-can finally install the Kubernetes services and administration package
-&lt;code&gt;kubeadm&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After installing Docker we must also install Kubernetes. The
+Kubernetes package sources and GPG keys need to be added to the
+&lt;code&gt;apt-get&lt;/code&gt; package manager first, then we must update the &lt;code&gt;apt-get&lt;/code&gt;
+package list with the new sources before we can finally install the
+Kubernetes services and administration package &lt;code&gt;kubeadm&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo apt-key add -
 $ &lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;deb http://apt.kubernetes.io/ kubernetes-xenial main&amp;#34;&lt;/span&gt; |&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
@@ -2121,38 +2157,43 @@ $ sudo apt-get update -q; sudo apt-get install -qy kubeadm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once Kubernetes and Docker are correctly installed there are some system
 configuration changes necessary for Kubernetes.&lt;/p&gt;
 &lt;h3 id=&#34;pi-kubernetes-system-config&#34;&gt;System configuration&lt;/h3&gt;
-&lt;p&gt;Kubernetes is not compatible with SWAP memory and as of version 1.8 it will
-&lt;a href=&#34;https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.8.md#before-upgrading&#34;&gt;fail if swap is enabled on a node&lt;/a&gt;,
-therefore we need to disable swap memory on Raspbian. It is possible that
-disabling swap on the Pi could cause other issues, especially due to the low
-memory on the Raspberry Pi, but it is accepted practice for running any
-Kubernetes cluster to disable swap. There is a flag &lt;code&gt;--fail-swap-on=false&lt;/code&gt; that
-can be passed to &lt;code&gt;kubeadm&lt;/code&gt; to skip the check for swap but we have not tested
-with this setting.  To disable swap execute the following commands on the Pi:&lt;/p&gt;
+&lt;p&gt;Kubernetes is not compatible with SWAP memory and as of version 1.8 it
+will &lt;a href=&#34;https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.8.md#before-upgrading&#34;&gt;fail if swap is enabled on a
+node&lt;/a&gt;,
+therefore we need to disable swap memory on Raspbian. It is possible
+that disabling swap on the Pi could cause other issues, especially due
+to the low memory on the Raspberry Pi, but it is accepted practice for
+running any Kubernetes cluster to disable swap. There is a flag
+&lt;code&gt;--fail-swap-on=false&lt;/code&gt; that can be passed to &lt;code&gt;kubeadm&lt;/code&gt; to skip the
+check for swap but we have not tested with this setting.  To disable
+swap execute the following commands on the Pi:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo dphys-swapfile swapoff &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo dphys-swapfile uninstall &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo update-rc.d dphys-swapfile remove
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should now not see any entries in this command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo swapon --summary
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next some kernel cgroup settings need to be changed for Kubernetes. This is a
-boot-time option that can only be changed by altering the options passed to the
-Linux kernel during boot. These options are stored in the file
-&lt;code&gt;/boot/cmdline.txt&lt;/code&gt; on the Raspberry Pi. This file only contains a single line
-that specifies the kernel options. The following three options must be added to
-the end of the line &lt;code&gt;cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory&lt;/code&gt;.
-You may edit the file in a text editor if you are confident that you can make
-the change correctly or simply run the following lines at the command prompt.
-They will first backup the current file, then then append the new options and
-finally write the entire string back to the original file:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next some kernel cgroup settings need to be changed for
+Kubernetes. This is a boot-time option that can only be changed by
+altering the options passed to the Linux kernel during boot. These
+options are stored in the file &lt;code&gt;/boot/cmdline.txt&lt;/code&gt; on the Raspberry
+Pi. This file only contains a single line that specifies the kernel
+options. The following three options must be added to the end of the
+line &lt;code&gt;cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory&lt;/code&gt;.  You
+may edit the file in a text editor if you are confident that you can
+make the change correctly or simply run the following lines at the
+command prompt.  They will first backup the current file, then then
+append the new options and finally write the entire string back to the
+original file:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo cp /boot/cmdline.txt /boot/cmdline.bak.txt
 $ &lt;span style=&#34;color:#b8860b&#34;&gt;new_options&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;$(&lt;/span&gt;head -n1 /boot/cmdline.txt&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt; \
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory&amp;#34;&lt;/span&gt;
 $ &lt;span style=&#34;color:#a2f&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b8860b&#34;&gt;$new_options&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt; | sudo tee /boot/cmdline.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kubernetes also expects certain kernel modules to be loaded. It will enable
-these kernel modules during setup but we can also specify them to always be
-loaded on boot which removes the warning messages. To enable the required kernel
-modules, execute the following lines which will append these modules to the list
-of enabled kernel modules stored in &lt;code&gt;/etc/modules&lt;/code&gt;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kubernetes also expects certain kernel modules to be loaded. It will
+enable these kernel modules during setup but we can also specify them
+to always be loaded on boot which removes the warning messages. To
+enable the required kernel modules, execute the following lines which
+will append these modules to the list of enabled kernel modules stored
+in &lt;code&gt;/etc/modules&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat &lt;span style=&#34;color:#b44&#34;&gt;&amp;lt;&amp;lt; EOF | sudo tee -a /etc/modules
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;ip_vs
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;ip_vs_sh
@@ -2160,24 +2201,26 @@ of enabled kernel modules stored in &lt;code&gt;/etc/modules&lt;/code&gt;.&lt;/p
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;ip_vs_wrr
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;nf_conntrack_ipv4
 &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;EOF&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since these changes only take place at boot time, you &lt;em&gt;must reboot&lt;/em&gt; before
-continuing with the rest of the section. If you do not reboot then Kubernetes
-will refuse to run and issue an error.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since these changes only take place at boot time, you &lt;em&gt;must reboot&lt;/em&gt;
+before continuing with the rest of the section. If you do not reboot
+then Kubernetes will refuse to run and issue an error.&lt;/p&gt;
 &lt;h3 id=&#34;setup-kubernetes-cluster&#34;&gt;Setup Kubernetes Cluster&lt;/h3&gt;
-&lt;p&gt;After the Pi reboots and you reconnect to it there are a few steps to perform on
-the master Kubernetes node to prepare it for the worker nodes to connect to.
-First we recommend pulling (downloading) the Kubernetes images so that this step
-is separate from initializing the cluster. You can issue the following command
-and note that it will take several minutes depending on your network connection:&lt;/p&gt;
+&lt;p&gt;After the Pi reboots and you reconnect to it there are a few steps to
+perform on the master Kubernetes node to prepare it for the worker
+nodes to connect to.  First we recommend pulling (downloading) the
+Kubernetes images so that this step is separate from initializing the
+cluster. You can issue the following command and note that it will
+take several minutes depending on your network connection:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubeadm config images pull
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once that is complete we can now initialize the Kubernetes master. You need to
-know the IP address of the master node and you should choose a CIDR for the pod
-network. Note that in this case we are setting the join token to have a
-time-to-live of 0 which means it will never expire. This is reasonable for
-initial setup and testing but in any permanent system the token should be
-allowed to expire in a few hours or days to prevent unauthorized nodes from
-joining the cluster should the token accidentally be leaked. The following
-command will setup the master:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once that is complete we can now initialize the Kubernetes master. You
+need to know the IP address of the master node and you should choose a
+CIDR for the pod network. Note that in this case we are setting the
+join token to have a time-to-live of 0 which means it will never
+expire. This is reasonable for initial setup and testing but in any
+permanent system the token should be allowed to expire in a few hours
+or days to prevent unauthorized nodes from joining the cluster should
+the token accidentally be leaked. The following command will setup the
+master:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#b8860b&#34;&gt;POD_CIDR&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;10.244.0.0/16
 $ &lt;span style=&#34;color:#b8860b&#34;&gt;APISERVER_IP&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;10.0.0.101
 $ sudo kubeadm init --token-ttl&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
@@ -2212,20 +2255,21 @@ lose the details you can view the existing tokens with &lt;code&gt;kubeadm token
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey |&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  openssl rsa -pubin -outform DER 2&amp;gt;/dev/null | sha256sum |&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  cut -d&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The original token is for development use and so we set it to have an unlimited
-time-to-live. This is not recommended for a production system, however, a
-shorter TTL of a few hours or days should be specified and a new token should be
-generated when the previous one has expired. A new token can be created with the
-following command.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The original token is for development use and so we set it to have an
+unlimited time-to-live. This is not recommended for a production
+system, however, a shorter TTL of a few hours or days should be
+specified and a new token should be generated when the previous one
+has expired. A new token can be created with the following command.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubeadm token create --print-join-command
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will not retrieve the original token but will generate a new one. These
-tokens should be carefully managed as they allow a node to join the Kubernetes
-cluster which is a potentially unsafe operation for untrusted nodes.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will not retrieve the original token but will generate a new
+one. These tokens should be carefully managed as they allow a node to
+join the Kubernetes cluster which is a potentially unsafe operation
+for untrusted nodes.&lt;/p&gt;
 &lt;p&gt;The final step is setting up the networking. These instructions use
-&lt;a href=&#34;https://www.weave.works/oss/net/&#34;&gt;Weave Net&lt;/a&gt; to enable the Kubernetes network
-architecture. Another recommended solution to use with the Raspberry Pi is
-&lt;a href=&#34;https://github.com/coreos/flannel&#34;&gt;Flannel&lt;/a&gt;. Here is the command to setup Weave
-Net on the Kubernetes cluster.&lt;/p&gt;
+&lt;a href=&#34;https://www.weave.works/oss/net/&#34;&gt;Weave Net&lt;/a&gt; to enable the Kubernetes
+network architecture. Another recommended solution to use with the
+Raspberry Pi is &lt;a href=&#34;https://github.com/coreos/flannel&#34;&gt;Flannel&lt;/a&gt;. Here is
+the command to setup Weave Net on the Kubernetes cluster.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  kubectl apply -f \
  &amp;quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d &#39;\n&#39;)&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After waiting a minute or so, you should see the following output from this
@@ -2245,44 +2289,50 @@ weave-net-xj4tc                  2/2     Running   0          73s
 for them to join the master. Please see the section &lt;a href=&#34;#pi-kubernetes-join-workers&#34;&gt;Join Workers to
 Master&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h2 id=&#34;kubernetes-first-steps&#34;&gt;Kubernetes First Steps&lt;/h2&gt;
-&lt;p&gt;Now that you have the Kubernetes cluster running you can deploy pods on the
-cluster. For production use of Kubernetes it is recommended to use a Controller
-which will manage the details of deploying pods to nodes and ensuring
-replication and self-healing. Please see the
-&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#pods-and-controllers&#34;&gt;Kubernetes Pod Overview&lt;/a&gt;
+&lt;p&gt;Now that you have the Kubernetes cluster running you can deploy pods
+on the cluster. For production use of Kubernetes it is recommended to
+use a Controller which will manage the details of deploying pods to
+nodes and ensuring replication and self-healing. Please see the
+&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#pods-and-controllers&#34;&gt;Kubernetes Pod
+Overview&lt;/a&gt;
 section of the Kubernetes documentation for information on creating
 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/deployment/&#34;&gt;Deployments&lt;/a&gt;,
 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/&#34;&gt;StatefulSets&lt;/a&gt;
 or
 &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/&#34;&gt;DaemonSets&lt;/a&gt;
-on your cluster. For our simple use case we will create a few pods by hand.&lt;/p&gt;
+on your cluster. For our simple use case we will create a few pods by
+hand.&lt;/p&gt;
 &lt;h3 id=&#34;kubernetes-pods&#34;&gt;Kubernetes Pods&lt;/h3&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/cloudmesh-community/pi&#34;&gt;Cloudmesh Community Pi&lt;/a&gt;
-repository has several pod definition files that you can use directly or
-customize to your particular use case for experimenting with the Kubernetes
-cluster. If you used our install scripts you should already have these on your
-Kubernetes master. If you did the setup by hand you can get the repository by
-installing &lt;code&gt;git&lt;/code&gt; and then cloning it onto the Pi using the instructions in the
-&lt;a href=&#34;#pi-cluster-tools-setup&#34;&gt;Pi Tools Prerequisites&lt;/a&gt; section.&lt;/p&gt;
-&lt;p&gt;As an initial test you can create the markdown renderer deployment on your
-cluster with the command:&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/cloudmesh-community/pi&#34;&gt;Cloudmesh Community
+Pi&lt;/a&gt; repository has several
+pod definition files that you can use directly or customize to your
+particular use case for experimenting with the Kubernetes cluster. If
+you used our install scripts you should already have these on your
+Kubernetes master. If you did the setup by hand you can get the
+repository by installing &lt;code&gt;git&lt;/code&gt; and then cloning it onto the Pi using
+the instructions in the &lt;a href=&#34;#pi-cluster-tools-setup&#34;&gt;Pi Tools
+Prerequisites&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;As an initial test you can create the markdown renderer deployment on
+your cluster with the command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#a2f&#34;&gt;cd&lt;/span&gt; pi/kubernetes
 $ sudo kubectl create -f markdownrender.yml
 service/markdownrender created
 deployment.apps/markdownrender created
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you look at the markdownrender.yml file you will see that it defines a
-Service and a Deployment and it maps port 8080 from the Service to the external
-port 31118. The Deployment specifies that it should have one replica of the
-application which runs a Docker container from Docker Hub titled
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you look at the markdownrender.yml file you will see that it
+defines a Service and a Deployment and it maps port 8080 from the
+Service to the external port 31118. The Deployment specifies that it
+should have one replica of the application which runs a Docker
+container from Docker Hub titled
 &lt;a href=&#34;https://hub.docker.com/r/functions/markdownrender/&#34;&gt;functions/markdownrender:latest-armhf&lt;/a&gt;.
-This container supplies a simple service to translate a markdown document into
-an HTML document. You can test it with the following commands to see it working:&lt;/p&gt;
+This container supplies a simple service to translate a markdown
+document into an HTML document. You can test it with the following
+commands to see it working:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -4 http://localhost:31118 -d &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;# test&amp;#34;&lt;/span&gt;
 $ curl -4 http://localhost:31118 --data-binary @../README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The 31118 port will also be accessible to any computer that can reach the
-Kubernetes master (unless firewall rules dictate otherwise) so you can also test
-this from your own computer if it is on the same network as the Kubernetes
-master. For example you could run:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The 31118 port will also be accessible to any computer that can reach
+the Kubernetes master (unless firewall rules dictate otherwise) so you
+can also test this from your own computer if it is on the same network
+as the Kubernetes master. For example you could run:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -4 http://blue00:31118 -d &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;# test&amp;#34;&lt;/span&gt;
 $ curl -s &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  https://raw.githubusercontent.com/cloudmesh-community/pi/master/README.md |&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
@@ -2297,11 +2347,12 @@ markdownrender-7d8d6f74d6-67bsg   1/1     Running   &lt;span style=&#34;color:#6
 blue01   &amp;lt;none&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo kubectl get pods -o &lt;span style=&#34;color:#b8860b&#34;&gt;jsonpath&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;{.items[*].spec.nodeName}&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;removing-a-node-from-a-cluster&#34;&gt;Removing a node from a cluster&lt;/h3&gt;
-&lt;p&gt;To remove a Kubernetes node from a cluster, you must first drain the node which
-will evict every pod in the node and cordon it off so that no new pods will be
-scheduled in it. For cluster setup each node will be running the Weave daemon so
-it is necessary to specify &lt;code&gt;--ignore-daemonsets&lt;/code&gt; to drain the node. The drain
-command should complete without errors.&lt;/p&gt;
+&lt;p&gt;To remove a Kubernetes node from a cluster, you must first drain the
+node which will evict every pod in the node and cordon it off so that
+no new pods will be scheduled in it. For cluster setup each node will
+be running the Weave daemon so it is necessary to specify
+&lt;code&gt;--ignore-daemonsets&lt;/code&gt; to drain the node. The drain command should
+complete without errors.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubectl drain --ignore-daemonsets &amp;lt;node&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If there are pods scheduled to the node then you should wait until those pods
 complete and are shutdown and removed from the node. You can observe the node
@@ -2317,10 +2368,11 @@ markdownrender-7d8d6f74d6-lqk58   0/1     ContainerCreating   &lt;span style=&#3
 $ sudo kubectl get pods -o wide
 NAME                              READY   STATUS    RESTARTS   AGE   IP          NODE     NOMINATED NODE
 markdownrender-7d8d6f74d6-lqk58   1/1     Running   &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;          24s   10.39.0.1   blue03   &amp;lt;none&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the node has no pods scheduled to it you can remove it from the cluster
-permanently by issuing the &lt;code&gt;delete&lt;/code&gt; command on the master. The node should be in
-the &lt;code&gt;Ready,SchedulingDisabled&lt;/code&gt; status. For example, in this output the node
-&lt;code&gt;blue04&lt;/code&gt; has been drained and is ready to be deleted from the cluster.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the node has no pods scheduled to it you can remove it from the
+cluster permanently by issuing the &lt;code&gt;delete&lt;/code&gt; command on the master. The
+node should be in the &lt;code&gt;Ready,SchedulingDisabled&lt;/code&gt; status. For example,
+in this output the node &lt;code&gt;blue04&lt;/code&gt; has been drained and is ready to be
+deleted from the cluster.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ sudo kubectl get nodes
 NAME     STATUS                     ROLES    AGE     VERSION
 blue00   Ready                      master   40h     v1.12.2
@@ -2329,27 +2381,29 @@ blue02   Ready                      &amp;lt;none&amp;gt;   40h     v1.12.2
 blue03   NotReady                   &amp;lt;none&amp;gt;   40h     v1.12.2
 blue04   Ready,SchedulingDisabled   &amp;lt;none&amp;gt;   4m10s   v1.12.2
 &lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubectl delete node &amp;lt;node&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once this is complete you can login to the node itself and reset it so that it
-can join another cluster or be used for other purposes. The &lt;code&gt;kubeadm reset&lt;/code&gt;
-command will accomplish this. At this point Kubernetes should be shut down on
-the Pi and you should not see any entries in the &lt;code&gt;systemctl&lt;/code&gt; table for
-&lt;code&gt;kubernetes&lt;/code&gt; or &lt;code&gt;kubelet&lt;/code&gt; and you should not see any running Docker images that
-are related to Kubernetes. This can be confirmed with the following commands run
-&lt;em&gt;on the node&lt;/em&gt; not on the master:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once this is complete you can login to the node itself and reset it so
+that it can join another cluster or be used for other purposes. The
+&lt;code&gt;kubeadm reset&lt;/code&gt; command will accomplish this. At this point Kubernetes
+should be shut down on the Pi and you should not see any entries in
+the &lt;code&gt;systemctl&lt;/code&gt; table for &lt;code&gt;kubernetes&lt;/code&gt; or &lt;code&gt;kubelet&lt;/code&gt; and you should not
+see any running Docker images that are related to Kubernetes. This can
+be confirmed with the following commands run &lt;em&gt;on the node&lt;/em&gt; not on the
+master:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo kubeadm reset
 $ sudo systemctl list-units | grep -E &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;kubernetes|kubelet&amp;#39;&lt;/span&gt;
 $ docker ps
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember that Kubernetes required swap to be disabled and it may need to be
-re-enabled if you are planning to use the Raspberry Pi for other uses. There is
-some debate about whether swap on a Pi is actually a good idea in general,
-however, since the SD Card is rather slow and doesn&amp;rsquo;t handle repeated reads and
-writes well. If you have a USB hard drive this could be a good solution to
-increasing swap. The memory and cpuset cgroups were also enabled for Kubernetes
-by modifying the &lt;code&gt;/boot/cmdline.txt&lt;/code&gt; kernel options file. Leaving these enabled
-will not cause problems for other uses but they can be easily turned off by
-removing the lines that were added in the
-&lt;a href=&#34;#pi-kubernetes-system-config&#34;&gt;System configuration&lt;/a&gt; section.
-Here are the required commands to re-enable swap.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember that Kubernetes required swap to be disabled and it may need
+to be re-enabled if you are planning to use the Raspberry Pi for other
+uses. There is some debate about whether swap on a Pi is actually a
+good idea in general, however, since the SD Card is rather slow and
+doesn&amp;rsquo;t handle repeated reads and writes well. If you have a USB hard
+drive this could be a good solution to increasing swap. The memory and
+cpuset cgroups were also enabled for Kubernetes by modifying the
+&lt;code&gt;/boot/cmdline.txt&lt;/code&gt; kernel options file. Leaving these enabled will
+not cause problems for other uses but they can be easily turned off by
+removing the lines that were added in the &lt;a href=&#34;#pi-kubernetes-system-config&#34;&gt;System
+configuration&lt;/a&gt; section.  Here are the
+required commands to re-enable swap.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo dphys-swapfile install &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo dphys-swapfile swapon &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;&lt;/span&gt;  sudo update-rc.d dphys-swapfile defaults
@@ -2995,6 +3049,34 @@ the private Pi cluster.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.tecmint.com/using-dsh-distributed-shell-to-run-linux-commands-across-multiple-machines/&#34;&gt;https://www.tecmint.com/using-dsh-distributed-shell-to-run-linux-commands-across-multiple-machines/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/vallard/psh&#34;&gt;https://github.com/vallard/psh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/karrick/psh/blob/master/psh&#34;&gt;https://github.com/karrick/psh/blob/master/psh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PI Battery Shield</title>
+      <link>/docs/iot/power/pibatteryshield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/iot/power/pibatteryshield/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Small Footprint Battery Power&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The following board provides to the Raspberry Pi a lithium battery power
+pack expansion board. It is powered by two 18650 Li-ion batteries
+providing steady. A 4-LED indicator indicates the level of charge. The
+board costs $16.99.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../power_pi.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sunfounder.com/plus-power-module.html&#34;&gt;https://www.sunfounder.com/plus-power-module.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -3788,7 +3870,7 @@ here until it can be combined with the other sections on initial cluster setup.&
 &lt;/ul&gt;
 &lt;p&gt;Once you have the required software and OS image file we can set up each SD card.  In order to ensure the SD card is formatted correctly we will want to run the SD Card Formatter tool.  Ensure that you don&amp;rsquo;t have any other drives connected to you computer and carefully select the drive that corresponds to your SD card.  Then select overwrite format and click format.  This step can take a few minutes but it is good practice to ensure the correct formatting.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../images/SD_format.png&#34; alt=&#34;SD Card Formatter&#34;&gt;{#fig:sd_format}&lt;/p&gt;
-&lt;p&gt;While the SD card is formatting you will want to extract the Raspbian Lite image from the zipfle it was downloaded in.  Extract this to your desktop so that it can be used in the next step.  Once the SD card is formatted you can open Etcher.  Select the Raspbian Lite image we saved to the desktop and then check to make sure the correct SD drive is selected by Etcher.  Then click &amp;ldquo;Flash!&amp;rdquo;.  Once this is done you should have the Raspbian Lite image burned to the SD card.&lt;/p&gt;
+&lt;p&gt;While the SD card is formatting you will want to extract the Raspbian Lite image from the zipfle it was downloaded in.  Extract this to your desktop so that it can be used in the next step.  Once the SD card is formatted you can open Etcher.  Select the Raspbian Lite image we saved to the desktop and then check to make sure the correct SD drive is selected by Etcher.  Then click &amp;ldquo;Flash!&amp;quot;.  Once this is done you should have the Raspbian Lite image burned to the SD card.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../images/etcher.png&#34; alt=&#34;Etcher&#34;&gt;{#fig:etcher}&lt;/p&gt;
 &lt;p&gt;Before pluging the SD card into the Raspberry Pi we will want to add a file to the boot partition.  Open notepad or another editor and save a blank file as &amp;ldquo;ssh&amp;rdquo; with no file extension.  When the raspberry pi boots up it will see this file and enable SSH connections.  At this point we will also edit the &lt;strong&gt;config.txt&lt;/strong&gt; file.  In the file we need to uncomment this line: &lt;code&gt;hdmi_force_hotplug=1&lt;/code&gt;.  This will ensure that your monitor will work correctly should you need to plug it in to a monitor to trouble shoot during the next steps.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Optional:&lt;/strong&gt; For this example we will be connecting the cluster to a router through an ethernet connection.  However, you could also configure the parent node to connect to WiFi and then share an internet connection with the worker nodes.  This can be done by setting up a &lt;a href=&#34;https://www.raspberrypi.org/forums/viewtopic.php?t=132674&#34;&gt;WiFi to Ethernet bridge.&lt;/a&gt; If you will be setting up the parent node or any of the other nodes to work with WiFi you can do this by automatically by adding a file to the boot partition of the SD card (same location as the ssh file).  To do this open up a text editor and add the following code to the file [@Headless setup].  Once WiFi is enabled you will need to follow the steps included in the &lt;a href=&#34;https://www.raspberrypi.org/forums/viewtopic.php?t=132674&#34;&gt;WiFi to Ethernet bridge tutorial.&lt;/a&gt;&lt;/p&gt;
@@ -3828,19 +3910,19 @@ network={
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Run Shell Script:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Before we run the shell script we will need to update some of the files contained in the git-repo that you have cloned in the previous step. The first file is the &lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/project-code/cassandra_custom.yaml&#34;&gt;cassandra_custom.yaml&lt;/a&gt; file.  The sections listed next need to be updated with the ip addresses that you noted when setting up the Pi&amp;rsquo;s.  The other settings can remain as is.  More information about configuration options can be found on the &lt;a href=&#34;https://cassandra.apache.org/doc/latest/configuration/cassandra_config_file.html&#34;&gt;apache cassandra site.&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;seed_provider&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;seed_provider&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Addresses of hosts that are deemed contact points.&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Cassandra nodes use this list of hosts to find each other and learn&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# the topology of the ring.  You must change this if you are running&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# multiple nodes!&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;class_name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;org.apache.cassandra.locator.SimpleSeedProvider&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;parameters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;class_name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;org.apache.cassandra.locator.SimpleSeedProvider&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;parameters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;          &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# seeds is actually a comma-delimited list of addresses.&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;          &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;# Ex: &amp;#34;&amp;lt;ip1&amp;gt;,&amp;lt;ip2&amp;gt;,&amp;lt;ip3&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;          &lt;/span&gt;- &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;seeds&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;10.0.0.42,10.0.0.40&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#one address should be the parent node and the other should be another node in the cluster&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;          &lt;/span&gt;- &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;seeds&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;10.0.0.42,10.0.0.40&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#one address should be the parent node and the other should be another node in the cluster&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;listen_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the parent node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;rpc_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the parent node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;listen_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the parent node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;rpc_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the parent node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next we need to update the &lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/project-code/FlaskApp.conf&#34;&gt;Flask_App.conf&lt;/a&gt; file.  In this file you will need to up date the ServerName with the ip address of the parent node and the ServerAdmin with your email address.  Also update the last Allow from variable for each directory to allow ip addresses from your local network.&lt;/p&gt;
 &lt;p&gt;The last manual update is to edit the &lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/project-code/FlaskApp/FlaskApp/__init__.py&#34;&gt;&lt;strong&gt;init&lt;/strong&gt;.py&lt;/a&gt; file.  You will need to update the variable at the beginning of the file with the ip address of one or both of the cassandra seed nodes that you have set up in the previous step.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cassandra_contact_points = [&#39;10.0.0.42&#39;]&lt;/code&gt;&lt;/p&gt;
@@ -3871,8 +3953,8 @@ chmod u+x parent_node.sh
 	&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;INFO: password changed&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After the setup has completed for each of the nodes you will need to ssh into each node individually to update the cassandra.yaml file with the ip address of that node.  You will just need to update the listen_address and the rpc_address.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo nano ~/apache-cassandra-3.11.3/conf/cassandra.yaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;listen_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;rpc_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;listen_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;rpc_address&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10.0.0.42&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;#should be the ip address of the node&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once you have updated all of the cassandra.yaml files we can start the cassandra cluster.  They should automatically join the cassandra instance running on the parent node creating a single rack datacenter.  This means that the data can be replicated across nodes preventing a single point of failure and faster read / write operations.  To start the rest of the nodes in the cluster you will first need to update the &lt;a href=&#34;https://github.com/cloudmesh-community/fa18-523-84/blob/master/project-code/cluster_start.py&#34;&gt;cluster_start.py&lt;/a&gt; script with the ip addresses of each of the nodes.  Once the script has been updated you can run it to start cassandra on each of the nodes.  Once the script has finished running SSH into the parent node and run &lt;code&gt;cd ~/apache-cassandra-3.11.3 &amp;amp;&amp;amp; bin/nodetool status&lt;/code&gt; to check the status of each node.  You should see something similar to @fig:nodetool_status.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../images/nodetool_status.JPG&#34; alt=&#34;nodetool_status&#34;&gt;{#fig:nodetool_status}&lt;/p&gt;
 &lt;h2 id=&#34;step-3-final-configuration-and-starting-the-connected-smart-thermostat&#34;&gt;Step 3: Final Configuration and Starting the Connected Smart Thermostat&lt;/h2&gt;
@@ -5359,7 +5441,7 @@ $ bash configure
 $ make altinstall
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;python-idle&#34;&gt;Python IDLE&lt;/h2&gt;
 &lt;p&gt;Click Menu -&amp;gt; Programming -&amp;gt; Python 3 (IDLE), and you&amp;rsquo;ll get a new
-window called &amp;lsquo;Python 3.6.5 Shell:&amp;rsquo;. This Shell works just like Python
+window called &amp;lsquo;Python 3.6.5 Shell:&#39;. This Shell works just like Python
 on the command line. Enter print(&amp;ldquo;Hello World&amp;rdquo;) to see the message.&lt;/p&gt;
 &lt;h2 id=&#34;go&#34;&gt;Go&lt;/h2&gt;
 &lt;p&gt;To install go use&lt;/p&gt;
@@ -5679,58 +5761,6 @@ parameters such as x,y, ans aspect ratio, rotation and other
 parameters.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: VNC</title>
-      <link>/docs/old/pi/vnc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/old/pi/vnc/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;em&gt;If you like to connect to your Raspberry from your laptop, we
-recommend to use VNC. If you rather like to connect a monitor and
-keyboard as well as a mouse to the Raspberry, you can skip the steps
-with the VNC update.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;setting-up-vnc&#34;&gt;Setting up VNC&lt;/h2&gt;
-&lt;p&gt;We had some issues with the installed version of VNC that is customized
-for connecting a Laptop via the ethernet cable to the PI. However as we
-connect wirelessly, our setup is slightly different. The easiest way that
-we found is to update the Raspbian OS as follows. In a terminal type&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get update
-sudo apt-get install realvnc-vnc-server
-sudo apt-get install realvnc-vnc-viewer
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next you enable the VNC server in the configuration panel via the
-Raspbian GUI by selecting&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Menu &amp;gt;
-    Preferences &amp;gt;
-       Raspberry Pi Configuration &amp;gt;
-          Interfaces.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here you toggle the VNC service to enabled. As we are already at it in
-our setup we enabled all other services, especially those that deal with
-Grove sensor related bins and wires.&lt;/p&gt;
-&lt;p&gt;Next reboot and double check if the settings are preserved after the
-reboot&lt;/p&gt;
-&lt;h3 id=&#34;install-vnc-on-macos&#34;&gt;Install VNC on macOS&lt;/h3&gt;
-&lt;p&gt;To install a vnc server of your liking on your Mac. You find one at&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.realvnc.com/download/vnc/latest/%5D&#34;&gt;http://www.realvnc.com/download/vnc/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Be sure to download the version of the VNC Viewer for the computer you
-are going to use to virtually control the Pi (there is a version listed
-for Raspberry Pi&amp;ndash; do not download this one. For us this is the Mac
-version.)&lt;/p&gt;
-&lt;h3 id=&#34;run-vnc-viewer-on-macos&#34;&gt;Run VNC Viewer on macOS&lt;/h3&gt;
-&lt;p&gt;Once you have downloaded the VNC viewer installed it you can open the
-program. Next you can start vnc viewer and enter the ip address of your
-raspberry. Make sure you are on the same network. You can find the
-address by using ifconfig.&lt;/p&gt;
 
       </description>
     </item>

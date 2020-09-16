@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>/docs/hardware/raspberry/pi4/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/cluster/form/</loc>
     <lastmod>2020-09-14T18:52:58-04:00</lastmod>
   </url>
@@ -42,6 +47,7 @@
   
   <url>
     <loc>/docs/projects/ideas/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -61,6 +67,7 @@
   
   <url>
     <loc>/docs/iot/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -75,10 +82,12 @@
   
   <url>
     <loc>/docs/os/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/projects/car/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -112,7 +121,7 @@
   
   <url>
     <loc>/docs/cluster/</loc>
-    <lastmod>2020-09-14T20:09:26-04:00</lastmod>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -127,6 +136,7 @@
   
   <url>
     <loc>/docs/projects/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -136,7 +146,7 @@
   
   <url>
     <loc>/docs/old/</loc>
-    <lastmod>2020-09-14T16:46:19-04:00</lastmod>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -199,6 +209,7 @@
   
   <url>
     <loc>/docs/iot/adruino/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -261,6 +272,7 @@
   
   <url>
     <loc>/docs/iot/adruino/easyplug/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -328,8 +340,7 @@
   </url>
   
   <url>
-    <loc>/docs/old/pi/clusters/pi-kubernetes/</loc>
-    <lastmod>2020-09-12T08:05:37-04:00</lastmod>
+    <loc>/docs/cluster/kubernetes/pi-kubernetes/</loc>
   </url>
   
   <url>
@@ -367,6 +378,11 @@
   </url>
   
   <url>
+    <loc>/docs/iot/power/pibatteryshield/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/old/pi/links/</loc>
     <lastmod>2020-09-12T08:05:37-04:00</lastmod>
   </url>
@@ -386,6 +402,7 @@
   
   <url>
     <loc>/docs/iot/power/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>
@@ -409,6 +426,7 @@
   
   <url>
     <loc>/docs/hardware/raspberry/</loc>
+    <lastmod>2020-09-15T09:43:38-04:00</lastmod>
   </url>
   
   <url>

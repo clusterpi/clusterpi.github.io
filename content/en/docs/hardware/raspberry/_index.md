@@ -1,6 +1,8 @@
 ---
 title: "Raspberry PI"
 linkTitle: "Raspberry PI"
+description:
+  Raspberry PI Hardware.
 ---
 
 [Raspberry PI's](https://www.raspberrypi.org/) are a convenient cheap

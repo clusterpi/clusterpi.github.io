@@ -158,7 +158,7 @@ enable = false
 	name ="Slack"
 	url = "https://app.slack.com/client/TFQC2P62D/CTP848QDV/details/top"
 	icon = "fab fa-slack"
-        desc = "Follow us on Twitter to get the latest news!"
+        desc = "Developers collaborate with us on SLack"
 #[[params.links.user]]
 #	name = "Stack Overflow"
 #	url = "https://example.org/stack"
