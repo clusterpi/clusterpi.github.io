@@ -1,0 +1,9 @@
+#! /bin/sh
+
+BIB=`pwd`/bib/all.bib
+
+echo $BIB
+
+cat - | /usr/local/bin/pandoc -F pandoc-crossref -F pandoc-citeproc -f markdown -t html -N
+
+

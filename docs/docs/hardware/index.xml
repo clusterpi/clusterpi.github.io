@@ -29,6 +29,13 @@
 
 &lt;/div&gt;
 
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+WARNING: UNDER NO CIRCUMSTANCES POWER A PI FORM YOUR DESKTOP OR LAPTOP USB PORTS
+&lt;/div&gt;
+
 &lt;p&gt;You will need a good SDCard Writer. We recommend to use one with USB
 3.0 as they are quicker than the 2.0 in case you have a laptop that
 supports them. As you may wantt o also use the writer on your PI make

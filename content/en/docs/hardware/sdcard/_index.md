@@ -11,6 +11,12 @@ description: >
 SD Card writers are needed to place the OS on a PI.
 {{% /pageinfo %}}
 
+{{< alert >}}
+
+WARNING: UNDER NO CIRCUMSTANCES POWER A PI FORM YOUR DESKTOP OR LAPTOP USB PORTS
+
+{{< /alert >}}
+
 You will need a good SDCard Writer. We recommend to use one with USB
 3.0 as they are quicker than the 2.0 in case you have a laptop that
 supports them. As you may wantt o also use the writer on your PI make
