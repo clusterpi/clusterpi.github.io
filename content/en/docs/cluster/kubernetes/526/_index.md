@@ -1,6 +1,8 @@
 ---
 title: "526: Kubernetes Cluster in Raspberry Pi"
 linkTitle: "526: Kubernetes Cluster in Raspberry Pi"
+description: >
+  Incomplete, should be replaced
 ---
 
 here is another project

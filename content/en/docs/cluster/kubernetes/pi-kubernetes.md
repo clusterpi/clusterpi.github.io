@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes with sh"
 linkTitle: "Kubernetes with sh"
+weight: 20
 description: >
   A sh based instalation of Kubernetes
 ---
